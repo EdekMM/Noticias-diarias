@@ -1,8 +1,8 @@
 name: Actualizar noticias diarias
 
-# Se ejecuta por cron (UTC). 07:00 UTC ≈ 08:00 CET (Madrid) en horario estándar.
 on:
   schedule:
+    # Se ejecuta todos los días a las 07:00 UTC ≈ 08:00 en Madrid
     - cron: "0 7 * * *"
   workflow_dispatch: {}
 
@@ -16,8 +16,6 @@ jobs:
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
 
       - name: Generar archivo XML actualizado (hora Madrid)
         run: |
@@ -25,7 +23,7 @@ jobs:
           FECHA=$(TZ="Europe/Madrid" date +"%d/%m/%Y")
           PUBDATE=$(TZ="Europe/Madrid" date -R)
 
-          cat > docs/noticias-diarias.xml.txt <<'EOF'
+          cat > docs/noticias-diarias.xml.txt <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
@@ -53,29 +51,4 @@ jobs:
       - Titular del sector del día ${FECHA}<br><br>
 
       🏢 <b>Grupo ACS / Dragados S.A.:</b><br>
-      - Titular corporativo del día ${FECHA}<br><br>
-      ]]></description>
-      <pubDate>${PUBDATE}</pubDate>
-    </item>
-  </channel>
-</rss>
-EOF
-
-      - name: Comprobar cambios
-        run: |
-          git status --porcelain
-          echo "---- listado de archivos en docs ----"
-          ls -la docs
-
-      - name: Commit & push (si hay cambios)
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/noticias-diarias.xml.txt
-          git diff --staged --name-only || true
-          if git diff --staged --quiet; then
-            echo "No hay cambios para commitar."
-          else
-            git commit -m "Actualización automática del feed ${FECHA}"
-            git push
-          fi
+      - Titular corpora
