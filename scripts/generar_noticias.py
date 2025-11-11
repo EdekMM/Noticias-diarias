@@ -1,6 +1,6 @@
 import feedparser, datetime, html
 
-def obtener_titulares(fuentes, max_items=2):
+def obtener_titulares(fuentes, max_items=3):
     """Combina titulares y descripciones de varias fuentes RSS."""
     noticias = []
     for url in fuentes:
@@ -8,10 +8,15 @@ def obtener_titulares(fuentes, max_items=2):
             feed = feedparser.parse(url)
             for entry in feed.entries[:max_items]:
                 titulo = html.escape(entry.title)
-                fuente = entry.link.split("/")[2]
-                resumen = html.escape(entry.get("summary", "")[:200])  # extracto breve
                 enlace = entry.link
-                noticias.append(f"- <a href='{enlace}'>{titulo}</a> ({fuente})<br><small>{resumen}</small>")
+                fuente = entry.link.split("/")[2]
+                resumen = html.escape(entry.get("summary", ""))
+                if len(resumen) > 250:  # Limitar longitud
+                    resumen = resumen[:247] + "..."
+                noticias.append(
+                    f"- <a href='{enlace}'>{titulo}</a> ({fuente})"
+                    f"<br><small>{resumen}</small>"
+                )
         except Exception as e:
             noticias.append(f"- Error al obtener noticias de {url}: {e}")
     return "<br><br>".join(noticias) if noticias else "- Sin noticias disponibles"
