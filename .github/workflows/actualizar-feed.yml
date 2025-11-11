@@ -2,9 +2,8 @@ name: Actualizar noticias diarias
 
 on:
   schedule:
-    # Se ejecuta todos los días a las 07:00 UTC ≈ 08:00 en Madrid
-    - cron: "0 7 * * *"
-  workflow_dispatch: {}
+    - cron: "0 7 * * *" # Ejecuta cada día a las 07:00 UTC ≈ 08:00 Madrid
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -17,38 +16,19 @@ jobs:
       - name: Clonar repositorio
         uses: actions/checkout@v4
 
-      - name: Generar archivo XML actualizado (hora Madrid)
+      - name: Generar archivo XML actualizado
         run: |
           mkdir -p docs
           FECHA=$(TZ="Europe/Madrid" date +"%d/%m/%Y")
           PUBDATE=$(TZ="Europe/Madrid" date -R)
 
-          cat > docs/noticias-diarias.xml.txt <<EOF
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-  <channel>
-    <title>Noticias Diarias - España</title>
-    <link>https://edekmm.github.io/Noticias-diarias/docs/noticias-diarias.xml.txt</link>
-    <description>Noticias destacadas en España, Madrid, economía mundial, economía española, construcción y Grupo ACS / Dragados.</description>
-    <language>es-es</language>
-
-    <item>
-      <title>Noticias del día ${FECHA}</title>
-      <description><![CDATA[
-      🇪🇸 <b>Noticias en España:</b><br>
-      - Titular nacional del día ${FECHA}<br><br>
-
-      🏙️ <b>Noticias en Madrid:</b><br>
-      - Titular Madrid del día ${FECHA}<br><br>
-
-      🌍 <b>Economía mundial:</b><br>
-      - Titular internacional del día ${FECHA}<br><br>
-
-      💶 <b>Economía en España:</b><br>
-      - Titular económico del día ${FECHA}<br><br>
-
-      🏗️ <b>Sector de la construcción:</b><br>
-      - Titular del sector del día ${FECHA}<br><br>
-
-      🏢 <b>Grupo ACS / Dragados S.A.:</b><br>
-      - Titular corpora
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > docs/noticias-diarias.xml.txt
+          echo '<rss version="2.0">' >> docs/noticias-diarias.xml.txt
+          echo '  <channel>' >> docs/noticias-diarias.xml.txt
+          echo '    <title>Noticias Diarias - España</title>' >> docs/noticias-diarias.xml.txt
+          echo '    <link>https://edekmm.github.io/Noticias-diarias/docs/noticias-diarias.xml.txt</link>' >> docs/noticias-diarias.xml.txt
+          echo '    <description>Noticias destacadas en España, Madrid, economía mundial, economía española, construcción y Grupo ACS / Dragados.</description>' >> docs/noticias-diarias.xml.txt
+          echo '    <language>es-es</language>' >> docs/noticias-diarias.xml.txt
+          echo '    <item>' >> docs/noticias-diarias.xml.txt
+          echo "      <title>Noticias del día ${FECHA}</title>" >> docs/noticias-diarias.xml.txt
+          echo '      <description><
