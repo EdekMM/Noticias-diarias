@@ -1,0 +1,40 @@
+import feedparser, datetime
+
+def obtener_titulares(url, max_items=2):
+    try:
+        feed = feedparser.parse(url)
+        noticias = []
+        for entry in feed.entries[:max_items]:
+            titulo = entry.title.replace("&", "y")
+            fuente = entry.link.split("/")[2]
+            noticias.append(f"- {titulo} ({fuente})")
+        return "<br>".join(noticias) if noticias else "- Sin noticias disponibles"
+    except Exception as e:
+        return f"- Error al obtener noticias ({e})"
+
+bloques = {
+    "🇪🇸 <b>Noticias en España:</b>": obtener_titulares("https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada"),
+    "🏙️ <b>Noticias en Madrid:</b>": obtener_titulares("https://www.20minutos.es/rss/madrid/"),
+    "🌍 <b>Economía mundial:</b>": obtener_titulares("https://feeds.reuters.com/reuters/businessNews"),
+    "💶 <b>Economía en España:</b>": obtener_titulares("https://e00-expansion.uecdn.es/rss/economia.xml"),
+    "🏗️ <b>Sector de la construcción:</b>": obtener_titulares("https://www.construible.es/feed"),
+    "🏢 <b>Grupo ACS / Dragados S.A.:</b>": obtener_titulares("https://e00-expansion.uecdn.es/rss/empresas.xml"),
+}
+
+fecha_hoy = datetime.date.today().strftime("%d/%m/%Y")
+pubdate = datetime.datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0100")
+
+with open("docs/noticias-diarias.xml.txt", "w", encoding="utf-8") as f:
+    f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+    f.write('<rss version="2.0">\n  <channel>\n')
+    f.write('    <title>Noticias Diarias - España</title>\n')
+    f.write('    <link>https://edekmm.github.io/Noticias-diarias/docs/noticias-diarias.xml.txt</link>\n')
+    f.write('    <description>Noticias destacadas en España, Madrid, economía mundial, economía española, construcción y Grupo ACS / Dragados.</description>\n')
+    f.write('    <language>es-es</language>\n\n')
+    f.write(f'    <item>\n      <title>Noticias del día {fecha_hoy}</title>\n')
+    f.write('      <description><![CDATA[\n')
+    for bloque, contenido in bloques.items():
+        f.write(f"{bloque}<br>{contenido}<br><br>\n")
+    f.write('      ]]></description>\n')
+    f.write(f'      <pubDate>{pubdate}</pubDate>\n')
+    f.write('    </item>\n  </channel>\n</rss>')
