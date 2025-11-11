@@ -2,8 +2,8 @@ name: Actualizar noticias diarias
 
 on:
   schedule:
-    - cron: "0 7 * * *" # 07:00 UTC ≈ 08:00 Madrid
-  workflow_dispatch:
+    - cron: "0 7 * * *"  # 07:00 UTC = 08:00 Madrid
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -13,48 +13,65 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout del repositorio
+      - name: Clonar repositorio
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
-      - name: Generar archivo XML actualizado
-        shell: bash
+      - name: Instalar dependencias
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3 python3-pip
+          pip install feedparser requests
+
+      - name: Generar archivo XML actualizado con noticias reales
         run: |
           mkdir -p docs
-          FECHA=$(TZ="Europe/Madrid" date +"%d/%m/%Y")
-          PUBDATE=$(TZ="Europe/Madrid" date -R)
 
-          {
-            echo '<?xml version="1.0" encoding="UTF-8"?>'
-            echo '<rss version="2.0">'
-            echo '  <channel>'
-            echo '    <title>Noticias Diarias - Espana</title>'
-            echo '    <link>https://edekmm.github.io/Noticias-diarias/docs/noticias-diarias.xml.txt</link>'
-            echo '    <description>Noticias destacadas en Espana, Madrid, economia mundial, economia espanola, construccion y Grupo ACS / Dragados.</description>'
-            echo '    <language>es-es</language>'
-            echo '    <item>'
-            echo "      <title>Noticias del dia ${FECHA}</title>"
-            echo '      <description><![CDATA['
-            echo "      Noticias en Espana: Titular nacional del dia ${FECHA}"
-            echo "      Noticias en Madrid: Titular Madrid del dia ${FECHA}"
-            echo "      Economia mundial: Titular internacional del dia ${FECHA}"
-            echo "      Economia en Espana: Titular economico del dia ${FECHA}"
-            echo "      Sector de la construccion: Titular del sector del dia ${FECHA}"
-            echo "      Grupo ACS / Dragados: Titular corporativo del dia ${FECHA}"
-            echo '      ]]></description>'
-            echo "      <pubDate>${PUBDATE}</pubDate>"
-            echo '    </item>'
-            echo '  </channel>'
-            echo '</rss>'
-          } > docs/noticias-diarias.xml.txt
+          python3 - <<'PYCODE'
+import feedparser, datetime
 
-      - name: Commit y push si hay cambios
+def obtener_titulares(url, max_items=2):
+    feed = feedparser.parse(url)
+    noticias = []
+    for entry in feed.entries[:max_items]:
+        titulo = entry.title
+        fuente = entry.link.split("/")[2]
+        noticias.append(f"- {titulo} ({fuente})")
+    return "<br>".join(noticias) if noticias else "- Sin noticias disponibles"
+
+bloques = {
+    "🇪🇸 <b>Noticias en España:</b>": obtener_titulares("https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada"),
+    "🏙️ <b>Noticias en Madrid:</b>": obtener_titulares("https://www.20minutos.es/rss/madrid/"),
+    "🌍 <b>Economía mundial:</b>": obtener_titulares("https://feeds.reuters.com/reuters/businessNews"),
+    "💶 <b>Economía en España:</b>": obtener_titulares("https://e00-expansion.uecdn.es/rss/economia.xml"),
+    "🏗️ <b>Sector de la construcción:</b>": obtener_titulares("https://www.construible.es/feed"),
+    "🏢 <b>Grupo ACS / Dragados S.A.:</b>": obtener_titulares("https://e00-expansion.uecdn.es/rss/empresas.xml"),
+}
+
+fecha_hoy = datetime.date.today().strftime("%d/%m/%Y")
+pubdate = datetime.datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0100")
+
+with open("docs/noticias-diarias.xml.txt", "w", encoding="utf-8") as f:
+    f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+    f.write('<rss version="2.0">\n  <channel>\n')
+    f.write('    <title>Noticias Diarias - España</title>\n')
+    f.write('    <link>https://edekmm.github.io/Noticias-diarias/docs/noticias-diarias.xml.txt</link>\n')
+    f.write('    <description>Noticias destacadas en España, Madrid, economía mundial, economía española, construcción y Grupo ACS / Dragados.</description>\n')
+    f.write('    <language>es-es</language>\n\n')
+    f.write(f'    <item>\n      <title>Noticias del día {fecha_hoy}</title>\n')
+    f.write('      <description><![CDATA[\n')
+    for bloque, contenido in bloques.items():
+        f.write(f"{bloque}<br>{contenido}<br><br>\n")
+    f.write('      ]]></description>\n')
+    f.write(f'      <pubDate>{pubdate}</pubDate>\n')
+    f.write('    </item>\n  </channel>\n</rss>')
+PYCODE
+
+      - name: Commit & push (si hay cambios)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/noticias-diarias.xml.txt
-          if git diff --staged --quiet; then
-            echo "Sin cambios que subir."
-          else
-            git commit -m "Actualizacion automatica del feed ${FECHA}"
-            git push
-          fi
+          git diff --staged --quiet || git commit -m "Actualización automática del feed con noticias reales"
+          git push
