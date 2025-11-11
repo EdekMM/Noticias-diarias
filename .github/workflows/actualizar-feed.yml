@@ -2,7 +2,7 @@ name: Actualizar noticias diarias
 
 on:
   schedule:
-    - cron: "0 7 * * *" # Ejecuta cada día a las 07:00 UTC ≈ 08:00 Madrid
+    - cron: "0 7 * * *" # 07:00 UTC ≈ 08:00 Madrid
   workflow_dispatch:
 
 permissions:
@@ -13,22 +13,48 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clonar repositorio
+      - name: Checkout del repositorio
         uses: actions/checkout@v4
 
       - name: Generar archivo XML actualizado
+        shell: bash
         run: |
           mkdir -p docs
           FECHA=$(TZ="Europe/Madrid" date +"%d/%m/%Y")
           PUBDATE=$(TZ="Europe/Madrid" date -R)
 
-          echo '<?xml version="1.0" encoding="UTF-8"?>' > docs/noticias-diarias.xml.txt
-          echo '<rss version="2.0">' >> docs/noticias-diarias.xml.txt
-          echo '  <channel>' >> docs/noticias-diarias.xml.txt
-          echo '    <title>Noticias Diarias - España</title>' >> docs/noticias-diarias.xml.txt
-          echo '    <link>https://edekmm.github.io/Noticias-diarias/docs/noticias-diarias.xml.txt</link>' >> docs/noticias-diarias.xml.txt
-          echo '    <description>Noticias destacadas en España, Madrid, economía mundial, economía española, construcción y Grupo ACS / Dragados.</description>' >> docs/noticias-diarias.xml.txt
-          echo '    <language>es-es</language>' >> docs/noticias-diarias.xml.txt
-          echo '    <item>' >> docs/noticias-diarias.xml.txt
-          echo "      <title>Noticias del día ${FECHA}</title>" >> docs/noticias-diarias.xml.txt
-          echo '      <description><
+          {
+            echo '<?xml version="1.0" encoding="UTF-8"?>'
+            echo '<rss version="2.0">'
+            echo '  <channel>'
+            echo '    <title>Noticias Diarias - Espana</title>'
+            echo '    <link>https://edekmm.github.io/Noticias-diarias/docs/noticias-diarias.xml.txt</link>'
+            echo '    <description>Noticias destacadas en Espana, Madrid, economia mundial, economia espanola, construccion y Grupo ACS / Dragados.</description>'
+            echo '    <language>es-es</language>'
+            echo '    <item>'
+            echo "      <title>Noticias del dia ${FECHA}</title>"
+            echo '      <description><![CDATA['
+            echo "      Noticias en Espana: Titular nacional del dia ${FECHA}"
+            echo "      Noticias en Madrid: Titular Madrid del dia ${FECHA}"
+            echo "      Economia mundial: Titular internacional del dia ${FECHA}"
+            echo "      Economia en Espana: Titular economico del dia ${FECHA}"
+            echo "      Sector de la construccion: Titular del sector del dia ${FECHA}"
+            echo "      Grupo ACS / Dragados: Titular corporativo del dia ${FECHA}"
+            echo '      ]]></description>'
+            echo "      <pubDate>${PUBDATE}</pubDate>"
+            echo '    </item>'
+            echo '  </channel>'
+            echo '</rss>'
+          } > docs/noticias-diarias.xml.txt
+
+      - name: Commit y push si hay cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/noticias-diarias.xml.txt
+          if git diff --staged --quiet; then
+            echo "Sin cambios que subir."
+          else
+            git commit -m "Actualizacion automatica del feed ${FECHA}"
+            git push
+          fi
