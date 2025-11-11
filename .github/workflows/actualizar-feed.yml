@@ -1,96 +1,46 @@
-import feedparser, datetime, html
-from googletrans import Translator
+name: Actualizar noticias diarias
 
-translator = Translator()
+# Se ejecuta todos los días a las 07:00 UTC (08:00 hora Madrid)
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
 
-def traducir(texto):
-    """Traduce al español si el texto está en inglés u otro idioma."""
-    try:
-        if not texto:
-            return ""
-        trad = translator.translate(texto, dest="es")
-        return html.escape(trad.text)
-    except Exception:
-        return html.escape(texto)
+permissions:
+  contents: write
 
-def obtener_titulares(fuentes, max_items=3):
-    """Obtiene titulares, resúmenes e imágenes de varias fuentes RSS."""
-    noticias = []
-    for url in fuentes:
-        try:
-            feed = feedparser.parse(url)
-            for entry in feed.entries[:max_items]:
-                titulo = traducir(entry.title)
-                enlace = entry.link
-                fuente = entry.link.split("/")[2]
-                resumen = traducir(entry.get("summary", ""))
+jobs:
+  actualizar-feed:
+    runs-on: ubuntu-latest
 
-                # Buscar imagen
-                imagen = ""
-                if "media_content" in entry and entry.media_content:
-                    imagen = entry.media_content[0].get("url", "")
-                elif "media_thumbnail" in entry and entry.media_thumbnail:
-                    imagen = entry.media_thumbnail[0].get("url", "")
-                elif "links" in entry:
-                    for l in entry.links:
-                        if l.get("type", "").startswith("image/"):
-                            imagen = l.get("href", "")
-                            break
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
-                # Limitar resumen
-                if len(resumen) > 250:
-                    resumen = resumen[:247] + "..."
+      - name: Instalar dependencias Python
+        run: |
+          pip install feedparser googletrans==4.0.0-rc1
 
-                bloque = f"<a href='{enlace}'><b>{titulo}</b></a> ({fuente})<br><small>{resumen}</small>"
-                if imagen:
-                    bloque = f"<img src='{imagen}' width='120' style='border-radius:8px; margin-top:4px;'><br>" + bloque
-                noticias.append(bloque)
-        except Exception as e:
-            noticias.append(f"- Error al obtener noticias de {url}: {e}")
-    return "<br><br>".join(noticias) if noticias else "- Sin noticias disponibles"
+      - name: Ejecutar script Python
+        run: |
+          python scripts/generar_noticias.py
 
-bloques = {
-    "🇪🇸 <b>Noticias en España:</b>": obtener_titulares([
-        "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
-        "https://e00-expansion.uecdn.es/rss/portada.xml",
-        "https://www.abc.es/rss/feeds/abc_espana.xml",
-    ]),
-    "🏙️ <b>Noticias en Madrid:</b>": obtener_titulares([
-        "https://www.20minutos.es/rss/madrid/",
-        "https://www.telemadrid.es/rss.xml",
-    ]),
-    "🌍 <b>Economía mundial:</b>": obtener_titulares([
-        "https://feeds.reuters.com/reuters/businessNews",
-        "https://www.bbc.com/mundo/temas/economia/index.xml",
-    ]),
-    "💶 <b>Economía en España:</b>": obtener_titulares([
-        "https://e00-expansion.uecdn.es/rss/economia.xml",
-        "https://www.eleconomista.es/rss/rss-economia.php",
-    ]),
-    "🏗️ <b>Sector de la construcción:</b>": obtener_titulares([
-        "https://www.construible.es/feed",
-        "https://www.interempresas.net/Construccion/Articulos/feed",
-    ]),
-    "🏢 <b>Grupo ACS / Dragados S.A.:</b>": obtener_titulares([
-        "https://e00-expansion.uecdn.es/rss/empresas.xml",
-        "https://www.lainformacion.com/rss/empresas/",
-    ]),
-}
+      - name: Comprobar cambios
+        run: |
+          echo "---- Archivos en docs ----"
+          ls -la docs
+          git status --porcelain
 
-fecha_hoy = datetime.date.today().strftime("%d/%m/%Y")
-pubdate = datetime.datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0100")
-
-with open("docs/noticias-diarias.xml.txt", "w", encoding="utf-8") as f:
-    f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-    f.write('<rss version="2.0">\n  <channel>\n')
-    f.write('    <title>Noticias Diarias - España</title>\n')
-    f.write('    <link>https://edekmm.github.io/Noticias-diarias/docs/noticias-diarias.xml.txt</link>\n')
-    f.write('    <description>Noticias destacadas en España, Madrid, economía mundial, economía española, construcción y Grupo ACS / Dragados.</description>\n')
-    f.write('    <language>es-es</language>\n\n')
-    f.write(f'    <item>\n      <title>Noticias del día {fecha_hoy}</title>\n')
-    f.write('      <description><![CDATA[\n')
-    for bloque, contenido in bloques.items():
-        f.write(f"{bloque}<br>{contenido}<br><br>\n")
-    f.write('      ]]></description>\n')
-    f.write(f'      <pubDate>{pubdate}</pubDate>\n')
-    f.write('    </item>\n  </channel>\n</rss>')
+      - name: Commit y push (si hay cambios)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/noticias-diarias.xml.txt
+          if git diff --staged --quiet; then
+            echo "No hay cambios para commitear."
+          else
+            git commit -m "Actualización automática del feed"
+            git push
+          fi
