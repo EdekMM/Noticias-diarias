@@ -1,81 +1,62 @@
-import feedparser, datetime, html
-from googletrans import Translator
+import feedparser
+from datetime import datetime
+import pytz
+import html
 
-translator = Translator()
-
-def traducir(texto):
-    """Traduce al español si el texto está en inglés u otro idioma."""
-    try:
-        if not texto:
-            return ""
-        trad = translator.translate(texto, dest="es")
-        return html.escape(trad.text)
-    except Exception:
-        return html.escape(texto)
-
-def obtener_titulares(fuentes, max_items=3):
-    """Obtiene titulares y resúmenes traducidos de varias fuentes RSS."""
-    noticias = []
-    for url in fuentes:
-        try:
-            feed = feedparser.parse(url)
-            for entry in feed.entries[:max_items]:
-                titulo = traducir(entry.title)
-                enlace = entry.link
-                fuente = entry.link.split("/")[2]
-                resumen = traducir(entry.get("summary", ""))
-                if len(resumen) > 250:
-                    resumen = resumen[:247] + "..."
-                noticias.append(
-                    f"- <a href='{enlace}'>{titulo}</a> ({fuente})"
-                    f"<br><small>{resumen}</small>"
-                )
-        except Exception as e:
-            noticias.append(f"- Error al obtener noticias de {url}: {e}")
-    return "<br><br>".join(noticias) if noticias else "- Sin noticias disponibles"
-
-bloques = {
-    "🇪🇸 <b>Noticias en España:</b>": obtener_titulares([
-        "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
-        "https://e00-expansion.uecdn.es/rss/portada.xml",
-        "https://www.abc.es/rss/feeds/abc_espana.xml",
-    ]),
-    "🏙️ <b>Noticias en Madrid:</b>": obtener_titulares([
-        "https://www.20minutos.es/rss/madrid/",
-        "https://www.telemadrid.es/rss.xml",
-    ]),
-    "🌍 <b>Economía mundial:</b>": obtener_titulares([
-        "https://feeds.reuters.com/reuters/businessNews",
-        "https://www.bbc.com/mundo/temas/economia/index.xml",
-    ]),
-    "💶 <b>Economía en España:</b>": obtener_titulares([
-        "https://e00-expansion.uecdn.es/rss/economia.xml",
-        "https://www.eleconomista.es/rss/rss-economia.php",
-    ]),
-    "🏗️ <b>Sector de la construcción:</b>": obtener_titulares([
-        "https://www.construible.es/feed",
-        "https://www.interempresas.net/Construccion/Articulos/feed",
-    ]),
-    "🏢 <b>Grupo ACS / Dragados S.A.:</b>": obtener_titulares([
-        "https://e00-expansion.uecdn.es/rss/empresas.xml",
-        "https://www.lainformacion.com/rss/empresas/",
-    ]),
+# Categorías y búsquedas en Google News
+CATEGORIES = {
+    "España": "https://news.google.com/rss?hl=es&gl=ES&ceid=ES:es",
+    "Madrid": "https://news.google.com/rss/search?q=Madrid&hl=es&gl=ES&ceid=ES:es",
+    "Economía Mundial": "https://news.google.com/rss/search?q=econom%C3%ADa+mundial&hl=es&gl=ES&ceid=ES:es",
+    "Economía España": "https://news.google.com/rss/search?q=econom%C3%ADa+Espa%C3%B1a&hl=es&gl=ES&ceid=ES:es",
+    "Construcción": "https://news.google.com/rss/search?q=sector+construcci%C3%B3n&hl=es&gl=ES&ceid=ES:es",
+    "Grupo ACS / Dragados": "https://news.google.com/rss/search?q=grupo+ACS+OR+Dragados&hl=es&gl=ES&ceid=ES:es"
 }
 
-fecha_hoy = datetime.date.today().strftime("%d/%m/%Y")
-pubdate = datetime.datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0100")
+# Fecha y hora local de Madrid
+tz = pytz.timezone("Europe/Madrid")
+fecha_hoy = datetime.now(tz)
+fecha_str = fecha_hoy.strftime("%d/%m/%Y")
+pub_date = fecha_hoy.strftime("%a, %d %b %Y %H:%M:%S %z")
 
-with open("docs/noticias-diarias.xml.txt", "w", encoding="utf-8") as f:
-    f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-    f.write('<rss version="2.0">\n  <channel>\n')
-    f.write('    <title>Noticias Diarias - España</title>\n')
-    f.write('    <link>https://edekmm.github.io/Noticias-diarias/docs/noticias-diarias.xml.txt</link>\n')
-    f.write('    <description>Noticias destacadas en España, Madrid, economía mundial, economía española, construcción y Grupo ACS / Dragados.</description>\n')
-    f.write('    <language>es-es</language>\n\n')
-    f.write(f'    <item>\n      <title>Noticias del día {fecha_hoy}</title>\n')
-    f.write('      <description><![CDATA[\n')
-    for bloque, contenido in bloques.items():
-        f.write(f"{bloque}<br>{contenido}<br><br>\n")
-    f.write('      ]]></description>\n')
-    f.write(f'      <pubDate>{pubdate}</pubDate>\n')
-    f.write('    </item>\n  </channel>\n</rss>')
+# Cabecera XML
+rss = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Noticias Diarias - España</title>
+    <link>https://edekmm.github.io/Noticias-diarias/docs/noticias-diarias.xml</link>
+    <description>Noticias destacadas en España, Madrid, economía mundial, economía española, construcción y Grupo ACS / Dragados.</description>
+    <language>es-es</language>
+    <item>
+      <title>🗓️ Noticias del día {fecha_str}</title>
+      <description><![CDATA[
+"""
+
+# Recorrer todas las categorías
+for categoria, url in CATEGORIES.items():
+    feed = feedparser.parse(url)
+    rss += f"<h3>🗞️ <u>{categoria}</u></h3>\n<ul>\n"
+
+    if not feed.entries:
+        rss += f"<li>No se han encontrado noticias recientes para {categoria}.</li>\n"
+    else:
+        for entry in feed.entries[:3]:
+            titulo = html.escape(entry.title)
+            link = entry.link
+            resumen = html.escape(entry.get('summary', '')[:250]).replace('\n', ' ').strip()
+            rss += f"<li><a href='{link}'><b>{titulo}</b></a><br>{resumen}</li><br>\n"
+
+    rss += "</ul>\n<hr style='border:0;border-top:1px solid #ccc;margin:10px 0;'>\n"
+
+# Cierre del XML
+rss += f"""]]></description>
+      <pubDate>{pub_date}</pubDate>
+    </item>
+  </channel>
+</rss>"""
+
+# Guardar archivo final
+with open("docs/noticias-diarias.xml", "w", encoding="utf-8") as f:
+    f.write(rss)
+
+print("✅ Feed actualizado correctamente con todas las categorías.")
