@@ -1,48 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Noticias Diarias - España</title>
+    <title>Noticias Diarias - Espana</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/noticias-diarias.xml.txt</link>
-    <description>Noticias destacadas en España, Madrid, economía mundial, economía española, construcción y Grupo ACS / Dragados.</description>
+    <description>Noticias destacadas en Espana, Madrid, economia mundial, economia espanola, construccion y Grupo ACS / Dragados.</description>
     <language>es-es</language>
-
     <item>
-      <title>Noticias del día 11 de noviembre de 2025</title>
+      <title>Noticias del dia 11/11/2025</title>
       <description><![CDATA[
-      🇪🇸 <b>Noticias en España:</b><br>
-      - Titular nacional 1<br>
-      - Titular nacional 2<br><br>
-
-      🏙️ <b>Noticias en Madrid:</b><br>
-      - Titular Madrid 1<br>
-      - Titular Madrid 2<br><br>
-
-      🌍 <b>Economía mundial:</b><br>
-      - Titular global 1<br>
-      - Titular global 2<br><br>
-
-      💶 <b>Economía en España:</b><br>
-      - Titular económico 1<br>
-      - Titular económico 2<br><br>
-
-      🏗️ <b>Sector de la construcción:</b><br>
-      - Titular construcción 1<br>
-      - Titular construcción 2<br><br>
-
-      🏢 <b>Grupo ACS / Dragados S.A.:</b><br>
-      - Titular empresa 1<br>
-      - Titular empresa 2<br><br>
-
-      <!-- 🧱 BLOQUE OPCIONAL: Añade aquí tus futuras secciones
-      Ejemplo:
-      📊 <b>Noticias sobre Energías Renovables:</b><br>
-      - Titular 1<br>
-      - Titular 2<br><br>
-      -->
+      Noticias en Espana: Titular nacional del dia 11/11/2025
+      Noticias en Madrid: Titular Madrid del dia 11/11/2025
+      Economia mundial: Titular internacional del dia 11/11/2025
+      Economia en Espana: Titular economico del dia 11/11/2025
+      Sector de la construccion: Titular del sector del dia 11/11/2025
+      Grupo ACS / Dragados: Titular corporativo del dia 11/11/2025
       ]]></description>
-      <pubDate>Tue, 11 Nov 2025 08:00:00 +0100</pubDate>
+      <pubDate>Tue, 11 Nov 2025 22:42:08 +0100</pubDate>
     </item>
   </channel>
 </rss>
-
-
