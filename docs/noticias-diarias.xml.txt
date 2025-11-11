@@ -3,24 +3,38 @@
   <channel>
     <title>Noticias Diarias - España</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/noticias-diarias.xml.txt</link>
-    <description>Noticias destacadas en España, Madrid, economía mundial, economía española y construcción.</description>
+    <description>Noticias destacadas en España, Madrid, economía mundial, economía española, construcción y grupo ACS.</description>
     <language>es-es</language>
 
     <item>
-      <title>Noticias del día 9 de noviembre de 2025</title>
+      <title>Noticias del día 11 de noviembre de 2025</title>
       <description><![CDATA[
       🇪🇸 <b>Noticias en España:</b><br>
-      - Ejemplo de titular nacional.<br><br>
+      - [Titular nacional 1]<br>
+      - [Titular nacional 2]<br><br>
+
       🏙️ <b>Noticias en Madrid:</b><br>
-      - Ejemplo local.<br><br>
+      - [Titular Madrid 1]<br>
+      - [Titular Madrid 2]<br><br>
+
       🌍 <b>Economía mundial:</b><br>
-      - Ejemplo internacional.<br><br>
+      - [Titular internacional 1]<br>
+      - [Titular internacional 2]<br><br>
+
       💶 <b>Economía en España:</b><br>
-      - Ejemplo económico.<br><br>
+      - [Titular economía España 1]<br>
+      - [Titular economía España 2]<br><br>
+
       🏗️ <b>Sector de la construcción:</b><br>
-      - Ejemplo del sector.
+      - [Titular construcción 1]<br>
+      - [Titular construcción 2]<br><br>
+
+      🏢 <b>Grupo ACS / Dragados S.A.:</b><br>
+      - [Titular ACS 1]<br>
+      - [Titular ACS 2]
       ]]></description>
-      <pubDate>Sun, 09 Nov 2025 08:00:00 +0100</pubDate>
+      <pubDate>Tue, 11 Nov 2025 08:00:00 +0100</pubDate>
     </item>
   </channel>
 </rss>
+
