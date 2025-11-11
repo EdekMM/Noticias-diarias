@@ -1,17 +1,30 @@
 import feedparser, datetime, html
+from googletrans import Translator
+
+translator = Translator()
+
+def traducir(texto):
+    """Traduce al español si el texto está en inglés u otro idioma."""
+    try:
+        if not texto:
+            return ""
+        trad = translator.translate(texto, dest="es")
+        return html.escape(trad.text)
+    except Exception:
+        return html.escape(texto)
 
 def obtener_titulares(fuentes, max_items=3):
-    """Combina titulares y descripciones de varias fuentes RSS."""
+    """Obtiene titulares y resúmenes traducidos de varias fuentes RSS."""
     noticias = []
     for url in fuentes:
         try:
             feed = feedparser.parse(url)
             for entry in feed.entries[:max_items]:
-                titulo = html.escape(entry.title)
+                titulo = traducir(entry.title)
                 enlace = entry.link
                 fuente = entry.link.split("/")[2]
-                resumen = html.escape(entry.get("summary", ""))
-                if len(resumen) > 250:  # Limitar longitud
+                resumen = traducir(entry.get("summary", ""))
+                if len(resumen) > 250:
                     resumen = resumen[:247] + "..."
                 noticias.append(
                     f"- <a href='{enlace}'>{titulo}</a> ({fuente})"
