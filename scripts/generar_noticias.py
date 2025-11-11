@@ -1,24 +1,47 @@
-import feedparser, datetime
+import feedparser, datetime, html
 
-def obtener_titulares(url, max_items=2):
-    try:
-        feed = feedparser.parse(url)
-        noticias = []
-        for entry in feed.entries[:max_items]:
-            titulo = entry.title.replace("&", "y")
-            fuente = entry.link.split("/")[2]
-            noticias.append(f"- {titulo} ({fuente})")
-        return "<br>".join(noticias) if noticias else "- Sin noticias disponibles"
-    except Exception as e:
-        return f"- Error al obtener noticias ({e})"
+def obtener_titulares(fuentes, max_items=2):
+    """Combina titulares y descripciones de varias fuentes RSS."""
+    noticias = []
+    for url in fuentes:
+        try:
+            feed = feedparser.parse(url)
+            for entry in feed.entries[:max_items]:
+                titulo = html.escape(entry.title)
+                fuente = entry.link.split("/")[2]
+                resumen = html.escape(entry.get("summary", "")[:200])  # extracto breve
+                enlace = entry.link
+                noticias.append(f"- <a href='{enlace}'>{titulo}</a> ({fuente})<br><small>{resumen}</small>")
+        except Exception as e:
+            noticias.append(f"- Error al obtener noticias de {url}: {e}")
+    return "<br><br>".join(noticias) if noticias else "- Sin noticias disponibles"
 
 bloques = {
-    "🇪🇸 <b>Noticias en España:</b>": obtener_titulares("https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada"),
-    "🏙️ <b>Noticias en Madrid:</b>": obtener_titulares("https://www.20minutos.es/rss/madrid/"),
-    "🌍 <b>Economía mundial:</b>": obtener_titulares("https://feeds.reuters.com/reuters/businessNews"),
-    "💶 <b>Economía en España:</b>": obtener_titulares("https://e00-expansion.uecdn.es/rss/economia.xml"),
-    "🏗️ <b>Sector de la construcción:</b>": obtener_titulares("https://www.construible.es/feed"),
-    "🏢 <b>Grupo ACS / Dragados S.A.:</b>": obtener_titulares("https://e00-expansion.uecdn.es/rss/empresas.xml"),
+    "🇪🇸 <b>Noticias en España:</b>": obtener_titulares([
+        "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
+        "https://e00-expansion.uecdn.es/rss/portada.xml",
+        "https://www.abc.es/rss/feeds/abc_espana.xml",
+    ]),
+    "🏙️ <b>Noticias en Madrid:</b>": obtener_titulares([
+        "https://www.20minutos.es/rss/madrid/",
+        "https://www.telemadrid.es/rss.xml",
+    ]),
+    "🌍 <b>Economía mundial:</b>": obtener_titulares([
+        "https://feeds.reuters.com/reuters/businessNews",
+        "https://www.bbc.com/mundo/temas/economia/index.xml",
+    ]),
+    "💶 <b>Economía en España:</b>": obtener_titulares([
+        "https://e00-expansion.uecdn.es/rss/economia.xml",
+        "https://www.eleconomista.es/rss/rss-economia.php",
+    ]),
+    "🏗️ <b>Sector de la construcción:</b>": obtener_titulares([
+        "https://www.construible.es/feed",
+        "https://www.interempresas.net/Construccion/Articulos/feed",
+    ]),
+    "🏢 <b>Grupo ACS / Dragados S.A.:</b>": obtener_titulares([
+        "https://e00-expansion.uecdn.es/rss/empresas.xml",
+        "https://www.lainformacion.com/rss/empresas/",
+    ]),
 }
 
 fecha_hoy = datetime.date.today().strftime("%d/%m/%Y")
