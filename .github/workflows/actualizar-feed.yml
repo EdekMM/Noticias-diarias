@@ -25,10 +25,10 @@ jobs:
           pip install feedparser requests
 
       - name: Generar archivo XML actualizado con noticias reales
+        shell: bash
         run: |
           mkdir -p docs
-
-          python3 - <<'PYCODE'
+          python3 <<'PYCODE'
 import feedparser, datetime
 
 def obtener_titulares(url, max_items=2):
@@ -53,19 +53,19 @@ fecha_hoy = datetime.date.today().strftime("%d/%m/%Y")
 pubdate = datetime.datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0100")
 
 with open("docs/noticias-diarias.xml.txt", "w", encoding="utf-8") as f:
-    f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-    f.write('<rss version="2.0">\n  <channel>\n')
-    f.write('    <title>Noticias Diarias - España</title>\n')
-    f.write('    <link>https://edekmm.github.io/Noticias-diarias/docs/noticias-diarias.xml.txt</link>\n')
-    f.write('    <description>Noticias destacadas en España, Madrid, economía mundial, economía española, construcción y Grupo ACS / Dragados.</description>\n')
-    f.write('    <language>es-es</language>\n\n')
-    f.write(f'    <item>\n      <title>Noticias del día {fecha_hoy}</title>\n')
-    f.write('      <description><![CDATA[\n')
+    f.write('<?xml version="1.0" encoding="UTF-8"?>\\n')
+    f.write('<rss version="2.0">\\n  <channel>\\n')
+    f.write('    <title>Noticias Diarias - España</title>\\n')
+    f.write('    <link>https://edekmm.github.io/Noticias-diarias/docs/noticias-diarias.xml.txt</link>\\n')
+    f.write('    <description>Noticias destacadas en España, Madrid, economía mundial, economía española, construcción y Grupo ACS / Dragados.</description>\\n')
+    f.write('    <language>es-es</language>\\n\\n')
+    f.write(f'    <item>\\n      <title>Noticias del día {fecha_hoy}</title>\\n')
+    f.write('      <description><![CDATA[\\n')
     for bloque, contenido in bloques.items():
-        f.write(f"{bloque}<br>{contenido}<br><br>\n")
-    f.write('      ]]></description>\n')
-    f.write(f'      <pubDate>{pubdate}</pubDate>\n')
-    f.write('    </item>\n  </channel>\n</rss>')
+        f.write(f"{bloque}<br>{contenido}<br><br>\\n")
+    f.write('      ]]></description>\\n')
+    f.write(f'      <pubDate>{pubdate}</pubDate>\\n')
+    f.write('    </item>\\n  </channel>\\n</rss>')
 PYCODE
 
       - name: Commit & push (si hay cambios)
@@ -73,5 +73,9 @@ PYCODE
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/noticias-diarias.xml.txt
-          git diff --staged --quiet || git commit -m "Actualización automática del feed con noticias reales"
-          git push
+          if git diff --staged --quiet; then
+            echo "No hay cambios para commitear."
+          else
+            git commit -m "Actualización automática del feed con noticias reales"
+            git push
+          fi
