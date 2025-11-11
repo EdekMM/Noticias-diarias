@@ -1,9 +1,13 @@
 name: Actualizar noticias diarias
 
+# Se ejecuta por cron (UTC). 07:00 UTC ≈ 08:00 CET (Madrid) en horario estándar.
 on:
   schedule:
-    - cron: "0 7 * * *"  # Se ejecuta cada día a las 08:00 hora de Madrid (UTC+1)
-  workflow_dispatch:      # Permite ejecutarlo manualmente también
+    - cron: "0 7 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
 
 jobs:
   actualizar-feed:
@@ -12,16 +16,16 @@ jobs:
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
-      - name: Configurar zona horaria
-        run: sudo timedatectl set-timezone Europe/Madrid
-
-      - name: Generar archivo XML actualizado
+      - name: Generar archivo XML actualizado (hora Madrid)
         run: |
-          FECHA=$(date +"%d/%m/%Y")
-          PUBDATE=$(date -R)
+          mkdir -p docs
+          FECHA=$(TZ="Europe/Madrid" date +"%d/%m/%Y")
+          PUBDATE=$(TZ="Europe/Madrid" date -R)
 
-          cat > docs/noticias-diarias.xml.txt <<EOF
+          cat > docs/noticias-diarias.xml.txt <<'EOF'
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
@@ -31,36 +35,47 @@ jobs:
     <language>es-es</language>
 
     <item>
-      <title>Noticias del día \$FECHA</title>
+      <title>Noticias del día ${FECHA}</title>
       <description><![CDATA[
       🇪🇸 <b>Noticias en España:</b><br>
-      - Titular nacional del día \$FECHA<br><br>
+      - Titular nacional del día ${FECHA}<br><br>
 
       🏙️ <b>Noticias en Madrid:</b><br>
-      - Titular Madrid del día \$FECHA<br><br>
+      - Titular Madrid del día ${FECHA}<br><br>
 
       🌍 <b>Economía mundial:</b><br>
-      - Titular internacional del día \$FECHA<br><br>
+      - Titular internacional del día ${FECHA}<br><br>
 
       💶 <b>Economía en España:</b><br>
-      - Titular económico del día \$FECHA<br><br>
+      - Titular económico del día ${FECHA}<br><br>
 
       🏗️ <b>Sector de la construcción:</b><br>
-      - Titular del sector del día \$FECHA<br><br>
+      - Titular del sector del día ${FECHA}<br><br>
 
       🏢 <b>Grupo ACS / Dragados S.A.:</b><br>
-      - Titular corporativo del día \$FECHA<br><br>
+      - Titular corporativo del día ${FECHA}<br><br>
       ]]></description>
-      <pubDate>\$PUBDATE</pubDate>
+      <pubDate>${PUBDATE}</pubDate>
     </item>
   </channel>
 </rss>
 EOF
 
-      - name: Subir cambios al repositorio
+      - name: Comprobar cambios
+        run: |
+          git status --porcelain
+          echo "---- listado de archivos en docs ----"
+          ls -la docs
+
+      - name: Commit & push (si hay cambios)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/noticias-diarias.xml.txt
-          git commit -m "Actualización automática del feed \$FECHA" || echo "Sin cambios"
-          git push
+          git diff --staged --name-only || true
+          if git diff --staged --quiet; then
+            echo "No hay cambios para commitar."
+          else
+            git commit -m "Actualización automática del feed ${FECHA}"
+            git push
+          fi
