@@ -2,7 +2,7 @@ name: Actualizar feeds diarios
 
 on:
   schedule:
-    - cron: "0 7 * * *"  # 08:00 hora Madrid (07:00 UTC)
+    - cron: "0 7 * * *"  # 07:00 UTC = 08:00 hora Madrid
   workflow_dispatch:
 
 permissions:
@@ -15,60 +15,182 @@ jobs:
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
-      - name: Generar archivos RSS
+      - name: Generar archivos RSS en docs
         run: |
           mkdir -p docs
           FECHA=$(TZ="Europe/Madrid" date +"%d/%m/%Y")
           PUBDATE=$(TZ="Europe/Madrid" date -R)
 
-          generar_feed () {
-            NOMBRE=$1
-            TITULO=$2
-            DESCRIPCION=$3
-            cat > docs/${NOMBRE}.xml.txt <<EOF
+          echo "Generando feeds RSS para la fecha $FECHA"
+
+          cat > docs/espana.xml.txt <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>${TITULO}</title>
-    <link>https://edekmm.github.io/Noticias-diarias/docs/${NOMBRE}.xml.txt</link>
-    <description>${DESCRIPCION}</description>
+    <title>Noticias de España</title>
+    <link>https://edekmm.github.io/Noticias-diarias/docs/espana.xml.txt</link>
+    <description>Noticias nacionales destacadas - ${FECHA}</description>
     <language>es-es</language>
 
     <item>
-      <title>${TITULO} - ${FECHA}</title>
+      <title>Noticias de España - ${FECHA}</title>
       <description><![CDATA[
-      <p><b>${TITULO}</b></p>
+      <p><b>Noticias de España</b></p>
       <ul>
-        <li>Noticia 1 de ${TITULO}, publicada el ${FECHA}.</li>
-        <li>Noticia 2 de ${TITULO}, publicada el ${FECHA}.</li>
-        <li>Noticia 3 de ${TITULO}, publicada el ${FECHA}.</li>
+        <li>Noticia 1 de España, publicada el ${FECHA}.</li>
+        <li>Noticia 2 de España, publicada el ${FECHA}.</li>
+        <li>Noticia 3 de España, publicada el ${FECHA}.</li>
       </ul>
-      <p>Resumen general: resumen de las principales noticias del bloque ${TITULO}.</p>
+      <p>Resumen general: resumen de las principales noticias del bloque España.</p>
       ]]></description>
       <pubDate>${PUBDATE}</pubDate>
     </item>
   </channel>
 </rss>
 EOF
-          }
 
-          generar_feed "espana" "Noticias de España" "Noticias nacionales destacadas del día ${FECHA}"
-          generar_feed "madrid" "Noticias de Madrid" "Noticias locales de la Comunidad de Madrid del día ${FECHA}"
-          generar_feed "economia_mundial" "Economía Mundial" "Noticias internacionales de economía del día ${FECHA}"
-          generar_feed "economia_espana" "Economía en España" "Principales titulares económicos nacionales del día ${FECHA}"
-          generar_feed "construccion" "Sector de la Construcción" "Noticias y tendencias del sector de la construcción del día ${FECHA}"
-          generar_feed "acs_dragados" "Grupo ACS / Dragados" "Noticias del Grupo ACS y sus filiales del día ${FECHA}"
+          cat > docs/madrid.xml.txt <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Noticias de Madrid</title>
+    <link>https://edekmm.github.io/Noticias-diarias/docs/madrid.xml.txt</link>
+    <description>Noticias locales de Madrid - ${FECHA}</description>
+    <language>es-es</language>
 
-      - name: Hacer commit y push
+    <item>
+      <title>Noticias de Madrid - ${FECHA}</title>
+      <description><![CDATA[
+      <p><b>Noticias de Madrid</b></p>
+      <ul>
+        <li>Noticia 1 de Madrid, publicada el ${FECHA}.</li>
+        <li>Noticia 2 de Madrid, publicada el ${FECHA}.</li>
+        <li>Noticia 3 de Madrid, publicada el ${FECHA}.</li>
+      </ul>
+      <p>Resumen local: principales novedades en la Comunidad de Madrid.</p>
+      ]]></description>
+      <pubDate>${PUBDATE}</pubDate>
+    </item>
+  </channel>
+</rss>
+EOF
+
+          cat > docs/economia_mundial.xml.txt <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Economía Mundial</title>
+    <link>https://edekmm.github.io/Noticias-diarias/docs/economia_mundial.xml.txt</link>
+    <description>Titulares y resúmenes de economía global - ${FECHA}</description>
+    <language>es-es</language>
+
+    <item>
+      <title>Economía Mundial - ${FECHA}</title>
+      <description><![CDATA[
+      <p><b>Economía Mundial</b></p>
+      <ul>
+        <li>Noticia 1 economía mundial, publicada el ${FECHA}.</li>
+        <li>Noticia 2 economía mundial, publicada el ${FECHA}.</li>
+        <li>Noticia 3 economía mundial, publicada el ${FECHA}.</li>
+      </ul>
+      <p>Resumen internacional: tendencias económicas globales.</p>
+      ]]></description>
+      <pubDate>${PUBDATE}</pubDate>
+    </item>
+  </channel>
+</rss>
+EOF
+
+          cat > docs/economia_espana.xml.txt <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Economía en España</title>
+    <link>https://edekmm.github.io/Noticias-diarias/docs/economia_espana.xml.txt</link>
+    <description>Titulares económicos de España - ${FECHA}</description>
+    <language>es-es</language>
+
+    <item>
+      <title>Economía en España - ${FECHA}</title>
+      <description><![CDATA[
+      <p><b>Economía en España</b></p>
+      <ul>
+        <li>Noticia 1 economía España, publicada el ${FECHA}.</li>
+        <li>Noticia 2 economía España, publicada el ${FECHA}.</li>
+        <li>Noticia 3 economía España, publicada el ${FECHA}.</li>
+      </ul>
+      <p>Resumen: situación y mercados españoles.</p>
+      ]]></description>
+      <pubDate>${PUBDATE}</pubDate>
+    </item>
+  </channel>
+</rss>
+EOF
+
+          cat > docs/construccion.xml.txt <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Sector de la Construcción</title>
+    <link>https://edekmm.github.io/Noticias-diarias/docs/construccion.xml.txt</link>
+    <description>Noticias y tendencias del sector de la construcción - ${FECHA}</description>
+    <language>es-es</language>
+
+    <item>
+      <title>Construcción - ${FECHA}</title>
+      <description><![CDATA[
+      <p><b>Sector de la Construcción</b></p>
+      <ul>
+        <li>Noticia 1 construcción, publicada el ${FECHA}.</li>
+        <li>Noticia 2 construcción, publicada el ${FECHA}.</li>
+        <li>Noticia 3 construcción, publicada el ${FECHA}.</li>
+      </ul>
+      <p>Resumen sectorial: obras públicas e inversión.</p>
+      ]]></description>
+      <pubDate>${PUBDATE}</pubDate>
+    </item>
+  </channel>
+</rss>
+EOF
+
+          cat > docs/acs_dragados.xml.txt <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Grupo ACS / Dragados</title>
+    <link>https://edekmm.github.io/Noticias-diarias/docs/acs_dragados.xml.txt</link>
+    <description>Noticias corporativas de Grupo ACS y Dragados - ${FECHA}</description>
+    <language>es-es</language>
+
+    <item>
+      <title>Grupo ACS / Dragados - ${FECHA}</title>
+      <description><![CDATA[
+      <p><b>Grupo ACS / Dragados</b></p>
+      <ul>
+        <li>Noticia 1 ACS, publicada el ${FECHA}.</li>
+        <li>Noticia 2 ACS, publicada el ${FECHA}.</li>
+        <li>Noticia 3 ACS, publicada el ${FECHA}.</li>
+      </ul>
+      <p>Resumen corporativo: contratos y resultados.</p>
+      ]]></description>
+      <pubDate>${PUBDATE}</pubDate>
+    </item>
+  </channel>
+</rss>
+EOF
+
+      - name: Commit & push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/*.xml.txt
-          if git diff --staged --quiet; then
+          git add docs/*.xml.txt || true
+          if git diff --cached --quiet; then
             echo "No hay cambios para commitear."
           else
             git commit -m "Actualización automática de feeds del día ${FECHA}"
-            git pull --rebase origin main
+            git pull --rebase origin main || true
             git push origin main
           fi
