@@ -1,43 +1,74 @@
-name: Actualizar noticias diarias
+name: Actualizar feeds diarios
 
 on:
   schedule:
-    - cron: "0 7 * * *" # Ejecuta todos los días a las 08:00 hora Madrid
-  workflow_dispatch: {}
+    - cron: "0 7 * * *"  # 08:00 hora Madrid (07:00 UTC)
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  actualizar-feed:
+  generar-feeds:
     runs-on: ubuntu-latest
 
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
 
-      - name: Instalar dependencias
+      - name: Generar archivos RSS
         run: |
-          pip install feedparser pytz
+          mkdir -p docs
+          FECHA=$(TZ="Europe/Madrid" date +"%d/%m/%Y")
+          PUBDATE=$(TZ="Europe/Madrid" date -R)
 
-      - name: Generar feeds XML
-        run: python scripts/generar_feed.py
+          generar_feed () {
+            NOMBRE=$1
+            TITULO=$2
+            DESCRIPCION=$3
+            cat > docs/${NOMBRE}.xml.txt <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>${TITULO}</title>
+    <link>https://edekmm.github.io/Noticias-diarias/docs/${NOMBRE}.xml.txt</link>
+    <description>${DESCRIPCION}</description>
+    <language>es-es</language>
 
-      - name: Mostrar archivos generados
-        run: ls -la docs
+    <item>
+      <title>${TITULO} - ${FECHA}</title>
+      <description><![CDATA[
+      <p><b>${TITULO}</b></p>
+      <ul>
+        <li>Noticia 1 de ${TITULO}, publicada el ${FECHA}.</li>
+        <li>Noticia 2 de ${TITULO}, publicada el ${FECHA}.</li>
+        <li>Noticia 3 de ${TITULO}, publicada el ${FECHA}.</li>
+      </ul>
+      <p>Resumen general: resumen de las principales noticias del bloque ${TITULO}.</p>
+      ]]></description>
+      <pubDate>${PUBDATE}</pubDate>
+    </item>
+  </channel>
+</rss>
+EOF
+          }
 
-      - name: Forzar commit y push de los XML (ignorando conflictos)
+          generar_feed "espana" "Noticias de España" "Noticias nacionales destacadas del día ${FECHA}"
+          generar_feed "madrid" "Noticias de Madrid" "Noticias locales de la Comunidad de Madrid del día ${FECHA}"
+          generar_feed "economia_mundial" "Economía Mundial" "Noticias internacionales de economía del día ${FECHA}"
+          generar_feed "economia_espana" "Economía en España" "Principales titulares económicos nacionales del día ${FECHA}"
+          generar_feed "construccion" "Sector de la Construcción" "Noticias y tendencias del sector de la construcción del día ${FECHA}"
+          generar_feed "acs_dragados" "Grupo ACS / Dragados" "Noticias del Grupo ACS y sus filiales del día ${FECHA}"
+
+      - name: Hacer commit y push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin main
-          git reset --hard origin/main
-          git add docs/*.xml.txt || true
-          if git diff --cached --quiet; then
-            echo "No hay cambios nuevos en los feeds."
+          git add docs/*.xml.txt
+          if git diff --staged --quiet; then
+            echo "No hay cambios para commitear."
           else
-            git commit -m "Actualización automática de feeds del día $(TZ='Europe/Madrid' date '+%d/%m/%Y')"
-            git push origin HEAD:main --force
+            git commit -m "Actualización automática de feeds del día ${FECHA}"
+            git pull --rebase origin main
+            git push origin main
           fi
