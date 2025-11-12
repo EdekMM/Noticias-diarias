@@ -2,7 +2,7 @@ name: Actualizar noticias diarias
 
 on:
   schedule:
-    - cron: "0 7 * * *"
+    - cron: "0 7 * * *" # Ejecuta todos los días a las 08:00 hora Madrid
   workflow_dispatch: {}
 
 permissions:
@@ -32,10 +32,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git merge --strategy-option=ours origin/main --allow-unrelated-histories -m "Merge remoto antes del push automático"
           git add docs/*.xml.txt || true
           if git diff --cached --quiet; then
             echo "No hay cambios nuevos en los feeds."
           else
             git commit -m "Actualización automática de feeds del día $(TZ='Europe/Madrid' date '+%d/%m/%Y')"
-            git push
+            git push origin main
           fi
