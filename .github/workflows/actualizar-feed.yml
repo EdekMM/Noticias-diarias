@@ -28,16 +28,16 @@ jobs:
       - name: Mostrar archivos generados
         run: ls -la docs
 
-      - name: Commit & push de los XML
+      - name: Forzar commit y push de los XML (ignorando conflictos)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin main
-          git merge --strategy-option=ours origin/main --allow-unrelated-histories -m "Merge remoto antes del push automático"
+          git reset --hard origin/main
           git add docs/*.xml.txt || true
           if git diff --cached --quiet; then
             echo "No hay cambios nuevos en los feeds."
           else
             git commit -m "Actualización automática de feeds del día $(TZ='Europe/Madrid' date '+%d/%m/%Y')"
-            git push origin main
+            git push origin HEAD:main --force
           fi
