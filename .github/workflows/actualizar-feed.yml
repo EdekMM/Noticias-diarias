@@ -2,7 +2,7 @@ name: Actualizar noticias diarias
 
 on:
   schedule:
-    - cron: "0 7 * * *"  # 08:00 CET
+    - cron: "0 7 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -15,29 +15,27 @@ jobs:
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v4
-
-      - name: Configurar Python
-        uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          persist-credentials: true
 
       - name: Instalar dependencias
         run: |
           pip install feedparser pytz
 
       - name: Generar feeds XML
-        run: |
-          python scripts/generar_feed.py
+        run: python scripts/generar_feed.py
 
-      - name: Commit & push cambios
+      - name: Mostrar archivos generados
+        run: ls -la docs
+
+      - name: Commit & push de los XML
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/*.xml || true
+          git add docs/*.xml.txt || true
           if git diff --cached --quiet; then
-            echo "No hay cambios para commitear."
+            echo "No hay cambios nuevos en los feeds."
           else
-            FECHA=$(TZ="Europe/Madrid" date +"%d/%m/%Y")
-            git commit -m "Actualización automática del feed ${FECHA}"
+            git commit -m "Actualización automática de feeds del día $(TZ='Europe/Madrid' date '+%d/%m/%Y')"
             git push
           fi
