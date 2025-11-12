@@ -1,31 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Noticias Diarias - Economia_espana</title>
+    <title>Economía en España</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/economia_espana.xml.txt</link>
-    <description>Noticias del bloque economia_espana generadas automáticamente.</description>
+    <description>Economía en España - Noticias del 12/11/2025</description>
     <language>es-es</language>
-    
-        <item>
-          <title>La tasa de basuras deja diferencias de hasta 230 euros entre municipios: así es la factura en cada ciudad</title>
-          <link>https://www.expansion.com/economia/2025/11/12/6913a951468aebb87a8b458a.html</link>
-          <description><![CDATA[Europa ha exigido que los ciudadanos carguen con el coste de la gestión de sus residuos para incentivar su reducción.&nbsp;<a href="https://www.expansion.com/economia/2025/11/12/6913a951468aebb87a8b458a.html">Leer</a><img alt="" src="http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditoria]]></description>
-          <pubDate>Wed, 12 Nov 2025 01:21:16 +0100</pubDate>
-        </item>
-        
-        <item>
-          <title>El Rey pide en China "apertura y seguridad jurídica" para las empresas españolas</title>
-          <link>https://www.expansion.com/economia/2025/11/11/691381fce5fdea9f608b456e.html</link>
-          <description><![CDATA[Felipe VI preside un encuentro empresarial hispano-chino, en el que participaron el ministro Cuerpo, y los presidentes de CEOE y Cámara de España, Antonio Garamendi y José Luis Bonet.&nbsp;<a href="https://www.expansion.com/economia/2025/11/11/691381fce5fdea9f608b456e.html">Leer</a><img alt="" src="]]></description>
-          <pubDate>Wed, 12 Nov 2025 01:21:16 +0100</pubDate>
-        </item>
-        
-        <item>
-          <title>Parches al Presupuesto de Sánchez y de Trump</title>
-          <link>https://www.expansion.com/opinion/2025/11/11/69131b4b468aeb60678b458e.html</link>
-          <description><![CDATA[El Gobierno utiliza la prórroga de las Cuentas Públicas para no tener que convocar elecciones.&nbsp;<a href="https://www.expansion.com/opinion/2025/11/11/69131b4b468aeb60678b458e.html">Leer</a><img alt="" src="http://secure-uk.imrworldwide.com/cgi-bin/m?cid=es-widgetueditorial&amp;cg=rss-expansion&a]]></description>
-          <pubDate>Wed, 12 Nov 2025 01:21:16 +0100</pubDate>
-        </item>
-        
+    <item>
+      <title>Economía en España - 12/11/2025</title>
+      <description><![CDATA[
+      <ul>
+        <li>Titular 1 sobre Economía en España (12/11/2025).</li>
+        <li>Titular 2 sobre Economía en España (12/11/2025).</li>
+        <li>Titular 3 sobre Economía en España (12/11/2025).</li>
+      </ul>
+      <p>Resumen general del bloque Economía en España.</p>
+      ]]></description>
+      <pubDate>Wed, 12 Nov 2025 23:12:49 +0100</pubDate>
+    </item>
   </channel>
 </rss>

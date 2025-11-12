@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Noticias Diarias - Economia_mundial</title>
+    <title>Economía Mundial</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/economia_mundial.xml.txt</link>
-    <description>Noticias del bloque economia_mundial generadas automáticamente.</description>
+    <description>Economía Mundial - Noticias del 12/11/2025</description>
     <language>es-es</language>
-    
+    <item>
+      <title>Economía Mundial - 12/11/2025</title>
+      <description><![CDATA[
+      <ul>
+        <li>Titular 1 sobre Economía Mundial (12/11/2025).</li>
+        <li>Titular 2 sobre Economía Mundial (12/11/2025).</li>
+        <li>Titular 3 sobre Economía Mundial (12/11/2025).</li>
+      </ul>
+      <p>Resumen general del bloque Economía Mundial.</p>
+      ]]></description>
+      <pubDate>Wed, 12 Nov 2025 23:12:49 +0100</pubDate>
+    </item>
   </channel>
 </rss>

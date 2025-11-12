@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Noticias Diarias - Acs_dragados</title>
+    <title>Grupo ACS / Dragados</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/acs_dragados.xml.txt</link>
-    <description>Noticias del bloque acs_dragados generadas automáticamente.</description>
+    <description>Grupo ACS / Dragados - Noticias del 12/11/2025</description>
     <language>es-es</language>
-    
+    <item>
+      <title>Grupo ACS / Dragados - 12/11/2025</title>
+      <description><![CDATA[
+      <ul>
+        <li>Titular 1 sobre Grupo ACS / Dragados (12/11/2025).</li>
+        <li>Titular 2 sobre Grupo ACS / Dragados (12/11/2025).</li>
+        <li>Titular 3 sobre Grupo ACS / Dragados (12/11/2025).</li>
+      </ul>
+      <p>Resumen general del bloque Grupo ACS / Dragados.</p>
+      ]]></description>
+      <pubDate>Wed, 12 Nov 2025 23:12:49 +0100</pubDate>
+    </item>
   </channel>
 </rss>
