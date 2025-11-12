@@ -2,7 +2,7 @@ name: Actualizar feeds diarios
 
 on:
   schedule:
-    - cron: "0 7 * * *" # Todos los días a las 8:00 hora Madrid
+    - cron: "0 7 * * *" # Todos los días a las 8:00 hora Madrid (07:00 UTC)
   workflow_dispatch:
 
 permissions:
@@ -36,27 +36,28 @@ jobs:
             titulo="${feeds[$clave]}"
             archivo="docs/${clave}.xml.txt"
 
-            echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" > "$archivo"
-            echo "<rss version=\"2.0\">" >> "$archivo"
-            echo "  <channel>" >> "$archivo"
-            echo "    <title>${titulo}</title>" >> "$archivo"
-            echo "    <link>https://edekmm.github.io/Noticias-diarias/docs/${clave}.xml.txt</link>" >> "$archivo"
-            echo "    <description>${titulo} - Noticias del ${FECHA}</description>" >> "$archivo"
-            echo "    <language>es-es</language>" >> "$archivo"
-            echo "    <item>" >> "$archivo"
-            echo "      <title>${titulo} - ${FECHA}</title>" >> "$archivo"
-            echo "      <description><![CDATA[" >> "$archivo"
-            echo "      <ul>" >> "$archivo"
-            echo "        <li>Titular 1 sobre ${titulo} (${FECHA}).</li>" >> "$archivo"
-            echo "        <li>Titular 2 sobre ${titulo} (${FECHA}).</li>" >> "$archivo"
-            echo "        <li>Titular 3 sobre ${titulo} (${FECHA}).</li>" >> "$archivo"
-            echo "      </ul>" >> "$archivo"
-            echo "      <p>Resumen general del bloque ${titulo}.</p>" >> "$archivo"
-            echo "      ]]></description>" >> "$archivo"
-            echo "      <pubDate>${PUBDATE}</pubDate>" >> "$archivo"
-            echo "    </item>" >> "$archivo"
-            echo "  </channel>" >> "$archivo"
-            echo "</rss>" >> "$archivo"
+            {
+              echo '<?xml version="1.0" encoding="UTF-8"?>'
+              echo '<rss version="2.0">'
+              echo '  <channel>'
+              echo "    <title>${titulo}</title>"
+              echo "    <link>https://edekmm.github.io/Noticias-diarias/docs/${clave}.xml.txt</link>"
+              echo "    <description>${titulo} - Noticias del ${FECHA}</description>"
+              echo "    <language>es-es</language>"
+              echo "    <item>"
+              echo "      <title>${titulo} - ${FECHA}</title>"
+              echo "      <description><![CDATA["
+              echo "      <b>${titulo}</b><br>"
+              echo "      - Titular 1 del día ${FECHA}.<br>"
+              echo "      - Titular 2 del día ${FECHA}.<br>"
+              echo "      - Titular 3 del día ${FECHA}.<br><br>"
+              echo "      <i>Resumen del bloque ${titulo}.</i>"
+              echo "      ]]></description>"
+              echo "      <pubDate>${PUBDATE}</pubDate>"
+              echo "    </item>"
+              echo '  </channel>'
+              echo '</rss>'
+            } > "$archivo"
           done
 
       - name: Commit y push
