@@ -10,21 +10,21 @@
           <title>El juicio al fiscal general entra en la fase decisiva con el choque entre la defensa y la UCO</title>
           <link>https://elpais.com/espana/2025-11-11/el-juicio-al-fiscal-general-entra-en-la-fase-decisiva-con-el-choque-entre-la-defensa-y-la-uco.html</link>
           <description><![CDATA[La vista termina esta semana con la incógnita de si García Ortiz responderá a las acusaciones]]></description>
-          <pubDate>Wed, 12 Nov 2025 01:16:46 +0100</pubDate>
+          <pubDate>Wed, 12 Nov 2025 01:21:16 +0100</pubDate>
         </item>
         
         <item>
           <title>Claves del cuarto día del juicio al fiscal general | Testifican los periodistas que informaron sobre el ‘email’ filtrado</title>
           <link>https://elpais.com/espana/2025-11-11/claves-del-cuarto-dia-del-juicio-al-fiscal-general-testifican-los-periodistas-que-informaron-sobre-el-email-filtrado.html</link>
           <description><![CDATA[Miguel Ángel Campos, periodista de la SER y José Manuel Romero, ex subdirector de EL PAÍS, declaran al final de la mañana]]></description>
-          <pubDate>Wed, 12 Nov 2025 01:16:46 +0100</pubDate>
+          <pubDate>Wed, 12 Nov 2025 01:21:16 +0100</pubDate>
         </item>
         
         <item>
           <title>El socio de Aldama acude a una montería con 90 jabalíes en la finca bajo el foco de la UCO</title>
           <link>https://elpais.com/espana/2025-11-11/el-socio-de-aldama-acude-a-una-monteria-con-90-jabalies-en-la-finca-bajo-el-foco-de-la-uco.html</link>
           <description><![CDATA[Claudio Rivas aparece en vídeos del fin de semana de Todos los Santos en la Finca Matasanos, que fue registrada por la Guardia Civil por el fraude de hidrocarburos]]></description>
-          <pubDate>Wed, 12 Nov 2025 01:16:46 +0100</pubDate>
+          <pubDate>Wed, 12 Nov 2025 01:21:16 +0100</pubDate>
         </item>
         
   </channel>
