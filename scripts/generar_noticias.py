@@ -2,34 +2,54 @@ import feedparser
 from datetime import datetime
 import pytz
 import html
+import os
 
 # Fuentes RSS por categoría
 FUENTES = {
-    "España": [
-        "https://www.elmundo.es/rss/espana.xml",
-        "https://www.abc.es/rss/feeds/abc_Espana.xml",
-        "https://www.elpais.com/rss/elpais/portada.xml"
-    ],
-    "Madrid": [
-        "https://www.abc.es/rss/feeds/abc_Madrid.xml",
-        "https://www.elmundo.es/rss/madrid.xml"
-    ],
-    "Economía mundial": [
-        "https://www.ft.com/?format=rss",
-        "https://feeds.reuters.com/reuters/businessNews"
-    ],
-    "Economía España": [
-        "https://www.eleconomista.es/rss/rss-economia.php",
-        "https://www.expansion.com/rss/economia.xml"
-    ],
-    "Construcción": [
-        "https://www.construible.es/feed",
-        "https://www.interempresas.net/Obra-Publica/Articulos.rss"
-    ],
-    "Grupo ACS / Dragados S.A.": [
-        "https://www.europapress.es/rss/rss.aspx?ch=279"
-    ]
+    "espana": {
+        "nombre": "España",
+        "urls": [
+            "https://www.elmundo.es/rss/espana.xml",
+            "https://www.abc.es/rss/feeds/abc_Espana.xml",
+            "https://www.elpais.com/rss/elpais/portada.xml"
+        ],
+    },
+    "madrid": {
+        "nombre": "Madrid",
+        "urls": [
+            "https://www.abc.es/rss/feeds/abc_Madrid.xml",
+            "https://www.elmundo.es/rss/madrid.xml"
+        ],
+    },
+    "economia-mundial": {
+        "nombre": "Economía mundial",
+        "urls": [
+            "https://feeds.reuters.com/reuters/businessNews",
+            "https://www.ft.com/?format=rss"
+        ],
+    },
+    "economia-espana": {
+        "nombre": "Economía España",
+        "urls": [
+            "https://www.eleconomista.es/rss/rss-economia.php",
+            "https://www.expansion.com/rss/economia.xml"
+        ],
+    },
+    "construccion": {
+        "nombre": "Construcción",
+        "urls": [
+            "https://www.construible.es/feed",
+            "https://www.interempresas.net/Obra-Publica/Articulos.rss"
+        ],
+    },
+    "acs-dragados": {
+        "nombre": "Grupo ACS / Dragados S.A.",
+        "urls": [
+            "https://www.europapress.es/rss/rss.aspx?ch=279"
+        ],
+    },
 }
+
 
 def obtener_titulares(urls, max_items=3):
     """Devuelve una lista de (título, resumen, enlace) desde varias fuentes."""
@@ -47,37 +67,34 @@ def obtener_titulares(urls, max_items=3):
             break
     return items
 
-def generar_feed():
-    """Genera el RSS completo con un item por categoría."""
+
+def generar_feed_individual(slug, nombre, urls):
+    """Crea un feed RSS independiente para cada categoría."""
     zona_madrid = pytz.timezone("Europe/Madrid")
     ahora = datetime.now(zona_madrid)
     fecha = ahora.strftime("%d/%m/%Y")
     pubdate = ahora.strftime("%a, %d %b %Y %H:%M:%S %z")
 
+    items = obtener_titulares(urls)
+    if not items:
+        print(f"⚠️  Sin noticias para {nombre}")
+        return
+
     rss = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Noticias Diarias - España</title>
-    <link>https://edekmm.github.io/Noticias-diarias/docs/noticias-diarias.xml</link>
-    <description>Resumen diario con noticias destacadas en España, Madrid, economía mundial, economía española, construcción y Grupo ACS/Dragados.</description>
+    <title>{nombre} - Noticias Diarias</title>
+    <link>https://edekmm.github.io/Noticias-diarias/docs/{slug}.xml</link>
+    <description>Noticias destacadas de {nombre} actualizadas el {fecha}.</description>
     <language>es-es</language>
 """
 
-    for categoria, urls in FUENTES.items():
-        items = obtener_titulares(urls)
-        if not items:
-            continue
-
-        contenido = f"<h3>🗞️ <u>{categoria}</u></h3>\n<ul>\n"
-        for titulo, resumen, link in items:
-            contenido += f"<li><a href='{link}'><b>{titulo}</b></a><br>{resumen}</li><br>\n"
-        contenido += "</ul>"
-
+    for titulo, resumen, link in items:
         rss += f"""
     <item>
-      <title>{categoria} - Noticias del {fecha}</title>
-      <description><![CDATA[{contenido}]]></description>
-      <link>https://edekmm.github.io/Noticias-diarias/</link>
+      <title>{titulo}</title>
+      <link>{link}</link>
+      <description><![CDATA[{resumen}]]></description>
       <pubDate>{pubdate}</pubDate>
     </item>
 """
@@ -87,8 +104,17 @@ def generar_feed():
 </rss>
 """
 
-    with open("docs/noticias-diarias.xml", "w", encoding="utf-8") as f:
+    os.makedirs("docs", exist_ok=True)
+    ruta = f"docs/{slug}.xml"
+    with open(ruta, "w", encoding="utf-8") as f:
         f.write(rss)
+    print(f"✅ Feed actualizado: {ruta}")
+
+
+def generar_todos_los_feeds():
+    for slug, datos in FUENTES.items():
+        generar_feed_individual(slug, datos["nombre"], datos["urls"])
+
 
 if __name__ == "__main__":
-    generar_feed()
+    generar_todos_los_feeds()
