@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Noticias Diarias - Acs_dragados</title>
+    <link>https://edekmm.github.io/Noticias-diarias/docs/acs_dragados.xml.txt</link>
+    <description>Noticias del bloque acs_dragados generadas automáticamente.</description>
+    <language>es-es</language>
+    
+  </channel>
+</rss>

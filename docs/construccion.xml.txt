@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Noticias Diarias - Construccion</title>
+    <link>https://edekmm.github.io/Noticias-diarias/docs/construccion.xml.txt</link>
+    <description>Noticias del bloque construccion generadas automáticamente.</description>
+    <language>es-es</language>
+    
+        <item>
+          <title>La compañía Molins extiende su financiación sindicada sostenible hasta 2030</title>
+          <link>https://www.construible.es/2025/11/11/compania-molins-extiende-financiacion-sindicada-sostenible-2030</link>
+          <description><![CDATA[<p>La compañía Molins ha firmado la tercera novación de su financiación sindicada sostenible, formalizada originalmente en 2019 y novada por primera vez en 2021 y posteriormente en 2023. La operación mantiene vinculados los fondos a objetivos concretos de reducción de emisiones de CO₂, alineados con]]></description>
+          <pubDate>Wed, 12 Nov 2025 01:16:46 +0100</pubDate>
+        </item>
+        
+        <item>
+          <title>Abierto el concurso para la rehabilitación integral del Palacio de Pedralbes en Barcelona</title>
+          <link>https://www.construible.es/2025/11/11/abierto-concurso-rehabilitacion-integral-palacio-pedralbes-barcelona</link>
+          <description><![CDATA[<p>La Generalitat de Cataluña ha puesto en marcha el proceso de rehabilitación integral del Palacio de Pedralbes (Barcelona), tras la publicación del concurso de proyectos en el portal de contratación pública. El objetivo es restaurar y modernizar de forma completa este edificio catalogado como Bien]]></description>
+          <pubDate>Wed, 12 Nov 2025 01:16:46 +0100</pubDate>
+        </item>
+        
+        <item>
+          <title>Una red de ciudades europeas desarrollará soluciones innovadoras para la adaptación climática justa</title>
+          <link>https://www.construible.es/2025/11/11/red-ciudades-europeas-desarrollara-soluciones-innovadoras-adaptacion-climatica-justa</link>
+          <description><![CDATA[<p>Bajo el nombre Just4Care, se ha puesto en marcha una nueva red de ciudades europeas que trabajarán juntas para impulsar una adaptación climática equitativa y sostenible. Financiada por el programa Horizon Europe, en el marco de la Misión de la Unión Europea sobre Adaptación al Cambio Climático, l]]></description>
+          <pubDate>Wed, 12 Nov 2025 01:16:46 +0100</pubDate>
+        </item>
+        
+  </channel>
+</rss>

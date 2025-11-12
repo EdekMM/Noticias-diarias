@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Noticias Diarias - Economia_mundial</title>
+    <link>https://edekmm.github.io/Noticias-diarias/docs/economia_mundial.xml.txt</link>
+    <description>Noticias del bloque economia_mundial generadas automáticamente.</description>
+    <language>es-es</language>
+    
+  </channel>
+</rss>
