@@ -8,14 +8,13 @@
     <item>
       <title>Grupo ACS / Dragados - 12/11/2025</title>
       <description><![CDATA[
-      <ul>
-        <li>Titular 1 sobre Grupo ACS / Dragados (12/11/2025).</li>
-        <li>Titular 2 sobre Grupo ACS / Dragados (12/11/2025).</li>
-        <li>Titular 3 sobre Grupo ACS / Dragados (12/11/2025).</li>
-      </ul>
-      <p>Resumen general del bloque Grupo ACS / Dragados.</p>
+      <b>Grupo ACS / Dragados</b><br>
+      - Titular 1 del día 12/11/2025.<br>
+      - Titular 2 del día 12/11/2025.<br>
+      - Titular 3 del día 12/11/2025.<br><br>
+      <i>Resumen del bloque Grupo ACS / Dragados.</i>
       ]]></description>
-      <pubDate>Wed, 12 Nov 2025 23:18:48 +0100</pubDate>
+      <pubDate>Wed, 12 Nov 2025 23:34:48 +0100</pubDate>
     </item>
   </channel>
 </rss>

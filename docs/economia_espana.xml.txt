@@ -8,14 +8,13 @@
     <item>
       <title>Economía en España - 12/11/2025</title>
       <description><![CDATA[
-      <ul>
-        <li>Titular 1 sobre Economía en España (12/11/2025).</li>
-        <li>Titular 2 sobre Economía en España (12/11/2025).</li>
-        <li>Titular 3 sobre Economía en España (12/11/2025).</li>
-      </ul>
-      <p>Resumen general del bloque Economía en España.</p>
+      <b>Economía en España</b><br>
+      - Titular 1 del día 12/11/2025.<br>
+      - Titular 2 del día 12/11/2025.<br>
+      - Titular 3 del día 12/11/2025.<br><br>
+      <i>Resumen del bloque Economía en España.</i>
       ]]></description>
-      <pubDate>Wed, 12 Nov 2025 23:18:48 +0100</pubDate>
+      <pubDate>Wed, 12 Nov 2025 23:34:48 +0100</pubDate>
     </item>
   </channel>
 </rss>
