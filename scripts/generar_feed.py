@@ -1,94 +1,93 @@
-import datetime
-import pytz
-from pathlib import Path
+import os
+from datetime import datetime
 
-# === Configuración ===
-directorio = Path("docs")
-directorio.mkdir(exist_ok=True)
+# Directorio de salida
+output_dir = "docs"
+os.makedirs(output_dir, exist_ok=True)
 
-zona_madrid = pytz.timezone("Europe/Madrid")
-fecha = datetime.datetime.now(zona_madrid)
-fecha_str = fecha.strftime("%d/%m/%Y")
-pubdate = fecha.strftime("%a, %d %b %Y %H:%M:%S %z")
+# Fecha actual
+fecha = datetime.now().strftime("%d/%m/%Y")
+pubdate = datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0100")
 
-# === Definición de bloques ===
-bloques = {
+# Bloques de noticias
+feeds = {
     "espana": {
-        "titulo": "Noticias en España",
+        "titulo": "Noticias de España",
+        "descripcion": "Resumen de noticias nacionales de España.",
         "contenido": [
-            "El Gobierno aprueba nuevas medidas económicas.",
-            "La inflación se modera en el último trimestre.",
-            "Se incrementa el empleo en el sector servicios."
-        ],
-        "resumen": "Resumen de las principales noticias nacionales del día."
+            "El Gobierno anuncia nuevas medidas económicas.",
+            "El paro baja un 2% en el último trimestre.",
+            "España refuerza su liderazgo en energías renovables."
+        ]
     },
     "madrid": {
-        "titulo": "Noticias en Madrid",
+        "titulo": "Noticias de Madrid",
+        "descripcion": "Actualidad de la Comunidad y ciudad de Madrid.",
         "contenido": [
-            "El Ayuntamiento presenta un nuevo plan de movilidad.",
-            "Finalizan las obras en la M-30 antes de lo previsto.",
-            "Aumenta la inversión en vivienda pública."
-        ],
-        "resumen": "Actualidad destacada de la Comunidad de Madrid."
+            "El Ayuntamiento aprueba un nuevo plan de movilidad.",
+            "Aumenta el turismo en la capital un 5% este mes.",
+            "Nuevas obras en la M-30 para mejorar el tráfico."
+        ]
     },
     "economia_mundial": {
         "titulo": "Economía Mundial",
+        "descripcion": "Tendencias y titulares de la economía global.",
         "contenido": [
-            "El FMI revisa al alza el crecimiento global.",
-            "El petróleo sube por tensiones geopolíticas.",
-            "Wall Street cierra la jornada con leves subidas."
-        ],
-        "resumen": "Panorama económico internacional actualizado."
+            "La FED mantiene los tipos de interés estables.",
+            "El petróleo sube ligeramente por tensiones geopolíticas.",
+            "China presenta datos de crecimiento mejores de lo esperado."
+        ]
     },
     "economia_espana": {
         "titulo": "Economía en España",
+        "descripcion": "Noticias sobre la economía y mercados españoles.",
         "contenido": [
-            "El IBEX 35 supera los 10.000 puntos.",
-            "Las exportaciones españolas alcanzan récord histórico.",
-            "El sector industrial muestra señales de recuperación."
-        ],
-        "resumen": "Situación económica y financiera de España."
+            "El IBEX 35 cierra en positivo impulsado por la banca.",
+            "El déficit público se reduce un 0.3% del PIB.",
+            "El consumo interno muestra signos de recuperación."
+        ]
     },
     "construccion": {
         "titulo": "Sector de la Construcción",
+        "descripcion": "Noticias del sector inmobiliario y obras públicas.",
         "contenido": [
-            "Crecen las licitaciones públicas un 15% interanual.",
-            "La demanda de vivienda nueva se mantiene estable.",
-            "Avanza la digitalización de las constructoras."
-        ],
-        "resumen": "Noticias del sector inmobiliario y de infraestructuras."
+            "Las licitaciones de obra pública aumentan un 10%.",
+            "El precio del cemento alcanza su nivel más alto desde 2018.",
+            "Se anuncian nuevos proyectos de infraestructuras en Andalucía."
+        ]
     },
     "acs_dragados": {
         "titulo": "Grupo ACS / Dragados S.A.",
+        "descripcion": "Noticias corporativas del grupo ACS y sus filiales.",
         "contenido": [
-            "ACS anuncia nuevos contratos internacionales.",
-            "Dragados lidera la construcción de un gran proyecto ferroviario.",
-            "Florentino Pérez destaca la solidez financiera del grupo."
-        ],
-        "resumen": "Actualidad corporativa de ACS y sus filiales."
+            "ACS gana un contrato de 500 millones en Estados Unidos.",
+            "Dragados participa en un nuevo túnel ferroviario en Alemania.",
+            "El grupo presenta resultados trimestrales al alza."
+        ]
     }
 }
 
-# === Generar los archivos XML ===
-for clave, datos in bloques.items():
-    nombre_archivo = directorio / f"{clave}.xml.txt"
-    with open(nombre_archivo, "w", encoding="utf-8") as f:
+# Generar un XML por bloque
+for clave, datos in feeds.items():
+    file_path = os.path.join(output_dir, f"{clave}.xml.txt")
+    with open(file_path, "w", encoding="utf-8") as f:
         f.write(f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>{datos['titulo']} - {fecha_str}</title>
+    <title>{datos['titulo']}</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/{clave}.xml.txt</link>
-    <description>{datos['resumen']}</description>
+    <description>{datos['descripcion']}</description>
     <language>es-es</language>
+    <pubDate>{pubdate}</pubDate>
 
-    <item>
-      <title>{datos['titulo']} - {fecha_str}</title>
-      <description><![CDATA[
-      {"<br><br>".join([f"• {linea}" for linea in datos['contenido']])}
-      ]]></description>
+""")
+        for noticia in datos["contenido"]:
+            f.write(f"""    <item>
+      <title>{noticia}</title>
+      <description><![CDATA[{noticia}]]></description>
       <pubDate>{pubdate}</pubDate>
     </item>
-  </channel>
-</rss>""")
+""")
+        f.write("  </channel>\n</rss>")
 
-print("✅ Archivos XML generados correctamente.")
+print("Feeds generados correctamente.")
