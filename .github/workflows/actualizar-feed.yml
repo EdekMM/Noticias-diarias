@@ -2,7 +2,7 @@ name: Actualizar noticias diarias
 
 on:
   schedule:
-    - cron: "0 7 * * *"  # 07:00 UTC = 08:00 en Madrid
+    - cron: "0 7 * * *"  # 07:00 UTC = 08:00 Madrid
   workflow_dispatch:
 
 permissions:
@@ -21,7 +21,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests googletrans==4.0.0-rc1
 
-      - name: Generar feeds RSS automáticos
+      - name: Generar feeds RSS automáticos con imágenes
         env:
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
         run: |
@@ -29,7 +29,6 @@ jobs:
           FECHA=$(TZ="Europe/Madrid" date +"%d/%m/%Y")
           PUBDATE=$(TZ="Europe/Madrid" date -R)
 
-          # Crear script Python temporal
           cat > generar_feeds.py <<'PYCODE'
 import requests, os, datetime
 from googletrans import Translator
@@ -38,19 +37,19 @@ translator = Translator()
 API_KEY = os.getenv("NEWSAPI_KEY")
 
 fuentes = {
-    "espana": "Spain",
-    "madrid": "Madrid",
-    "economia_mundial": "global economy",
-    "economia_espana": "Spain economy",
-    "construccion": "construction sector Spain",
-    "acs_dragados": "ACS construction OR Dragados company"
+    "espana": ("Spain", "🇪🇸"),
+    "madrid": ("Madrid", "🏙️"),
+    "economia_mundial": ("global economy", "🌍"),
+    "economia_espana": ("Spain economy", "💶"),
+    "construccion": ("construction sector Spain", "🏗️"),
+    "acs_dragados": ("ACS construction OR Dragados company", "🏢")
 }
 
 def traducir(texto):
     try:
         return translator.translate(texto, dest="es").text
-    except:
-        return texto
+    except Exception:
+        return texto or ""
 
 def obtener_noticias(tema):
     url = f"https://newsapi.org/v2/everything?q={tema}&language=en&sortBy=publishedAt&pageSize=3&apiKey={API_KEY}"
@@ -58,16 +57,17 @@ def obtener_noticias(tema):
     data = r.json()
     noticias = []
     for art in data.get("articles", []):
-        titulo = traducir(art["title"])
-        desc = traducir(art["description"] or "")
-        link = art["url"]
-        noticias.append((titulo, desc, link))
+        titulo = traducir(art.get("title", ""))
+        desc = traducir(art.get("description", ""))
+        link = art.get("url", "")
+        img = art.get("urlToImage", "")
+        noticias.append((titulo, desc, link, img))
     return noticias
 
 fecha = datetime.datetime.now().strftime("%d/%m/%Y")
 pubdate = datetime.datetime.now(datetime.timezone.utc).strftime("%a, %d %b %Y %H:%M:%S %z")
 
-for clave, tema in fuentes.items():
+for clave, (tema, icono) in fuentes.items():
     noticias = obtener_noticias(tema)
     xml = f'''<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
@@ -77,11 +77,12 @@ for clave, tema in fuentes.items():
     <description>Noticias sobre {tema} actualizadas automáticamente.</description>
     <language>es-es</language>
 '''
-    for t, d, l in noticias:
+    for t, d, l, img in noticias:
+        img_html = f'<img src="{img}" width="480"/><br>' if img else ""
         xml += f'''
     <item>
       <title>{t}</title>
-      <description><![CDATA[{d}]]></description>
+      <description><![CDATA[{icono} {img_html}<b>{t}</b><br><br>{d}<br><a href="{l}">Leer más</a>]]></description>
       <link>{l}</link>
       <pubDate>{pubdate}</pubDate>
     </item>'''
@@ -93,7 +94,7 @@ PYCODE
 
           python generar_feeds.py
 
-      - name: Confirmar y subir cambios
+      - name: Subir cambios al repositorio
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
