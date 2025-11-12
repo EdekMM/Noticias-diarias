@@ -15,7 +15,7 @@
       </ul>
       <p>Resumen general del bloque Sector de la Construcción.</p>
       ]]></description>
-      <pubDate>Wed, 12 Nov 2025 23:13:03 +0100</pubDate>
+      <pubDate>Wed, 12 Nov 2025 23:18:37 +0100</pubDate>
     </item>
   </channel>
 </rss>
