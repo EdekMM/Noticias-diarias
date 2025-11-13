@@ -1,163 +1,139 @@
-#!/usr/bin/env python3
-# scripts/generar_feeds.py
-import os
 import requests
-import datetime
-import time
-from googletrans import Translator
+from datetime import datetime
+import html
+import os
 
-translator = Translator()
-API_KEY = os.getenv("NEWSAPI_KEY", "")
+# -----------------------------
+# CONFIGURACIÓN
+# -----------------------------
+API_KEY = "AQUI_TU_API_KEY_DE_NEWSAPI"   # ← pon aquí tu API Key
+MAX_TITULARES = 10
 
-# Categorías: (queries preferidas, fallback queries)
-FUENTES = {
-    "espana": (["Spain", "España", "España NOT Covid"], ["Spain"]),
-    "madrid": (["Madrid", "Madrid España"], ["Madrid Spain", "Comunidad de Madrid"]),
-    "economia_mundial": (["global economy", "economy"], ["world economy", "economía mundial"]),
-    "economia_espana": (["Spain economy", "economía España"], ["economía España", "economia españa"]),
-    "construccion": (["construction Spain", "sector construcción"], ["construction", "building sector"]),
-    "acs_dragados": (["ACS OR Dragados", "ACS company"], ["ACS", "Dragados"])
+CATEGORIAS = {
+    "espana": {
+        "query": "España NOT deportes NOT fútbol",
+        "titulo": "Noticias de España"
+    },
+    "madrid": {
+        "query": "Madrid NOT deportes NOT fútbol",
+        "titulo": "Noticias de Madrid"
+    },
+    "economia_mundial": {
+        "query": "global economy OR world economy",
+        "titulo": "Economía mundial"
+    },
+    "economia_espana": {
+        "query": "economía España",
+        "titulo": "Economía en España"
+    },
+    "construccion": {
+        "query": "sector construcción España",
+        "titulo": "Sector de la construcción"
+    },
+    "acs_dragados": {
+        "query": "ACS OR Dragados OR Florentino Pérez construcción",
+        "titulo": "Grupo ACS / Dragados"
+    }
 }
 
-HEADERS = {"User-Agent": "Noticias-Diarias-bot/1.0"}
-
+# -----------------------------
+# TRADUCTOR SIMPLE (Google-free)
+# -----------------------------
 def traducir(texto):
-    if not texto:
-        return ""
+    url = "https://api.mymemory.translated.net/get"
+    params = {"q": texto, "langpair": "en|es"}
     try:
-        return translator.translate(texto, dest="es").text
-    except Exception:
-        return texto
+        r = requests.get(url, params=params, timeout=10)
+        data = r.json()
+        return data.get("responseData", {}).get("translatedText", texto)
+    except:
+        return texto  # Si falla, devuelve el original
 
-def newsapi_query(q, language="es", page_size=3):
-    if not API_KEY:
-        return []
+
+# -----------------------------
+# OBTENER TITULARES
+# -----------------------------
+def obtener_titulares(query):
     url = "https://newsapi.org/v2/everything"
     params = {
-        "q": q,
-        "language": language,
+        "q": query,
+        "language": "es",
         "sortBy": "publishedAt",
-        "pageSize": page_size,
+        "pageSize": MAX_TITULARES,
         "apiKey": API_KEY
     }
-    try:
-        r = requests.get(url, params=params, headers=HEADERS, timeout=15)
-        r.raise_for_status()
-        data = r.json()
-        articles = data.get("articles", []) if isinstance(data, dict) else []
-        return articles
-    except Exception as e:
-        print(f"⚠️ Error consulta NewsAPI q='{q}' lang={language}: {e}")
-        return []
 
-def obtener_noticias_para_fuente(queries):
-    # Intenta con language=es, si no hay resultados intenta english y queries alternativos
-    resultados = []
-    for q in queries:
-        # 1) intentar en español
-        arts = newsapi_query(q, language="es", page_size=3)
-        if arts:
-            return arts
-        # 2) intentar en inglés (muchas fuentes devuelven artículos en inglés)
-        arts = newsapi_query(q, language="en", page_size=3)
-        if arts:
-            return arts
-        # 3) si no, prueba la siguiente query del listado
-    # si todo falla, intenta ampliar con query genérica en inglés
-    generic = newsapi_query("news " + " ".join(queries), language="en", page_size=3)
-    return generic
+    r = requests.get(url, params=params)
+    data = r.json()
 
-def build_xml_items(articles, icono):
-    items = []
-    for art in articles:
-        title_orig = art.get("title") or ""
-        desc_orig = art.get("description") or ""
-        url = art.get("url") or ""
-        url_img = art.get("urlToImage") or ""
-        # traducir al español si la entrada está en otro idioma
-        title = traducir(title_orig) if title_orig else "Sin título"
-        desc = traducir(desc_orig) if desc_orig else ""
-        img_html = f'<img src="{url_img}" width="120" style="border-radius:6px;"><br>' if url_img else ""
-        description = f'{icono} {img_html}<b>{title}</b><br><br>{desc}<br><a href="{url}">Leer más</a>'
-        item = {
-            "title": title,
-            "description": description,
-            "link": url,
-        }
-        items.append(item)
-    return items
+    articulos = data.get("articles", [])
 
-def generar():
-    docs_dir = "docs"
-    os.makedirs(docs_dir, exist_ok=True)
-    ahora = datetime.datetime.now()
-    fecha = ahora.strftime("%d/%m/%Y")
-    pubdate = datetime.datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S +0000")
+    titulares = []
+    for art in articulos[:MAX_TITULARES]:
+        titulo = art.get("title", "Sin título")
 
-    for slug, (preferred_queries, fallback) in FUENTES.items():
-        print(f"\n=== Procesando {slug} ===")
-        # combinar listas (preferred primero)
-        queries_to_try = preferred_queries + (fallback if isinstance(fallback, list) else [])
-        articles = obtener_noticias_para_fuente(queries_to_try)
-        print(f"  Encontrados {len(articles)} artículos para {slug} con queries: {queries_to_try[:3]}")
-        # si no hay artículos, escribimos un item de aviso
-        if not articles:
-            items = [{
-                "title": f"Sin titulares disponibles para {slug}",
-                "description": f"No se han encontrado noticias para la categoría {slug} hoy.",
-                "link": ""
-            }]
-        else:
-            built = build_xml_items(articles, icono_for_slug(slug))
-            items = built
+        # Traducir si viene de fuente internacional
+        if art.get("language", "es") != "es":
+            titulo = traducir(titulo)
 
-        # crear XML
-        channel_title = f"Noticias diarias - {slug.replace('_',' ').title()}"
-        link = f"https://edekmm.github.io/Noticias-diarias/docs/{slug}.xml.txt"
-        xml_lines = [
-            '<?xml version="1.0" encoding="UTF-8"?>',
-            '<rss version="2.0">',
-            '  <channel>',
-            f'    <title>{channel_title}</title>',
-            f'    <link>{link}</link>',
-            f'    <description>Noticias sobre {slug} actualizadas automáticamente ({fecha}).</description>',
-            '    <language>es-es"',
-            f'    <pubDate>{pubdate}</pubDate>'
-        ]
-        for it in items:
-            xml_lines.extend([
-                '    <item>',
-                f'      <title>{escape_xml(it["title"])}</title>',
-                f'      <description><![CDATA[{it["description"]}]]></description>',
-                f'      <link>{it["link"]}</link>',
-                f'      <pubDate>{pubdate}</pubDate>',
-                '    </item>',
-            ])
-        xml_lines.append('  </channel>')
-        xml_lines.append('</rss>')
+        titulares.append(titulo)
 
-        contenido = "\n".join(xml_lines)
-        ruta = os.path.join(docs_dir, f"{slug}.xml.txt")
-        with open(ruta, "w", encoding="utf-8") as fh:
-            fh.write(contenido)
-        print(f"✅ Generado {ruta} ({len(items)} items)")
+    return titulares
 
-def escape_xml(text):
-    # mínimo escape para títulos
-    return (text.replace("&", "&amp;")
-                .replace("<", "&lt;")
-                .replace(">", "&gt;"))
 
-def icono_for_slug(slug):
-    mapping = {
-        "espana": "🇪🇸",
-        "madrid": "🏙️",
-        "economia_mundial": "🌍",
-        "economia_espana": "💶",
-        "construccion": "🏗️",
-        "acs_dragados": "🏢"
-    }
-    return mapping.get(slug, "")
+# -----------------------------
+# CREAR XML
+# -----------------------------
+def generar_xml(nombre, categoria, query):
+    FECHA = datetime.now().strftime("%d/%m/%Y")
+    PUBDATE = datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0100")
+
+    # Obtener titulares
+    titulares = obtener_titulares(query)
+
+    # Armar bloque HTML
+    bloque = ""
+    for i, t in enumerate(titulares, 1):
+        bloque += f"- {html.escape(t)}<br>\n"
+
+    # Resumen final genérico
+    resumen = f"Resumen automático generado el {FECHA}."
+
+    bloque += f"<br><b>{resumen}</b>"
+
+    xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{categoria}</title>
+    <link>https://edekmm.github.io/Noticias-diarias/docs/{nombre}.xml.txt</link>
+    <description>{categoria}</description>
+    <language>es-es</language>
+
+    <item>
+      <title>{categoria} - {FECHA}</title>
+      <description><![CDATA[
+{bloque}
+      ]]></description>
+      <pubDate>{PUBDATE}</pubDate>
+    </item>
+  </channel>
+</rss>
+"""
+    return xml
+
+
+# -----------------------------
+# GUARDAR ARCHIVOS
+# -----------------------------
+def main():
+    os.makedirs("docs", exist_ok=True)
+
+    for nombre, datos in CATEGORIAS.items():
+        xml = generar_xml(nombre, datos["titulo"], datos["query"])
+        ruta = f"docs/{nombre}.xml.txt"
+        with open(ruta, "w", encoding="utf-8") as f:
+            f.write(xml)
+        print(f"✔ Feed generado: {ruta}")
 
 if __name__ == "__main__":
-    generar()
+    main()
