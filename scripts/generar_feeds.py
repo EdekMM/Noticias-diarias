@@ -7,7 +7,7 @@ import os
 # -----------------------------
 # CONFIG
 # -----------------------------
-API_KEY = "AQUI_TU_API_KEY_DE_NEWSAPI"   # ← tu API Key
+API_KEY = d40030cf26d0445eb105613a3dfdbd2b  # ← tu API Key
 MAX_TITULARES = 10
 
 # Categorías y búsquedas
