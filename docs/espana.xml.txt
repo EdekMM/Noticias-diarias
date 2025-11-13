@@ -3,27 +3,26 @@
   <channel>
     <title>Noticias diarias - Espana</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/espana.xml.txt</link>
-    <description>Noticias sobre Spain actualizadas automáticamente.</description>
+    <description>Noticias sobre espana actualizadas automáticamente (13/11/2025).</description>
     <language>es-es"
-    <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
+    <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
     <item>
-      <title>La estrella del Barcelona revela esperanzas del regreso de Lionel Messi</title>
-      <description><![CDATA[🇪🇸 <img src="https://getfootballnewsspain.com/wp-content/uploads/2022/12/fbl-wc-2022-match57-ned-arg-4-1-1024x683.jpg" width="120" style="border-radius:6px;"><br><b>La estrella del Barcelona revela esperanzas del regreso de Lionel Messi</b><br><br>La estrella del Barcelona Joan García ha revelado esta semana su esperanza de que el ícono del club Lionel Messi pueda regresar a la capital de Cataluña como jugador. El tema de una posible reunión entre el Barcelona...<br><a href="https://getfootballnewsspain.com/barcelona-star-reveals-hopes-of-lionel-messi-return/">Leer más</a>]]></description>
-      <link>https://getfootballnewsspain.com/barcelona-star-reveals-hopes-of-lionel-messi-return/</link>
-      <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
+      <title>La reina Sofía hace un guiño a Felipe y Letizia y su viaje de Estado a China con su look reciclado en Nueva York</title>
+      <description><![CDATA[🇪🇸 <img src="https://images.ecestaticos.com/GScRK4VwOrRALEe2J2Fo9m3EUj0=/0x81:1920x1089/600x315/filters:fill(white):format(jpg):quality(99):watermark(f.elconfidencial.com/file/0f2/6d9/13e/0f26d913e1b27ca111e62b656aa354da.png,0,275,1)/f.elconfidencial.com/original/026/982/82c/02698282cb35c1affefc982698ec28be.jpg" width="120" style="border-radius:6px;"><br><b>La reina Sofía hace un guiño a Felipe y Letizia y su viaje de Estado a China con su look reciclado en Nueva York</b><br><br>Mientras que Felipe y Letizia siguen con sus actos en Pekín, al otro lado del mundo, en Estados Unidos, doña Sofía cumple también con su agenda<br><a href="https://www.vanitatis.elconfidencial.com/casas-reales/2025-11-12/reina-sofia-guino-felipe-letizia-china-look_4246398/">Leer más</a>]]></description>
+      <link>https://www.vanitatis.elconfidencial.com/casas-reales/2025-11-12/reina-sofia-guino-felipe-letizia-china-look_4246398/</link>
+      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
     </item>
     <item>
-      <title>El juez no reveló vínculos personales con el fiscal en dos casos del corredor de la muerte</title>
-      <description><![CDATA[🇪🇸 <img src="https://theintercept.com/wp-content/uploads/2025/11/IMG_7667.jpg?fit=4032%2C3024&w=1200&h=800" width="120" style="border-radius:6px;"><br><b>El juez no reveló vínculos personales con el fiscal en dos casos del corredor de la muerte</b><br><br>El fiscal veterano Fern Smith condenó tanto a Tremane Wood como a Richard Glossip.En ambos casos, llama amigo al juez.
-La publicación El juez no reveló vínculos personales con el fiscal en dos casos condenados a muerte apareció por primera vez en The Intercept.<br><a href="https://theintercept.com/2025/11/12/richard-glossip-tremane-wood-susan-stallings-judge-recusal/">Leer más</a>]]></description>
-      <link>https://theintercept.com/2025/11/12/richard-glossip-tremane-wood-susan-stallings-judge-recusal/</link>
-      <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
+      <title>Black Friday 2025: moda, descuentos y consumo responsable con sello español</title>
+      <description><![CDATA[🇪🇸 <img src="https://s1.staticld.com/2025/11/12/1200/675/733x1271/whatsapp-image-2025-11-12-at-172347-2.jpeg" width="120" style="border-radius:6px;"><br><b>Black Friday 2025: moda, descuentos y consumo responsable con sello español</b><br><br>Este Black Friday, las marcas de moda españolas apuestan por la calidad, la durabilidad y el consumo responsable.<br><a href="https://www.libertaddigital.com/libremercado/negocios/2025-11-12/black-friday-2025-moda-descuentos-y-consumo-responsable-con-sello-espanol-7319536/">Leer más</a>]]></description>
+      <link>https://www.libertaddigital.com/libremercado/negocios/2025-11-12/black-friday-2025-moda-descuentos-y-consumo-responsable-con-sello-espanol-7319536/</link>
+      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
     </item>
     <item>
-      <title>urnas-internacionales-es 1.0.0</title>
-      <description><![CDATA[🇪🇸 <b>urnas-internacionales-es 1.0.0</b><br><br>Complemento de validación de España para URN internacionales<br><a href="https://pypi.org/project/international-urns-es/1.0.0/">Leer más</a>]]></description>
-      <link>https://pypi.org/project/international-urns-es/1.0.0/</link>
-      <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
+      <title>Las fotos del encuentro que reunió anoche a Sassa de Osma y Eugenia de York con la moda en Londres</title>
+      <description><![CDATA[🇪🇸 <img src="https://www.hola.com/horizon/landscape/5e657be15dbc-580517313185472251740445945756890901944280778n.jpg?im=Resize=(1200)" width="120" style="border-radius:6px;"><br><b>Las fotos del encuentro que reunió anoche a Sassa de Osma y Eugenia de York con la moda en Londres</b><br><br>La firma Philippa1970 ha hecho un 'pop up' de Navidad en la capital británica<br><a href="https://www.hola.com/realeza/casa_inglesa/20251112867074/alessandra-de-osma-eugenia-de-york-cena-londres-firma-philippa/">Leer más</a>]]></description>
+      <link>https://www.hola.com/realeza/casa_inglesa/20251112867074/alessandra-de-osma-eugenia-de-york-cena-londres-firma-philippa/</link>
+      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
     </item>
   </channel>
 </rss>

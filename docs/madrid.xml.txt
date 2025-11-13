@@ -3,27 +3,26 @@
   <channel>
     <title>Noticias diarias - Madrid</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/madrid.xml.txt</link>
-    <description>Noticias sobre Madrid actualizadas automáticamente.</description>
+    <description>Noticias sobre madrid actualizadas automáticamente (13/11/2025).</description>
     <language>es-es"
-    <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
+    <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
     <item>
-      <title>Liga de Campeones femenina: 3️⃣ brasileñas y el Atlético pierde ante la Juventus</title>
-      <description><![CDATA[🏙️ <img src="https://photobooth-api.onefootball.com/api/screenshot/%2Fv2%2Fphotobooth%2Fcms%2Fen%2F41943875%3Fdate=2025-11-12" width="120" style="border-radius:6px;"><br><b>Liga de Campeones femenina: 3️⃣ brasileñas y el Atlético pierde ante la Juventus</b><br><br>En una emocionante Liga de Campeones Femenina de la UEFA venció al Atlético de Madrid con una victoria por 2-1 en el Centro Deportivo Wanda Alcalá de Henares.<br><a href="https://onefootball.com/en/news/womens-champions-league-3-brazilians-as-atletico-lose-to-juventus-41943875">Leer más</a>]]></description>
-      <link>https://onefootball.com/en/news/womens-champions-league-3-brazilians-as-atletico-lose-to-juventus-41943875</link>
-      <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
+      <title>"Mi gol de chilena al Barça me lo pongo cada día desde hace casi 30 años"</title>
+      <description><![CDATA[🏙️ <img src="https://www.mundodeportivo.com/files/og_thumbnail/uploads/2014/09/16/60e5de6115937.jpeg" width="120" style="border-radius:6px;"><br><b>"Mi gol de chilena al Barça me lo pongo cada día desde hace casi 30 años"</b><br><br>Hay futbolistas ligados a una brillante carrera y otros a un instante irrepetible. Mauro Bressan pertenece al segundo grupo. Desde luego, por lo único que parecen preguntarle -y no le molesta en absoluto- a este ex jugador que hoy tiene 54 años es por un gola…<br><a href="https://www.mundodeportivo.com/futbol/fc-barcelona/20251112/1002568202/mi-gol-chilena-barca-me-pongo-dia-30-anos.html">Leer más</a>]]></description>
+      <link>https://www.mundodeportivo.com/futbol/fc-barcelona/20251112/1002568202/mi-gol-chilena-barca-me-pongo-dia-30-anos.html</link>
+      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
     </item>
     <item>
-      <title>Kane, el principal objetivo del Barcelona: las habladurías del jueves</title>
-      <description><![CDATA[🏙️ <img src="https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/1ba0/live/b83e3660-c010-11f0-8456-eff94716b162.png" width="120" style="border-radius:6px;"><br><b>Kane, el principal objetivo del Barcelona: las habladurías del jueves</b><br><br>El delantero de Inglaterra y del Bayern de Múnich, Harry Kane, es un objetivo principal para el Barcelona, ​​el mediocampista del Crystal Palace Adam Wharton encabeza la lista de transferencias del Chelsea, la Juventus detiene las negociaciones contractuales con Kenan Yildiz y más.<br><a href="https://www.bbc.com/sport/football/articles/cwyk0yk5vg4o">Leer más</a>]]></description>
-      <link>https://www.bbc.com/sport/football/articles/cwyk0yk5vg4o</link>
-      <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
+      <title>Dro, el único de los 'nuevos' canteranos con cancha</title>
+      <description><![CDATA[🏙️ <img src="https://www.mundodeportivo.com/files/og_thumbnail/files/fp/uploads/2025/07/29/68892e94b454a.r_d.842-699-0.jpeg" width="120" style="border-radius:6px;"><br><b>Dro, el único de los 'nuevos' canteranos con cancha</b><br><br>En su segundo año como entrenador del Barça, Hansi Flick ha ido incorporando canteranos al primer equipo del Barça. Y con el tiempo, después de los primeros 16 encuentros de la temporada, las 12 jornadas ligueras y los cuatro de la Champions League, la histor…<br><a href="https://www.mundodeportivo.com/futbol/fc-barcelona/20251112/1002568223/dro-unico-nuevos-canteranos-cancha.html">Leer más</a>]]></description>
+      <link>https://www.mundodeportivo.com/futbol/fc-barcelona/20251112/1002568223/dro-unico-nuevos-canteranos-cancha.html</link>
+      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
     </item>
     <item>
-      <title>Kylian Mbappé deja caer una pista del Real Madrid sobre Dayot Upamecano mientras el defensa del Bayern de Múnich se acerca a la agencia libre</title>
-      <description><![CDATA[🏙️ <img src="https://ds-images.bolavip.com/news/image?src=https://images.worldsoccertalk.com/webp/1200_740/WST_20251112_WST_603141_Mbappe-Upamecano.webp&width=1200&height=740" width="120" style="border-radius:6px;"><br><b>Kylian Mbappé deja caer una pista del Real Madrid sobre Dayot Upamecano mientras el defensa del Bayern de Múnich se acerca a la agencia libre</b><br><br>Dayot Upamecano parece estar en plena forma con el Bayern de Múnich, lo que le convierte en un activo crucial para Francia.Ante esto, Kylian Mbappé envió un picante mensaje, abriendo las puertas del Real Madrid en medio de una posible salida del conjunto alemán como agente libre.
-Después de s…<br><a href="https://worldsoccertalk.com/news/kylian-mbappe-drops-a-hint-to-upamecano-towards-real-madrid-amid-his-potential-free-agency-departure/">Leer más</a>]]></description>
-      <link>https://worldsoccertalk.com/news/kylian-mbappe-drops-a-hint-to-upamecano-towards-real-madrid-amid-his-potential-free-agency-departure/</link>
-      <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
+      <title>Alertan por tormenta solar que afectaría comunicaciones</title>
+      <description><![CDATA[🏙️ <img src="https://iphonegr.reforma.com/libre/online07/imagetransformer2/ImageTransformer.aspx?img=https://img.gruporeforma.com/imagenes/960x640/7/70/6069803.jpg&maxwidth=960&maxheight=640&imgWatermark=https://www.reforma.com/libre/imgdiseno/mailsharing/marca_agua.png&transparencia=0.9&centerWM=0" width="120" style="border-radius:6px;"><br><b>Alertan por tormenta solar que afectaría comunicaciones</b><br><br>La Agencia Espacial Europea aseveró que una tormenta solar se dirige hacia la Tierra y podría interrumpir algunas comunicaciones.<br><a href="https://www.reforma.com/alertan-por-tormenta-solar-que-afectaria-comunicaciones/ar3105404">Leer más</a>]]></description>
+      <link>https://www.reforma.com/alertan-por-tormenta-solar-que-afectaria-comunicaciones/ar3105404</link>
+      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
     </item>
   </channel>
 </rss>

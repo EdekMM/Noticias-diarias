@@ -3,26 +3,26 @@
   <channel>
     <title>Noticias diarias - Acs Dragados</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/acs_dragados.xml.txt</link>
-    <description>Noticias sobre ACS OR Dragados actualizadas automáticamente.</description>
+    <description>Noticias sobre acs_dragados actualizadas automáticamente (13/11/2025).</description>
     <language>es-es"
-    <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
+    <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
     <item>
-      <title>El ensayo de fase III de Novartis para el tratamiento de próxima generación contra la malaria KLU156 (GanLum) cumple el criterio de valoración principal y tiene potencial para combatir la resistencia a los antipalúdicos</title>
-      <description><![CDATA[🏢 <img src="https://ml-eu.globenewswire.com/Resource/Download/5d242013-5d1f-440c-8ba6-3b5d3799b035" width="120" style="border-radius:6px;"><br><b>El ensayo de fase III de Novartis para el tratamiento de próxima generación contra la malaria KLU156 (GanLum) cumple el criterio de valoración principal y tiene potencial para combatir la resistencia a los antipalúdicos</b><br><br>Basilea, 12 de noviembre de 2025 – Novartis anunció hoy resultados positivos de KALUMA, un estudio de fase III para el nuevo tratamiento contra la malaria KLU156 (ganaplacida/lumefantrina o GanLum).El nuevo antipalúdico sin artemisinina, desarrollado con Medicines for Malaria...<br><a href="https://www.globenewswire.com/news-release/2025/11/12/3186868/0/en/Novartis-Phase-III-trial-for-next-generation-malaria-treatment-KLU156-GanLum-meets-primary-endpoint-with-potential-to-combat-antimalarial-resistance.html">Leer más</a>]]></description>
-      <link>https://www.globenewswire.com/news-release/2025/11/12/3186868/0/en/Novartis-Phase-III-trial-for-next-generation-malaria-treatment-KLU156-GanLum-meets-primary-endpoint-with-potential-to-combat-antimalarial-resistance.html</link>
-      <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
+      <title>ACS ultima la alianza con GIP en centros de datos y lucirá ante los inversores 14.000 millones en contratos en el mundo</title>
+      <description><![CDATA[🏢 <img src="https://s03.s3c.es/imag/_v0/2355x1285/e/8/c/1200x655_acsjuansantamaria.jpg" width="120" style="border-radius:6px;"><br><b>ACS ultima la alianza con GIP en centros de datos y lucirá ante los inversores 14.000 millones en contratos en el mundo</b><br><br>ACS expondrá al mercado este viernes su decidida apuesta por el negocio de los centros de datos durante un Día del Inversor específico sobre este negocio.<br><a href="https://www.eleconomista.es/infraestructuras-servicios/noticias/13640788/11/25/acs-ultima-la-alianza-con-gip-en-centros-de-datos-y-lucira-ante-los-inversores-14000-millones-en-contratos-en-el-mundo.html">Leer más</a>]]></description>
+      <link>https://www.eleconomista.es/infraestructuras-servicios/noticias/13640788/11/25/acs-ultima-la-alianza-con-gip-en-centros-de-datos-y-lucira-ante-los-inversores-14000-millones-en-contratos-en-el-mundo.html</link>
+      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
     </item>
     <item>
-      <title>Mamá, 35 años, detalla los primeros signos de cáncer de páncreas que los médicos ignoraron durante meses: "Tenía miedo"</title>
-      <description><![CDATA[🏢 <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1200x630_center,f_auto,q_auto:best/rockcms/2025-11/mom-pancreatic-cancer-mh-111225-01-583985.jpg" width="120" style="border-radius:6px;"><br><b>Mamá, 35 años, detalla los primeros signos de cáncer de páncreas que los médicos ignoraron durante meses: "Tenía miedo"</b><br><br>Amy Skoutelas, de 35 años, sufrió durante meses dolor de estómago, indigestión y cambios en las heces, lo que fue descartado por los médicos.Resultó ser cáncer de páncreas.<br><a href="https://www.today.com/health/disease/mom-pancreatic-cancer-symptoms-dismissed-rcna242658">Leer más</a>]]></description>
-      <link>https://www.today.com/health/disease/mom-pancreatic-cancer-symptoms-dismissed-rcna242658</link>
-      <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
+      <title>Forestalia invertirá 12.000 millones en tres centros de datos en Zaragoza</title>
+      <description><![CDATA[🏢 <img src="https://s03.s3c.es/imag/_v0/6000x3275/9/d/e/1200x655_centrodatos.jpg" width="120" style="border-radius:6px;"><br><b>Forestalia invertirá 12.000 millones en tres centros de datos en Zaragoza</b><br><br>Forestalia se adentra en los centros de datos. La compañía aragonesa va a acometer una inversión de más de 12.000 millones de euros para la construcción de un campus formado por tres centros de datos en la provincia de Zaragoza. Los enclaves elegidos son las …<br><a href="https://www.eleconomista.es/tecnologia/noticias/13639514/11/25/forestalia-invertira-12000-millones-en-tres-centros-de-datos-en-zaragoza.html">Leer más</a>]]></description>
+      <link>https://www.eleconomista.es/tecnologia/noticias/13639514/11/25/forestalia-invertira-12000-millones-en-tres-centros-de-datos-en-zaragoza.html</link>
+      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
     </item>
     <item>
-      <title>OMRON Healthcare anuncia una segunda inversión en Tricog Health para avanzar en la atención cardíaca impulsada por IA en la India</title>
-      <description><![CDATA[🏢 <img src="https://th-i.thgim.com/public/incoming/y5zhpf/article70272530.ece/alternates/LANDSCAPE_1200/Blue_White_Logo.jpg" width="120" style="border-radius:6px;"><br><b>OMRON Healthcare anuncia una segunda inversión en Tricog Health para avanzar en la atención cardíaca impulsada por IA en la India</b><br><br>OMRON Healthcare anuncia una segunda inversión en Tricog Health para avanzar en la atención cardíaca impulsada por IA en la India<br><a href="https://www.thehindubusinessline.com/brandhub/omron-healthcare-announces-second-investment-in-tricog-health-to-advance-ai-powered-cardiac-care-in-india/article70272535.ece">Leer más</a>]]></description>
-      <link>https://www.thehindubusinessline.com/brandhub/omron-healthcare-announces-second-investment-in-tricog-health-to-advance-ai-powered-cardiac-care-in-india/article70272535.ece</link>
-      <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
+      <title>Calendario de dividendos 2025: próximos pagos e importaciones</title>
+      <description><![CDATA[🏢 <img src="https://s03.s3c.es/imag/_v0/1200x655/f/5/b/1200x655_calendario-dividendos-istock.jpg" width="120" style="border-radius:6px;"><br><b>Calendario de dividendos 2025: próximos pagos e importaciones</b><br><br>Los dividendos de cada empresa constituyen una parte del beneficio que dicha empresa acuerda entregar a sus accionistas antes de que finalice el ejercicio financiero, por lo que consultar el calendario de dividendos y otros datos puede ser de interés para qui…<br><a href="https://www.eleconomista.es/mercados-cotizaciones/noticias/13639058/11/25/calendario-de-dividendos-2025-proximos-pagos-e-importes.html">Leer más</a>]]></description>
+      <link>https://www.eleconomista.es/mercados-cotizaciones/noticias/13639058/11/25/calendario-de-dividendos-2025-proximos-pagos-e-importes.html</link>
+      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
     </item>
   </channel>
 </rss>
