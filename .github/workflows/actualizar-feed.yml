@@ -13,134 +13,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clonar repositorio
+      - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
 
-      - name: Configurar Python 3.10
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      - name: Actualizar pip e instalar dependencias
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests googletrans==4.0.0-rc1
 
-      - name: Crear script de generación de feeds
-        shell: bash
-        env:
-          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
-        run: |
-          mkdir -p scripts
-          cat > scripts/generar_feeds.py <<'PY'
-#!/usr/bin/env python3
-import os, requests, datetime
-from googletrans import Translator
-
-translator = Translator()
-API_KEY = os.getenv("NEWSAPI_KEY", "")
-
-# fuentes: (query, icono)
-FUENTES = {
-    "espana": ("Spain", "🇪🇸"),
-    "madrid": ("Madrid", "🏙️"),
-    "economia_mundial": ("global economy", "🌍"),
-    "economia_espana": ("Spain economy", "💶"),
-    "construccion": ("construction sector Spain", "🏗️"),
-    "acs_dragados": ("ACS construction OR Dragados company", "🏢")
-}
-
-def traducir(texto):
-    try:
-        if not texto:
-            return ""
-        return translator.translate(texto, dest="es").text
-    except Exception:
-        return texto or ""
-
-def obtener_noticias(tema, page_size=3):
-    # Consultamos everything para mayor cobertura; filtramos por idioma en la llamada (en inglés)
-    url = f"https://newsapi.org/v2/everything"
-    params = {
-        "q": tema,
-        "language": "en",
-        "sortBy": "publishedAt",
-        "pageSize": page_size,
-        "apiKey": API_KEY
-    }
-    try:
-        r = requests.get(url, params=params, timeout=15)
-        data = r.json()
-    except Exception:
-        data = {}
-    noticias = []
-    for art in data.get("articles", []):
-        titulo_orig = art.get("title", "") or ""
-        desc_orig = art.get("description", "") or ""
-        link = art.get("url", "") or ""
-        img = art.get("urlToImage", "") or ""
-        titulo = traducir(titulo_orig)
-        desc = traducir(desc_orig)
-        noticias.append((titulo, desc, link, img))
-    return noticias
-
-def generar():
-    docs_dir = "docs"
-    os.makedirs(docs_dir, exist_ok=True)
-    fecha = datetime.datetime.now().strftime("%d/%m/%Y")
-    pubdate = datetime.datetime.now(datetime.timezone.utc).strftime("%a, %d %b %Y %H:%M:%S %z")
-
-    for clave, (tema, icono) in FUENTES.items():
-        noticias = obtener_noticias(tema)
-        # Si no hay noticias, añadimos un texto de aviso
-        if not noticias:
-            noticias = [("Sin titulares disponibles", "No se han encontrado noticias para esta categoría.", "", "")]
-
-        xml = '<?xml version="1.0" encoding="UTF-8"?>\\n'
-        xml += '<rss version="2.0">\\n  <channel>\\n'
-        xml += f'    <title>Noticias diarias - {clave.replace("_", " ").title()}</title>\\n'
-        xml += f'    <link>https://edekmm.github.io/Noticias-diarias/docs/{clave}.xml.txt</link>\\n'
-        xml += f'    <description>Noticias sobre {tema} actualizadas automáticamente.</description>\\n'
-        xml += '    <language>es-es</language>\\n'
-
-        for t, d, l, img in noticias:
-            img_html = f\'<img src="{img}" width="120" style="border-radius:8px;"><br>\' if img else ""
-            description = f"{icono} {img_html}<b>{t}</b><br><br>{d}<br><a href=\"{l}\">Leer más</a>"
-            # Escape no necesario porque traducir devuelve texto plano; usamos CDATA
-            xml += "\\n    <item>\\n"
-            xml += f"      <title>{t}</title>\\n"
-            xml += f"      <description><![CDATA[{description}]]></description>\\n"
-            xml += f"      <link>{l}</link>\\n"
-            xml += f"      <pubDate>{pubdate}</pubDate>\\n"
-            xml += "    </item>"
-
-        xml += "\\n  </channel>\\n</rss>"
-
-        with open(os.path.join(docs_dir, f"{clave}.xml.txt"), "w", encoding="utf-8") as fh:
-            fh.write(xml)
-
-if __name__ == '__main__':
-    generar()
-PY
-
-      - name: Ejecutar script de generación
-        shell: bash
+      - name: Run feed generator
         env:
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
         run: |
           python3 scripts/generar_feeds.py
 
-      - name: Subir cambios (commit & push)
-        shell: bash
+      - name: Commit & push generated feeds
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main || true
           git add docs/*.xml.txt || true
           if git diff --cached --quiet; then
-            echo "No hay cambios nuevos."
+            echo "No changes to commit."
           else
             FECHA=$(TZ="Europe/Madrid" date +"%d/%m/%Y")
             git commit -m "Actualización automática de feeds del día ${FECHA}"
