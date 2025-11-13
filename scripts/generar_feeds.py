@@ -11,11 +11,11 @@ MAX_TITULARES = 10
 
 CATEGORIAS = {
     "espana": {
-        "query": "España NOT deportes NOT fútbol",
+        "query": "Spain OR España politics OR economy NOT sports NOT football",
         "titulo": "Noticias de España"
     },
     "madrid": {
-        "query": "Madrid NOT deportes NOT fútbol",
+        "query": "Madrid Spain politics OR economy NOT sports NOT football",
         "titulo": "Noticias de Madrid"
     },
     "economia_mundial": {
@@ -23,11 +23,11 @@ CATEGORIAS = {
         "titulo": "Economía mundial"
     },
     "economia_espana": {
-        "query": "economía España",
+        "query": "Spain economy OR economía España",
         "titulo": "Economía en España"
     },
     "construccion": {
-        "query": "sector construcción España",
+        "query": "construction sector Spain OR sector construcción España",
         "titulo": "Sector de la construcción"
     },
     "acs_dragados": {
@@ -37,7 +37,7 @@ CATEGORIAS = {
 }
 
 # -----------------------------
-# TRADUCTOR SIMPLE (Google-free)
+# TRADUCTOR SIMPLE (MyMemory)
 # -----------------------------
 def traducir(texto):
     url = "https://api.mymemory.translated.net/get"
@@ -47,18 +47,17 @@ def traducir(texto):
         data = r.json()
         return data.get("responseData", {}).get("translatedText", texto)
     except:
-        return texto  # Si falla, devuelve el original
+        return texto  # si falla, devuelve el original
 
 
 # -----------------------------
-# OBTENER TITULARES
+# OBTENER TITULARES DE NEWSAPI
 # -----------------------------
 def obtener_titulares(query):
     url = "https://newsapi.org/v2/everything"
     params = {
         "q": query,
-        "language": "es",
-        "sortBy": "publishedAt",
+        "sortBy": "publishedAt",        # quitado language="es"
         "pageSize": MAX_TITULARES,
         "apiKey": API_KEY
     }
@@ -72,7 +71,7 @@ def obtener_titulares(query):
     for art in articulos[:MAX_TITULARES]:
         titulo = art.get("title", "Sin título")
 
-        # Traducir si viene de fuente internacional
+        # Traducir si no está en español
         if art.get("language", "es") != "es":
             titulo = traducir(titulo)
 
@@ -82,7 +81,7 @@ def obtener_titulares(query):
 
 
 # -----------------------------
-# CREAR XML
+# GENERAR XML RSS
 # -----------------------------
 def generar_xml(nombre, categoria, query):
     FECHA = datetime.now().strftime("%d/%m/%Y")
@@ -91,15 +90,12 @@ def generar_xml(nombre, categoria, query):
     # Obtener titulares
     titulares = obtener_titulares(query)
 
-    # Armar bloque HTML
+    # Crear el bloque HTML
     bloque = ""
-    for i, t in enumerate(titulares, 1):
+    for t in titulares:
         bloque += f"- {html.escape(t)}<br>\n"
 
-    # Resumen final genérico
-    resumen = f"Resumen automático generado el {FECHA}."
-
-    bloque += f"<br><b>{resumen}</b>"
+    bloque += f"<br><b>Resumen automático generado el {FECHA}.</b>"
 
     xml = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
@@ -134,6 +130,7 @@ def main():
         with open(ruta, "w", encoding="utf-8") as f:
             f.write(xml)
         print(f"✔ Feed generado: {ruta}")
+
 
 if __name__ == "__main__":
     main()
