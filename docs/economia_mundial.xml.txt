@@ -1,28 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Noticias diarias - Economia Mundial</title>
+    <title>Economía mundial</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/economia_mundial.xml.txt</link>
-    <description>Noticias sobre economia_mundial actualizadas automáticamente (13/11/2025).</description>
-    <language>es-es"
-    <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
+    <description>Economía mundial</description>
+    <language>es-es</language>
+
     <item>
-      <title>JPMorgan conecta por primera vez bancos tradicionales con DeFi</title>
-      <description><![CDATA[🌍 <img src="https://assets.beincrypto.com/img/8vuf5YXny9vnu9R5OIAhM0fBwQI=/smart/dd30246a0196484b8d2366c002e3ac04" width="120" style="border-radius:6px;"><br><b>JPMorgan conecta por primera vez bancos tradicionales con DeFi</b><br><br>JPMorgan ha comenzado a implementar sus tokens de depósito que generan rendimiento, JPM Coin, en la red Base de Coinbase, marcando un hito importante en la conexión entre la banca tradicional y la DeFi. Este movimiento permite liquidaciones 24/7 para clientes…<br><a href="https://es.beincrypto.com/jpmorgan-jpmd-red-base-defi/">Leer más</a>]]></description>
-      <link>https://es.beincrypto.com/jpmorgan-jpmd-red-base-defi/</link>
-      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>Visa se lanza a la era 'blockchain' y habilita pagos transfronterizos casi instantáneos con 'stablecoins'</title>
-      <description><![CDATA[🌍 <img src="https://estaticos-cdn.prensaiberica.es/clip/0a719585-6294-47dc-a827-ec1b711ea843_16-9-discover-aspect-ratio_default_0.jpg" width="120" style="border-radius:6px;"><br><b>Visa se lanza a la era 'blockchain' y habilita pagos transfronterizos casi instantáneos con 'stablecoins'</b><br><br>Visa, el líder mundial en pagos digitales, ha dado un paso de gigante en la integración de la tecnología blockchain en las finanzas tradicionales.Seguir leyendo....<br><a href="https://www.elperiodico.com/es/economia/20251112/visa-blockchain-habilita-pagos-transfronterizos-stablecoins-123636758">Leer más</a>]]></description>
-      <link>https://www.elperiodico.com/es/economia/20251112/visa-blockchain-habilita-pagos-transfronterizos-stablecoins-123636758</link>
-      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>Lagarde sucederá a Powell en la presidencia de la reunión de banqueros centrales del BPI</title>
-      <description><![CDATA[🌍 <img src="https://img.europapress.es/fotoweb/fotonoticia_20251112112607_1200.jpg" width="120" style="border-radius:6px;"><br><b>Lagarde sucederá a Powell en la presidencia de la reunión de banqueros centrales del BPI</b><br><br>La presidenta del Banco Central Europeo (BCE), Christine Lagarde, sucederá desde mayo de 2026 a Jerome Powell, presidente de la Reserva Federal de Estados Unidos, al frente de la Reunión de la Economía Global (GEM) y del Comité Económico Consultivo (ECC) del …<br><a href="https://www.europapress.es/economia/finanzas-00340/noticia-lagarde-sucedera-powell-presidencia-reunion-banqueros-centrales-bpi-20251112112607.html">Leer más</a>]]></description>
-      <link>https://www.europapress.es/economia/finanzas-00340/noticia-lagarde-sucedera-powell-presidencia-reunion-banqueros-centrales-bpi-20251112112607.html</link>
-      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
+      <title>Economía mundial - 13/11/2025</title>
+      <description><![CDATA[
+<br><b>Resumen automático generado el 13/11/2025.</b>
+      ]]></description>
+      <pubDate>Thu, 13 Nov 2025 22:57:45 +0100</pubDate>
     </item>
   </channel>
 </rss>

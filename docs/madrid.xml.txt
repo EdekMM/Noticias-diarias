@@ -1,28 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Noticias diarias - Madrid</title>
+    <title>Noticias de Madrid</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/madrid.xml.txt</link>
-    <description>Noticias sobre madrid actualizadas automáticamente (13/11/2025).</description>
-    <language>es-es"
-    <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
+    <description>Noticias de Madrid</description>
+    <language>es-es</language>
+
     <item>
-      <title>"Mi gol de chilena al Barça me lo pongo cada día desde hace casi 30 años"</title>
-      <description><![CDATA[🏙️ <img src="https://www.mundodeportivo.com/files/og_thumbnail/uploads/2014/09/16/60e5de6115937.jpeg" width="120" style="border-radius:6px;"><br><b>"Mi gol de chilena al Barça me lo pongo cada día desde hace casi 30 años"</b><br><br>Hay futbolistas ligados a una brillante carrera y otros a un instante irrepetible. Mauro Bressan pertenece al segundo grupo. Desde luego, por lo único que parecen preguntarle -y no le molesta en absoluto- a este ex jugador que hoy tiene 54 años es por un gola…<br><a href="https://www.mundodeportivo.com/futbol/fc-barcelona/20251112/1002568202/mi-gol-chilena-barca-me-pongo-dia-30-anos.html">Leer más</a>]]></description>
-      <link>https://www.mundodeportivo.com/futbol/fc-barcelona/20251112/1002568202/mi-gol-chilena-barca-me-pongo-dia-30-anos.html</link>
-      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>Dro, el único de los 'nuevos' canteranos con cancha</title>
-      <description><![CDATA[🏙️ <img src="https://www.mundodeportivo.com/files/og_thumbnail/files/fp/uploads/2025/07/29/68892e94b454a.r_d.842-699-0.jpeg" width="120" style="border-radius:6px;"><br><b>Dro, el único de los 'nuevos' canteranos con cancha</b><br><br>En su segundo año como entrenador del Barça, Hansi Flick ha ido incorporando canteranos al primer equipo del Barça. Y con el tiempo, después de los primeros 16 encuentros de la temporada, las 12 jornadas ligueras y los cuatro de la Champions League, la histor…<br><a href="https://www.mundodeportivo.com/futbol/fc-barcelona/20251112/1002568223/dro-unico-nuevos-canteranos-cancha.html">Leer más</a>]]></description>
-      <link>https://www.mundodeportivo.com/futbol/fc-barcelona/20251112/1002568223/dro-unico-nuevos-canteranos-cancha.html</link>
-      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>Alertan por tormenta solar que afectaría comunicaciones</title>
-      <description><![CDATA[🏙️ <img src="https://iphonegr.reforma.com/libre/online07/imagetransformer2/ImageTransformer.aspx?img=https://img.gruporeforma.com/imagenes/960x640/7/70/6069803.jpg&maxwidth=960&maxheight=640&imgWatermark=https://www.reforma.com/libre/imgdiseno/mailsharing/marca_agua.png&transparencia=0.9&centerWM=0" width="120" style="border-radius:6px;"><br><b>Alertan por tormenta solar que afectaría comunicaciones</b><br><br>La Agencia Espacial Europea aseveró que una tormenta solar se dirige hacia la Tierra y podría interrumpir algunas comunicaciones.<br><a href="https://www.reforma.com/alertan-por-tormenta-solar-que-afectaria-comunicaciones/ar3105404">Leer más</a>]]></description>
-      <link>https://www.reforma.com/alertan-por-tormenta-solar-que-afectaria-comunicaciones/ar3105404</link>
-      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
+      <title>Noticias de Madrid - 13/11/2025</title>
+      <description><![CDATA[
+<br><b>Resumen automático generado el 13/11/2025.</b>
+      ]]></description>
+      <pubDate>Thu, 13 Nov 2025 22:57:45 +0100</pubDate>
     </item>
   </channel>
 </rss>

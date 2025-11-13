@@ -1,28 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Noticias diarias - Acs Dragados</title>
+    <title>Grupo ACS / Dragados</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/acs_dragados.xml.txt</link>
-    <description>Noticias sobre acs_dragados actualizadas automáticamente (13/11/2025).</description>
-    <language>es-es"
-    <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
+    <description>Grupo ACS / Dragados</description>
+    <language>es-es</language>
+
     <item>
-      <title>ACS ultima la alianza con GIP en centros de datos y lucirá ante los inversores 14.000 millones en contratos en el mundo</title>
-      <description><![CDATA[🏢 <img src="https://s03.s3c.es/imag/_v0/2355x1285/e/8/c/1200x655_acsjuansantamaria.jpg" width="120" style="border-radius:6px;"><br><b>ACS ultima la alianza con GIP en centros de datos y lucirá ante los inversores 14.000 millones en contratos en el mundo</b><br><br>ACS expondrá al mercado este viernes su decidida apuesta por el negocio de los centros de datos durante un Día del Inversor específico sobre este negocio.<br><a href="https://www.eleconomista.es/infraestructuras-servicios/noticias/13640788/11/25/acs-ultima-la-alianza-con-gip-en-centros-de-datos-y-lucira-ante-los-inversores-14000-millones-en-contratos-en-el-mundo.html">Leer más</a>]]></description>
-      <link>https://www.eleconomista.es/infraestructuras-servicios/noticias/13640788/11/25/acs-ultima-la-alianza-con-gip-en-centros-de-datos-y-lucira-ante-los-inversores-14000-millones-en-contratos-en-el-mundo.html</link>
-      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>Forestalia invertirá 12.000 millones en tres centros de datos en Zaragoza</title>
-      <description><![CDATA[🏢 <img src="https://s03.s3c.es/imag/_v0/6000x3275/9/d/e/1200x655_centrodatos.jpg" width="120" style="border-radius:6px;"><br><b>Forestalia invertirá 12.000 millones en tres centros de datos en Zaragoza</b><br><br>Forestalia se adentra en los centros de datos. La compañía aragonesa va a acometer una inversión de más de 12.000 millones de euros para la construcción de un campus formado por tres centros de datos en la provincia de Zaragoza. Los enclaves elegidos son las …<br><a href="https://www.eleconomista.es/tecnologia/noticias/13639514/11/25/forestalia-invertira-12000-millones-en-tres-centros-de-datos-en-zaragoza.html">Leer más</a>]]></description>
-      <link>https://www.eleconomista.es/tecnologia/noticias/13639514/11/25/forestalia-invertira-12000-millones-en-tres-centros-de-datos-en-zaragoza.html</link>
-      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>Calendario de dividendos 2025: próximos pagos e importaciones</title>
-      <description><![CDATA[🏢 <img src="https://s03.s3c.es/imag/_v0/1200x655/f/5/b/1200x655_calendario-dividendos-istock.jpg" width="120" style="border-radius:6px;"><br><b>Calendario de dividendos 2025: próximos pagos e importaciones</b><br><br>Los dividendos de cada empresa constituyen una parte del beneficio que dicha empresa acuerda entregar a sus accionistas antes de que finalice el ejercicio financiero, por lo que consultar el calendario de dividendos y otros datos puede ser de interés para qui…<br><a href="https://www.eleconomista.es/mercados-cotizaciones/noticias/13639058/11/25/calendario-de-dividendos-2025-proximos-pagos-e-importes.html">Leer más</a>]]></description>
-      <link>https://www.eleconomista.es/mercados-cotizaciones/noticias/13639058/11/25/calendario-de-dividendos-2025-proximos-pagos-e-importes.html</link>
-      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
+      <title>Grupo ACS / Dragados - 13/11/2025</title>
+      <description><![CDATA[
+<br><b>Resumen automático generado el 13/11/2025.</b>
+      ]]></description>
+      <pubDate>Thu, 13 Nov 2025 22:57:45 +0100</pubDate>
     </item>
   </channel>
 </rss>

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Noticias diarias - Economia Espana</title>
+    <title>Economía en España</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/economia_espana.xml.txt</link>
-    <description>Noticias sobre economia_espana actualizadas automáticamente (13/11/2025).</description>
-    <language>es-es"
-    <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
+    <description>Economía en España</description>
+    <language>es-es</language>
+
     <item>
-      <title>AEICE reforzará los vínculos con la universidad para implicar a los jóvenes en el desarrollo de modelo de hábitat del futuro</title>
-      <description><![CDATA[💶 <img src="https://s03.s3c.es/imag/_v0/1200x655/b/0/5/aeice.jpg" width="120" style="border-radius:6px;"><br><b>AEICE reforzará los vínculos con la universidad para implicar a los jóvenes en el desarrollo de modelo de hábitat del futuro</b><br><br>La presidenta del Clúster de Hábitat Eficiente de Castilla y León, AEICE, Estíbaliz González de la Serna, ha subrayado la importancia reforzar aún más los vínculos de las empresas con la universidad para implicar a los jóvenes en el diseño del modelo del háb…<br><a href="https://www.eleconomista.es/vivienda-inmobiliario/noticias/13639045/11/25/aeice-reforzara-los-vinculos-con-la-universidad-para-implicar-a-los-jovenes-en-el-desarrollo-de-modelo-de-habitat-del-futuro.html">Leer más</a>]]></description>
-      <link>https://www.eleconomista.es/vivienda-inmobiliario/noticias/13639045/11/25/aeice-reforzara-los-vinculos-con-la-universidad-para-implicar-a-los-jovenes-en-el-desarrollo-de-modelo-de-habitat-del-futuro.html</link>
-      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
+      <title>Economía en España - 13/11/2025</title>
+      <description><![CDATA[
+<br><b>Resumen automático generado el 13/11/2025.</b>
+      ]]></description>
+      <pubDate>Thu, 13 Nov 2025 22:57:45 +0100</pubDate>
     </item>
   </channel>
 </rss>

@@ -1,28 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Noticias diarias - Construccion</title>
+    <title>Sector de la construcción</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/construccion.xml.txt</link>
-    <description>Noticias sobre construccion actualizadas automáticamente (13/11/2025).</description>
-    <language>es-es"
-    <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
+    <description>Sector de la construcción</description>
+    <language>es-es</language>
+
     <item>
-      <title>Estos son los 37 donantes que ayudan a pagar el salón de baile de Trump de 300 millones de dólares en la Casa Blanca</title>
-      <description><![CDATA[🏗️ <img src="https://i.abcnewsfe.com/a/285635f2-d6f5-4485-94a2-e17bb7489680/wirestory_d4dd174eeb30ac244354a5a25551a86b_16x9.jpg?w=1600" width="120" style="border-radius:6px;"><br><b>Estos son los 37 donantes que ayudan a pagar el salón de baile de Trump de 300 millones de dólares en la Casa Blanca</b><br><br>La lista de 37 donantes de la Casa Blanca para el proyecto de salón de baile de 300 millones de dólares del presidente Donald Trump incluye criptomultimillonarios, poderosos financieros, compañías tabacaleras, gigantes tecnológicos, empresas de medios, donantes republicanos desde hace mucho tiempo y varios de los...<br><a href="https://abcnews.go.com/Technology/wireStory/37-donors-helping-pay-trumps-300-million-white-127464186">Leer más</a>]]></description>
-      <link>https://abcnews.go.com/Technology/wireStory/37-donors-helping-pay-trumps-300-million-white-127464186</link>
-      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>El salón de baile de la Casa Blanca de Donald Trump, valorado en 300 millones de dólares: Amazon, Apple, Google, Meta, Palantir, Microsoft y líderes de la industria criptográfica entre los donantes.Consulta la lista completa de 37 donantes</title>
-      <description><![CDATA[🏗️ <img src="https://img.etimg.com/thumb/msid-125284755,width-1200,height-630,imgsize-140484,overlay-economictimes/articleshow.jpg" width="120" style="border-radius:6px;"><br><b>El salón de baile de la Casa Blanca de Donald Trump, valorado en 300 millones de dólares: Amazon, Apple, Google, Meta, Palantir, Microsoft y líderes de la industria criptográfica entre los donantes.Consulta la lista completa de 37 donantes</b><br><br>Un funcionario de la Casa Blanca dijo que la lista ha crecido desde que se publicó por primera vez en octubre, pero algunas empresas no quieren ser nombradas públicamente hasta que así lo exijan las regulaciones de divulgación financiera.<br><a href="https://economictimes.indiatimes.com/news/international/us/donald-trumps-300-million-white-house-ballroom-amazon-apple-google-meta-palantir-microsoft-crypto-industry-leaders-among-donors-check-full-list-of-37-donors/articleshow/125284719.cms">Leer más</a>]]></description>
-      <link>https://economictimes.indiatimes.com/news/international/us/donald-trumps-300-million-white-house-ballroom-amazon-apple-google-meta-palantir-microsoft-crypto-industry-leaders-among-donors-check-full-list-of-37-donors/articleshow/125284719.cms</link>
-      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>Criptomultimillonarios entre los donantes del salón de baile de la Casa Blanca</title>
-      <description><![CDATA[🏗️ <img src="https://dims.apnews.com/dims4/default/1baa54d/2147483647/strip/true/crop/4897x2755+0+255/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fb6%2F70%2Fc9b010358f8124301f747a7c2934%2F3e5adfaca96549febaacc2d2697affdb" width="120" style="border-radius:6px;"><br><b>Criptomultimillonarios entre los donantes del salón de baile de la Casa Blanca</b><br><br>La lista de 37 donantes de la Casa Blanca para el proyecto de salón de baile de 300 millones de dólares del presidente Donald Trump incluye criptomultimillonarios, poderosos financieros, compañías tabacaleras, gigantes tecnológicos, empresas de medios, donantes republicanos desde hace mucho tiempo y varios de los vecinos del presidente...<br><a href="https://apnews.com/article/donors-to-trump-white-house-ballroom-d4dd174eeb30ac244354a5a25551a86b">Leer más</a>]]></description>
-      <link>https://apnews.com/article/donors-to-trump-white-house-ballroom-d4dd174eeb30ac244354a5a25551a86b</link>
-      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
+      <title>Sector de la construcción - 13/11/2025</title>
+      <description><![CDATA[
+<br><b>Resumen automático generado el 13/11/2025.</b>
+      ]]></description>
+      <pubDate>Thu, 13 Nov 2025 22:57:45 +0100</pubDate>
     </item>
   </channel>
 </rss>

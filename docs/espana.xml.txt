@@ -1,28 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Noticias diarias - Espana</title>
+    <title>Noticias de España</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/espana.xml.txt</link>
-    <description>Noticias sobre espana actualizadas automáticamente (13/11/2025).</description>
-    <language>es-es"
-    <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
+    <description>Noticias de España</description>
+    <language>es-es</language>
+
     <item>
-      <title>La reina Sofía hace un guiño a Felipe y Letizia y su viaje de Estado a China con su look reciclado en Nueva York</title>
-      <description><![CDATA[🇪🇸 <img src="https://images.ecestaticos.com/GScRK4VwOrRALEe2J2Fo9m3EUj0=/0x81:1920x1089/600x315/filters:fill(white):format(jpg):quality(99):watermark(f.elconfidencial.com/file/0f2/6d9/13e/0f26d913e1b27ca111e62b656aa354da.png,0,275,1)/f.elconfidencial.com/original/026/982/82c/02698282cb35c1affefc982698ec28be.jpg" width="120" style="border-radius:6px;"><br><b>La reina Sofía hace un guiño a Felipe y Letizia y su viaje de Estado a China con su look reciclado en Nueva York</b><br><br>Mientras que Felipe y Letizia siguen con sus actos en Pekín, al otro lado del mundo, en Estados Unidos, doña Sofía cumple también con su agenda<br><a href="https://www.vanitatis.elconfidencial.com/casas-reales/2025-11-12/reina-sofia-guino-felipe-letizia-china-look_4246398/">Leer más</a>]]></description>
-      <link>https://www.vanitatis.elconfidencial.com/casas-reales/2025-11-12/reina-sofia-guino-felipe-letizia-china-look_4246398/</link>
-      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>Black Friday 2025: moda, descuentos y consumo responsable con sello español</title>
-      <description><![CDATA[🇪🇸 <img src="https://s1.staticld.com/2025/11/12/1200/675/733x1271/whatsapp-image-2025-11-12-at-172347-2.jpeg" width="120" style="border-radius:6px;"><br><b>Black Friday 2025: moda, descuentos y consumo responsable con sello español</b><br><br>Este Black Friday, las marcas de moda españolas apuestan por la calidad, la durabilidad y el consumo responsable.<br><a href="https://www.libertaddigital.com/libremercado/negocios/2025-11-12/black-friday-2025-moda-descuentos-y-consumo-responsable-con-sello-espanol-7319536/">Leer más</a>]]></description>
-      <link>https://www.libertaddigital.com/libremercado/negocios/2025-11-12/black-friday-2025-moda-descuentos-y-consumo-responsable-con-sello-espanol-7319536/</link>
-      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
-    </item>
-    <item>
-      <title>Las fotos del encuentro que reunió anoche a Sassa de Osma y Eugenia de York con la moda en Londres</title>
-      <description><![CDATA[🇪🇸 <img src="https://www.hola.com/horizon/landscape/5e657be15dbc-580517313185472251740445945756890901944280778n.jpg?im=Resize=(1200)" width="120" style="border-radius:6px;"><br><b>Las fotos del encuentro que reunió anoche a Sassa de Osma y Eugenia de York con la moda en Londres</b><br><br>La firma Philippa1970 ha hecho un 'pop up' de Navidad en la capital británica<br><a href="https://www.hola.com/realeza/casa_inglesa/20251112867074/alessandra-de-osma-eugenia-de-york-cena-londres-firma-philippa/">Leer más</a>]]></description>
-      <link>https://www.hola.com/realeza/casa_inglesa/20251112867074/alessandra-de-osma-eugenia-de-york-cena-londres-firma-philippa/</link>
-      <pubDate>Thu, 13 Nov 2025 22:40:33 +0000</pubDate>
+      <title>Noticias de España - 13/11/2025</title>
+      <description><![CDATA[
+<br><b>Resumen automático generado el 13/11/2025.</b>
+      ]]></description>
+      <pubDate>Thu, 13 Nov 2025 22:57:45 +0100</pubDate>
     </item>
   </channel>
 </rss>
