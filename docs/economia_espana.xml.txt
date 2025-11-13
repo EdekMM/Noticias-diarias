@@ -5,24 +5,24 @@
     <link>https://edekmm.github.io/Noticias-diarias/docs/economia_espana.xml.txt</link>
     <description>Noticias sobre Spain economy actualizadas automáticamente.</description>
     <language>es-es"
-    <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
+    <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
     <item>
       <title>Las bolsas europeas cierran récord, impulsadas por el sector financiero y el alivio del cierre de EE.UU.</title>
       <description><![CDATA[💶 <img src="https://www.irishtimes.com/resizer/v2/IUNCFYIZIXHREWNRLJH7QWCEMQ.jpg?smart=true&auth=a700396e27503352c5c617db980779227a440288773ea71e707916a29f78aa39&width=1200&height=630" width="120" style="border-radius:6px;"><br><b>Las bolsas europeas cierran récord, impulsadas por el sector financiero y el alivio del cierre de EE.UU.</b><br><br>Día positivo para bancos y constructores de viviendas en la bolsa de Dublín<br><a href="https://www.irishtimes.com/business/2025/11/12/european-stocks-log-record-close-boosted-by-financials-and-us-shutdown-relief/">Leer más</a>]]></description>
       <link>https://www.irishtimes.com/business/2025/11/12/european-stocks-log-record-close-boosted-by-financials-and-us-shutdown-relief/</link>
-      <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
+      <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
     </item>
     <item>
       <title>¿El BCE reducirá los tipos dos veces este año?¿Realmente el Banco Central Europeo recortará las tasas dos veces a medida que crezcan las preocupaciones sobre la deuda de la UE?</title>
-      <description><![CDATA[💶 <img src="https://img.etimg.com/thumb/msid-125281451,width-1200,height-630,imgsize-7402,overlay-economictimes/articleshow.jpg" width="120" style="border-radius:6px;"><br><b>¿El BCE reducirá los tipos dos veces este año?¿Realmente el Banco Central Europeo recortará las tasas dos veces a medida que crezcan las preocupaciones sobre la deuda de la UE?</b><br><br>Dan Bulega, de ExodusPoint, dice que el BCE recortará las tasas dos veces en 2025, apostando a un cambio brusco de política a medida que la inflación de la eurozona caiga al 2,5% y el crecimiento se estanque en el 0,3%.La tasa del 3,75% del BCE parece insostenible, advierte, instando a los inversores a optar por bonos soberanos de la UE...<br><a href="https://economictimes.indiatimes.com/news/international/us/ecb-to-cut-rates-twice-this-year-will-the-european-central-bank-really-slash-rates-twice-as-eu-debt-worries-grow/articleshow/125281438.cms">Leer más</a>]]></description>
+      <description><![CDATA[💶 <img src="https://img.etimg.com/thumb/msid-125281451,width-1200,height-630,imgsize-7402,overlay-economictimes/articleshow.jpg" width="120" style="border-radius:6px;"><br><b>¿El BCE reducirá los tipos dos veces este año?¿Realmente el Banco Central Europeo recortará las tasas dos veces a medida que crezcan las preocupaciones sobre la deuda de la UE?</b><br><br>Dan Bulega, de ExodusPoint, dice que el BCE recortará las tasas dos veces en 2025, apostando a un cambio brusco de política a medida que la inflación de la eurozona caiga al 2,5% y el crecimiento se estanque en el 0,3%.La tasa del 3,75% del BCE parece insostenible, advierte, instando a los inversores a optar por los bonos soberanos de la UE...<br><a href="https://economictimes.indiatimes.com/news/international/us/ecb-to-cut-rates-twice-this-year-will-the-european-central-bank-really-slash-rates-twice-as-eu-debt-worries-grow/articleshow/125281438.cms">Leer más</a>]]></description>
       <link>https://economictimes.indiatimes.com/news/international/us/ecb-to-cut-rates-twice-this-year-will-the-european-central-bank-really-slash-rates-twice-as-eu-debt-worries-grow/articleshow/125281438.cms</link>
-      <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
+      <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
     </item>
     <item>
       <title>Iberia: Miami – Bilbao, España.$490 (Economía Básica) / $690 (Economía Regular).Ida y vuelta, incluidos todos los impuestos.</title>
       <description><![CDATA[💶 <img src="https://www.theflightdeal.com/wp-content/uploads/2016/11/bilbao_spain_november-640x390.jpg" width="120" style="border-radius:6px;"><br><b>Iberia: Miami – Bilbao, España.$490 (Economía Básica) / $690 (Economía Regular).Ida y vuelta, incluidos todos los impuestos.</b><br><br>Una buena oferta a Bilbao Matrix Airfare Search por parte de ITA Software le costará $ 718 (economía regular).Usar esas fechas en Iberia debería cambiar el precio a $490 (Economía Básica) y $690 (Economía Regular).<br><a href="https://www.theflightdeal.com/2025/11/12/iberia-miami-bilbao-spain-490-basic-economy-690-regular-economy-roundtrip-including-all-taxes-2/">Leer más</a>]]></description>
       <link>https://www.theflightdeal.com/2025/11/12/iberia-miami-bilbao-spain-490-basic-economy-690-regular-economy-roundtrip-including-all-taxes-2/</link>
-      <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
+      <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
     </item>
   </channel>
 </rss>

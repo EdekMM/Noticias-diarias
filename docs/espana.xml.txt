@@ -5,25 +5,25 @@
     <link>https://edekmm.github.io/Noticias-diarias/docs/espana.xml.txt</link>
     <description>Noticias sobre Spain actualizadas automáticamente.</description>
     <language>es-es"
-    <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
+    <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
     <item>
       <title>La estrella del Barcelona revela esperanzas del regreso de Lionel Messi</title>
       <description><![CDATA[🇪🇸 <img src="https://getfootballnewsspain.com/wp-content/uploads/2022/12/fbl-wc-2022-match57-ned-arg-4-1-1024x683.jpg" width="120" style="border-radius:6px;"><br><b>La estrella del Barcelona revela esperanzas del regreso de Lionel Messi</b><br><br>La estrella del Barcelona Joan García ha revelado esta semana su esperanza de que el ícono del club Lionel Messi pueda regresar a la capital de Cataluña como jugador. El tema de una posible reunión entre el Barcelona...<br><a href="https://getfootballnewsspain.com/barcelona-star-reveals-hopes-of-lionel-messi-return/">Leer más</a>]]></description>
       <link>https://getfootballnewsspain.com/barcelona-star-reveals-hopes-of-lionel-messi-return/</link>
-      <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
+      <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
     </item>
     <item>
       <title>El juez no reveló vínculos personales con el fiscal en dos casos del corredor de la muerte</title>
       <description><![CDATA[🇪🇸 <img src="https://theintercept.com/wp-content/uploads/2025/11/IMG_7667.jpg?fit=4032%2C3024&w=1200&h=800" width="120" style="border-radius:6px;"><br><b>El juez no reveló vínculos personales con el fiscal en dos casos del corredor de la muerte</b><br><br>El fiscal veterano Fern Smith condenó tanto a Tremane Wood como a Richard Glossip.En ambos casos, llama amigo al juez.
 La publicación El juez no reveló vínculos personales con el fiscal en dos casos condenados a muerte apareció por primera vez en The Intercept.<br><a href="https://theintercept.com/2025/11/12/richard-glossip-tremane-wood-susan-stallings-judge-recusal/">Leer más</a>]]></description>
       <link>https://theintercept.com/2025/11/12/richard-glossip-tremane-wood-susan-stallings-judge-recusal/</link>
-      <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
+      <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
     </item>
     <item>
       <title>urnas-internacionales-es 1.0.0</title>
       <description><![CDATA[🇪🇸 <b>urnas-internacionales-es 1.0.0</b><br><br>Complemento de validación de España para URN internacionales<br><a href="https://pypi.org/project/international-urns-es/1.0.0/">Leer más</a>]]></description>
       <link>https://pypi.org/project/international-urns-es/1.0.0/</link>
-      <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
+      <pubDate>Thu, 13 Nov 2025 22:25:41 +0000</pubDate>
     </item>
   </channel>
 </rss>
