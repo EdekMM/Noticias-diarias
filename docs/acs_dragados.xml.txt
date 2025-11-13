@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Grupo ACS / Dragados</title>
+    <title>Noticias diarias - Acs Dragados</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/acs_dragados.xml.txt</link>
-    <description>Grupo ACS / Dragados - Noticias del 12/11/2025</description>
-    <language>es-es</language>
+    <description>Noticias sobre ACS OR Dragados actualizadas automáticamente.</description>
+    <language>es-es"
+    <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
     <item>
-      <title>Grupo ACS / Dragados - 12/11/2025</title>
-      <description><![CDATA[
-      <b>Grupo ACS / Dragados</b><br>
-      - Titular 1 del día 12/11/2025.<br>
-      - Titular 2 del día 12/11/2025.<br>
-      - Titular 3 del día 12/11/2025.<br><br>
-      <i>Resumen del bloque Grupo ACS / Dragados.</i>
-      ]]></description>
-      <pubDate>Wed, 12 Nov 2025 23:34:48 +0100</pubDate>
+      <title>El ensayo de fase III de Novartis para el tratamiento de próxima generación contra la malaria KLU156 (GanLum) cumple el criterio de valoración principal y tiene potencial para combatir la resistencia a los antipalúdicos</title>
+      <description><![CDATA[🏢 <img src="https://ml-eu.globenewswire.com/Resource/Download/5d242013-5d1f-440c-8ba6-3b5d3799b035" width="120" style="border-radius:6px;"><br><b>El ensayo de fase III de Novartis para el tratamiento de próxima generación contra la malaria KLU156 (GanLum) cumple el criterio de valoración principal y tiene potencial para combatir la resistencia a los antipalúdicos</b><br><br>Basilea, 12 de noviembre de 2025 – Novartis anunció hoy resultados positivos de KALUMA, un estudio de fase III para el nuevo tratamiento contra la malaria KLU156 (ganaplacida/lumefantrina o GanLum).El nuevo antipalúdico sin artemisinina, desarrollado con Medicines for Malaria...<br><a href="https://www.globenewswire.com/news-release/2025/11/12/3186868/0/en/Novartis-Phase-III-trial-for-next-generation-malaria-treatment-KLU156-GanLum-meets-primary-endpoint-with-potential-to-combat-antimalarial-resistance.html">Leer más</a>]]></description>
+      <link>https://www.globenewswire.com/news-release/2025/11/12/3186868/0/en/Novartis-Phase-III-trial-for-next-generation-malaria-treatment-KLU156-GanLum-meets-primary-endpoint-with-potential-to-combat-antimalarial-resistance.html</link>
+      <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mamá, 35 años, detalla los primeros signos de cáncer de páncreas que los médicos ignoraron durante meses: "Tenía miedo"</title>
+      <description><![CDATA[🏢 <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1200x630_center,f_auto,q_auto:best/rockcms/2025-11/mom-pancreatic-cancer-mh-111225-01-583985.jpg" width="120" style="border-radius:6px;"><br><b>Mamá, 35 años, detalla los primeros signos de cáncer de páncreas que los médicos ignoraron durante meses: "Tenía miedo"</b><br><br>Amy Skoutelas, de 35 años, sufrió durante meses dolor de estómago, indigestión y cambios en las heces, lo que fue descartado por los médicos.Resultó ser cáncer de páncreas.<br><a href="https://www.today.com/health/disease/mom-pancreatic-cancer-symptoms-dismissed-rcna242658">Leer más</a>]]></description>
+      <link>https://www.today.com/health/disease/mom-pancreatic-cancer-symptoms-dismissed-rcna242658</link>
+      <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>OMRON Healthcare anuncia una segunda inversión en Tricog Health para avanzar en la atención cardíaca impulsada por IA en la India</title>
+      <description><![CDATA[🏢 <img src="https://th-i.thgim.com/public/incoming/y5zhpf/article70272530.ece/alternates/LANDSCAPE_1200/Blue_White_Logo.jpg" width="120" style="border-radius:6px;"><br><b>OMRON Healthcare anuncia una segunda inversión en Tricog Health para avanzar en la atención cardíaca impulsada por IA en la India</b><br><br>OMRON Healthcare anuncia una segunda inversión en Tricog Health para avanzar en la atención cardíaca impulsada por IA en la India<br><a href="https://www.thehindubusinessline.com/brandhub/omron-healthcare-announces-second-investment-in-tricog-health-to-advance-ai-powered-cardiac-care-in-india/article70272535.ece">Leer más</a>]]></description>
+      <link>https://www.thehindubusinessline.com/brandhub/omron-healthcare-announces-second-investment-in-tricog-health-to-advance-ai-powered-cardiac-care-in-india/article70272535.ece</link>
+      <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
     </item>
   </channel>
 </rss>

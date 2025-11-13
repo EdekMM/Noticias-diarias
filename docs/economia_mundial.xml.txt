@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Economía Mundial</title>
+    <title>Noticias diarias - Economia Mundial</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/economia_mundial.xml.txt</link>
-    <description>Economía Mundial - Noticias del 12/11/2025</description>
-    <language>es-es</language>
+    <description>Noticias sobre global economy actualizadas automáticamente.</description>
+    <language>es-es"
+    <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
     <item>
-      <title>Economía Mundial - 12/11/2025</title>
-      <description><![CDATA[
-      <b>Economía Mundial</b><br>
-      - Titular 1 del día 12/11/2025.<br>
-      - Titular 2 del día 12/11/2025.<br>
-      - Titular 3 del día 12/11/2025.<br><br>
-      <i>Resumen del bloque Economía Mundial.</i>
-      ]]></description>
-      <pubDate>Wed, 12 Nov 2025 23:34:48 +0100</pubDate>
+      <title>Hybar celebra la gran inauguración de la fábrica de varillas corrugadas más sostenible del mundo</title>
+      <description><![CDATA[🌍 <img src="https://ml.globenewswire.com/Resource/Download/2cd2fd70-0b1f-44f2-83d1-43d0ad08647d" width="120" style="border-radius:6px;"><br><b>Hybar celebra la gran inauguración de la fábrica de varillas corrugadas más sostenible del mundo</b><br><br>Hybar celebró la gran inauguración de su nueva fábrica de varillas corrugadas sostenible en Osceola, Arkansas...<br><a href="https://www.globenewswire.com/news-release/2025/11/12/3186898/0/en/Hybar-Celebrates-Grand-Opening-of-World-s-Most-Sustainable-Rebar-Mill.html">Leer más</a>]]></description>
+      <link>https://www.globenewswire.com/news-release/2025/11/12/3186898/0/en/Hybar-Celebrates-Grand-Opening-of-World-s-Most-Sustainable-Rebar-Mill.html</link>
+      <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>Informe de la Cámara de Representantes de Estados Unidos acusa a China de interferir en el mercado de minerales</title>
+      <description><![CDATA[🌍 <img src="https://media.zenfs.com/en/reuters.com/34f1d979ce6a4366b9cd1c47ff76fe0a" width="120" style="border-radius:6px;"><br><b>Informe de la Cámara de Representantes de Estados Unidos acusa a China de interferir en el mercado de minerales</b><br><br>Por Ernest Scheyder y Pratima Desai (Reuters) -China durante décadas ha tratado de manipular los precios globales de minerales críticos, utilizando su control como un medio económico...<br><a href="https://www.yahoo.com/news/articles/us-house-report-accuses-china-220450069.html">Leer más</a>]]></description>
+      <link>https://www.yahoo.com/news/articles/us-house-report-accuses-china-220450069.html</link>
+      <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>Bird informa los resultados del tercer trimestre de 2025;Récord de $10 mil millones de dólares combinados en cartera de pedidos y cartera pendiente</title>
+      <description><![CDATA[🌍 <img src="https://ml.globenewswire.com/Resource/Download/e3294255-d4dc-4f54-98b0-856da3dd778d" width="120" style="border-radius:6px;"><br><b>Bird informa los resultados del tercer trimestre de 2025;Récord de $10 mil millones de dólares combinados en cartera de pedidos y cartera pendiente</b><br><br>MISSISSAUGA, Ontario, 12 de noviembre de 2025 (GLOBE NEWSWIRE) -- “La demanda sostenida en los sectores estratégicos clave de Bird, junto con el historial comprobado de la Compañía en la ejecución de complejos proyectos institucionales, industriales y de infraestructura, ayudaron a impulsar el B combinado de Bird...<br><a href="https://www.globenewswire.com/news-release/2025/11/12/3186884/0/en/Bird-Reports-2025-Third-Quarter-Results-Record-10-Billion-Combined-Backlog-and-Pending-Backlog.html">Leer más</a>]]></description>
+      <link>https://www.globenewswire.com/news-release/2025/11/12/3186884/0/en/Bird-Reports-2025-Third-Quarter-Results-Record-10-Billion-Combined-Backlog-and-Pending-Backlog.html</link>
+      <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
     </item>
   </channel>
 </rss>

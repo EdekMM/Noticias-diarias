@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Noticias de Madrid</title>
+    <title>Noticias diarias - Madrid</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/madrid.xml.txt</link>
-    <description>Noticias de Madrid - Noticias del 12/11/2025</description>
-    <language>es-es</language>
+    <description>Noticias sobre Madrid actualizadas automáticamente.</description>
+    <language>es-es"
+    <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
     <item>
-      <title>Noticias de Madrid - 12/11/2025</title>
-      <description><![CDATA[
-      <b>Noticias de Madrid</b><br>
-      - Titular 1 del día 12/11/2025.<br>
-      - Titular 2 del día 12/11/2025.<br>
-      - Titular 3 del día 12/11/2025.<br><br>
-      <i>Resumen del bloque Noticias de Madrid.</i>
-      ]]></description>
-      <pubDate>Wed, 12 Nov 2025 23:34:48 +0100</pubDate>
+      <title>Liga de Campeones femenina: 3️⃣ brasileñas y el Atlético pierde ante la Juventus</title>
+      <description><![CDATA[🏙️ <img src="https://photobooth-api.onefootball.com/api/screenshot/%2Fv2%2Fphotobooth%2Fcms%2Fen%2F41943875%3Fdate=2025-11-12" width="120" style="border-radius:6px;"><br><b>Liga de Campeones femenina: 3️⃣ brasileñas y el Atlético pierde ante la Juventus</b><br><br>En una emocionante Liga de Campeones Femenina de la UEFA venció al Atlético de Madrid con una victoria por 2-1 en el Centro Deportivo Wanda Alcalá de Henares.<br><a href="https://onefootball.com/en/news/womens-champions-league-3-brazilians-as-atletico-lose-to-juventus-41943875">Leer más</a>]]></description>
+      <link>https://onefootball.com/en/news/womens-champions-league-3-brazilians-as-atletico-lose-to-juventus-41943875</link>
+      <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>Kane, el principal objetivo del Barcelona: las habladurías del jueves</title>
+      <description><![CDATA[🏙️ <img src="https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/1ba0/live/b83e3660-c010-11f0-8456-eff94716b162.png" width="120" style="border-radius:6px;"><br><b>Kane, el principal objetivo del Barcelona: las habladurías del jueves</b><br><br>El delantero de Inglaterra y del Bayern de Múnich, Harry Kane, es un objetivo principal para el Barcelona, ​​el mediocampista del Crystal Palace Adam Wharton encabeza la lista de transferencias del Chelsea, la Juventus detiene las negociaciones contractuales con Kenan Yildiz y más.<br><a href="https://www.bbc.com/sport/football/articles/cwyk0yk5vg4o">Leer más</a>]]></description>
+      <link>https://www.bbc.com/sport/football/articles/cwyk0yk5vg4o</link>
+      <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
+    </item>
+    <item>
+      <title>Kylian Mbappé deja caer una pista del Real Madrid sobre Dayot Upamecano mientras el defensa del Bayern de Múnich se acerca a la agencia libre</title>
+      <description><![CDATA[🏙️ <img src="https://ds-images.bolavip.com/news/image?src=https://images.worldsoccertalk.com/webp/1200_740/WST_20251112_WST_603141_Mbappe-Upamecano.webp&width=1200&height=740" width="120" style="border-radius:6px;"><br><b>Kylian Mbappé deja caer una pista del Real Madrid sobre Dayot Upamecano mientras el defensa del Bayern de Múnich se acerca a la agencia libre</b><br><br>Dayot Upamecano parece estar en plena forma con el Bayern de Múnich, lo que le convierte en un activo crucial para Francia.Ante esto, Kylian Mbappé envió un picante mensaje, abriendo las puertas del Real Madrid en medio de una posible salida del conjunto alemán como agente libre.
+Después de s…<br><a href="https://worldsoccertalk.com/news/kylian-mbappe-drops-a-hint-to-upamecano-towards-real-madrid-amid-his-potential-free-agency-departure/">Leer más</a>]]></description>
+      <link>https://worldsoccertalk.com/news/kylian-mbappe-drops-a-hint-to-upamecano-towards-real-madrid-amid-his-potential-free-agency-departure/</link>
+      <pubDate>Thu, 13 Nov 2025 22:21:03 +0000</pubDate>
     </item>
   </channel>
 </rss>
