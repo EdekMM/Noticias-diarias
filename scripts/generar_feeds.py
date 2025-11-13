@@ -1,33 +1,35 @@
 import requests
+import feedparser
 from datetime import datetime
 import html
 import os
 
 # -----------------------------
-# CONFIGURACIÓN
+# CONFIG
 # -----------------------------
-API_KEY = "AQUI_TU_API_KEY_DE_NEWSAPI"   # ← pon aquí tu API Key
+API_KEY = "AQUI_TU_API_KEY_DE_NEWSAPI"   # ← tu API Key
 MAX_TITULARES = 10
 
+# Categorías y búsquedas
 CATEGORIAS = {
     "espana": {
-        "query": "Spain OR España politics OR economy NOT sports NOT football",
+        "query": "España",
         "titulo": "Noticias de España"
     },
     "madrid": {
-        "query": "Madrid Spain politics OR economy NOT sports NOT football",
+        "query": "Madrid",
         "titulo": "Noticias de Madrid"
     },
     "economia_mundial": {
-        "query": "global economy OR world economy",
+        "query": "world economy",
         "titulo": "Economía mundial"
     },
     "economia_espana": {
-        "query": "Spain economy OR economía España",
+        "query": "economía España",
         "titulo": "Economía en España"
     },
     "construccion": {
-        "query": "construction sector Spain OR sector construcción España",
+        "query": "sector construcción España",
         "titulo": "Sector de la construcción"
     },
     "acs_dragados": {
@@ -37,63 +39,141 @@ CATEGORIAS = {
 }
 
 # -----------------------------
-# TRADUCTOR SIMPLE (MyMemory)
+# TRADUCTOR (mymemory)
 # -----------------------------
-def traducir(texto):
+def traducir(texto, origen="en"):
+    if origen == "es":
+        return texto
+
     url = "https://api.mymemory.translated.net/get"
-    params = {"q": texto, "langpair": "en|es"}
+    params = {"q": texto, "langpair": f"{origen}|es"}
+
     try:
         r = requests.get(url, params=params, timeout=10)
         data = r.json()
         return data.get("responseData", {}).get("translatedText", texto)
     except:
-        return texto  # si falla, devuelve el original
+        return texto
 
 
 # -----------------------------
-# OBTENER TITULARES DE NEWSAPI
+# FUENTE 1: NewsAPI
 # -----------------------------
-def obtener_titulares(query):
+def obtener_newsapi(query):
     url = "https://newsapi.org/v2/everything"
     params = {
         "q": query,
-        "sortBy": "publishedAt",        # quitado language="es"
+        "sortBy": "publishedAt",
+        "language": "es",
         "pageSize": MAX_TITULARES,
         "apiKey": API_KEY
     }
 
-    r = requests.get(url, params=params)
-    data = r.json()
-
-    articulos = data.get("articles", [])
-
-    titulares = []
-    for art in articulos[:MAX_TITULARES]:
-        titulo = art.get("title", "Sin título")
-
-        # Traducir si no está en español
-        if art.get("language", "es") != "es":
-            titulo = traducir(titulo)
-
-        titulares.append(titulo)
-
-    return titulares
+    try:
+        r = requests.get(url, params=params, timeout=10)
+        data = r.json()
+        articulos = data.get("articles", [])
+        return [a.get("title") for a in articulos if a.get("title")]
+    except:
+        return []
 
 
 # -----------------------------
-# GENERAR XML RSS
+# FUENTE 2: Google News RSS
+# -----------------------------
+def obtener_google_news(query):
+    url = f"https://news.google.com/rss/search?q={query}&hl=es&gl=ES&ceid=ES:es"
+    feed = feedparser.parse(url)
+
+    resultados = []
+    for item in feed.entries[:MAX_TITULARES]:
+        resultados.append(item.title)
+
+    return resultados
+
+
+# -----------------------------
+# FUENTE 3: Reuters
+# -----------------------------
+def obtener_reuters():
+    url = "https://feeds.reuters.com/reuters/worldNews"
+    feed = feedparser.parse(url)
+    resultados = []
+
+    for item in feed.entries[:MAX_TITULARES]:
+        resultados.append(traducir(item.title))
+
+    return resultados
+
+
+# -----------------------------
+# FUENTE 4: BBC News
+# -----------------------------
+def obtener_bbc():
+    url = "https://feeds.bbci.co.uk/news/world/rss.xml"
+    feed = feedparser.parse(url)
+    resultados = []
+
+    for item in feed.entries[:MAX_TITULARES]:
+        resultados.append(traducir(item.title))
+
+    return resultados
+
+
+# -----------------------------
+# FUENTE 5: El País RSS
+# -----------------------------
+def obtener_el_pais():
+    url = "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada"
+    feed = feedparser.parse(url)
+    resultados = []
+
+    for item in feed.entries[:MAX_TITULARES]:
+        resultados.append(item.title)
+
+    return resultados
+
+
+# -----------------------------
+# UNIFICAR LAS FUENTES
+# -----------------------------
+def obtener_titulares(query):
+    titulares = []
+
+    # newsapi
+    titulares.extend(obtener_newsapi(query))
+
+    # google news
+    titulares.extend(obtener_google_news(query))
+
+    # fuentes internacionales
+    titulares.extend(obtener_reuters())
+    titulares.extend(obtener_bbc())
+
+    # El País
+    titulares.extend(obtener_el_pais())
+
+    # eliminar duplicados y limitar
+    titulos_unicos = []
+    for t in titulares:
+        if t not in titulos_unicos:
+            titulos_unicos.append(t)
+
+    return titulos_unicos[:MAX_TITULARES]
+
+
+# -----------------------------
+# CREAR XML DE FEED
 # -----------------------------
 def generar_xml(nombre, categoria, query):
     FECHA = datetime.now().strftime("%d/%m/%Y")
     PUBDATE = datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0100")
 
-    # Obtener titulares
     titulares = obtener_titulares(query)
 
-    # Crear el bloque HTML
     bloque = ""
-    for t in titulares:
-        bloque += f"- {html.escape(t)}<br>\n"
+    for i, t in enumerate(titulares, 1):
+        bloque += f"{i}. {html.escape(t)}<br>\n"
 
     bloque += f"<br><b>Resumen automático generado el {FECHA}.</b>"
 
@@ -109,12 +189,12 @@ def generar_xml(nombre, categoria, query):
       <title>{categoria} - {FECHA}</title>
       <description><![CDATA[
 {bloque}
-      ]]></description>
+]]></description>
       <pubDate>{PUBDATE}</pubDate>
     </item>
   </channel>
-</rss>
-"""
+</rss>"""
+
     return xml
 
 
