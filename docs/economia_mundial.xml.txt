@@ -9,9 +9,19 @@
     <item>
       <title>Economía mundial - 13/11/2025</title>
       <description><![CDATA[
+- <b>Chief Economists&#x27; Outlook: September 2025 - El Foro Económico Mundial</b> (Google News)<br>
+- <b>International Cruise Summit 2025 - Session 5: Cruise destinations - The real economic impact - Blue economy - cruisesnews.es</b> (Google News)<br>
+- <b>Comillas, a benchmark in crypto-assets and tokenised economy - Universidad Pontificia Comillas</b> (Google News)<br>
+- <b>El Port de Barcelona lidera la innovación portuaria global en el Smart Ports: Piers of the Future 2025, acontecimiento insignia del Tomorrow.Blue Economy - Infopuertos</b> (Google News)<br>
+- <b>Trump’s policies, the main question mark surrounding the global economic outlook - CaixaBank Research</b> (Google News)<br>
+- <b>Food waste, an urgent challenge for people, the economy and the planet - Fundación Biodiversidad</b> (Google News)<br>
+- <b>World Green Economy Summit Hosts a High-Level Ministerial Roundtable - afp.com</b> (Google News)<br>
+- <b>Yolanda Díaz: &quot;Social Economy is the vaccine against inequality&quot; - La Moncloa</b> (Google News)<br>
+- <b>Al borde: comercio, finanzas y la reconfiguración de la economía mundial - UN Trade and Development (UNCTAD)</b> (Google News)<br>
+- <b>“Fifteen years ago, the European economy was larger than that of the U.S. Today, the U.S. economy is one and a half times that of Europe” - CapitalMadrid</b> (Google News)<br>
 <br><b>Resumen automático generado el 13/11/2025.</b>
       ]]></description>
-      <pubDate>Thu, 13 Nov 2025 23:09:37 +0100</pubDate>
+      <pubDate>Thu, 13 Nov 2025 23:48:16 +0100</pubDate>
     </item>
   </channel>
 </rss>

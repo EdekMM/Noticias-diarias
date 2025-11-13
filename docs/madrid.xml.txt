@@ -9,9 +9,19 @@
     <item>
       <title>Noticias de Madrid - 13/11/2025</title>
       <description><![CDATA[
+- <b>¿Qué equipos de LALIGA no son SAD? - DAZN</b> (Google News)<br>
+- <b>Real Sociedad-Real Madrid | El Madrid aguanta 60 minutos con 10 jugadores y se lleva la victoria en San Sebastián - EL PAÍS</b> (Google News)<br>
+- <b>Courtois no se &#x27;corta&#x27; con Tebas: &quot; No he visto jamás a un presidente de una liga de cualquier deporte hablar así&quot; - Mundo Deportivo</b> (Google News)<br>
+- <b>El Atlético no puede con el Manchester United - EL PAÍS</b> (Google News)<br>
+- <b>Ancelotti ha decidido no seguir la próxima temporada en el Real Madrid - Onda Cero</b> (Google News)<br>
+- <b>Xabi Alonso: “No hay que regodearse demasiado” - EL PAÍS</b> (Google News)<br>
+- <b>Convenio entre Coslada y la Real Federación de Fútbol de Madrid que permite que casi 300 niños y niñas no tengan que desplazarse - Deportes - Ayuntamiento de Coslada</b> (Google News)<br>
+- <b>Cincuenta años no es nada - EL PAÍS</b> (Google News)<br>
+- <b>Vedat Muriqi: “A veces, me parece que juego a otro deporte. No soy rápido ni técnico ni ágil” - EL PAÍS</b> (Google News)<br>
+- <b>El Madrid no se entrega - EL PAÍS</b> (Google News)<br>
 <br><b>Resumen automático generado el 13/11/2025.</b>
       ]]></description>
-      <pubDate>Thu, 13 Nov 2025 23:09:37 +0100</pubDate>
+      <pubDate>Thu, 13 Nov 2025 23:48:14 +0100</pubDate>
     </item>
   </channel>
 </rss>

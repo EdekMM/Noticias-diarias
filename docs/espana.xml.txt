@@ -9,9 +9,19 @@
     <item>
       <title>Noticias de España - 13/11/2025</title>
       <description><![CDATA[
+- <b>Lamine Yamal no jugará con España y la Federación estalla contra el Barça - El Mundo</b> (Google News)<br>
+- <b>España cambia para no cambiar - EL PAÍS</b> (Google News)<br>
+- <b>El Gobierno no aclara al PP si España irá al Mundial de Fútbol 2026 si acude Israel - EFE - Agencia de noticias</b> (Google News)<br>
+- <b>Deportes que no sabías que existían: desde el fútbol gaélico hasta la lucha con los dedos de los pies - Onda Cero</b> (Google News)<br>
+- <b>¿España jugará el Mundial de fútbol si participa Israel? Esto ha respondido la ministra de Deportes - El Faro de Ceuta</b> (Google News)<br>
+- <b>Sonia Bermúdez, la seleccionadora discreta y sosegada que estuvo en la &#x27;asamblea de la vergüenza&#x27; - El Periódico</b> (Google News)<br>
+- <b>El PSOE no descarta retirar a España del Mundial de fútbol si lo juega Israel - El Debate</b> (Google News)<br>
+- <b>Deporte hoy en TV: fútbol, Fórmula 1 y todo lo que no te puedes perder este fin de semana - Mundo Deportivo</b> (Google News)<br>
+- <b>El PSOE se abre a que España no juegue el Mundial de fútbol si se clasifica Israel: «Lo valoraremos» - OkDiario</b> (Google News)<br>
+- <b>Cincuenta años no es nada - EL PAÍS</b> (Google News)<br>
 <br><b>Resumen automático generado el 13/11/2025.</b>
       ]]></description>
-      <pubDate>Thu, 13 Nov 2025 23:09:37 +0100</pubDate>
+      <pubDate>Thu, 13 Nov 2025 23:48:12 +0100</pubDate>
     </item>
   </channel>
 </rss>

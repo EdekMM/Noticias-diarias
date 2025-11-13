@@ -9,9 +9,19 @@
     <item>
       <title>Economía en España - 13/11/2025</title>
       <description><![CDATA[
+- <b>La inflación vuelve a distanciar los sueldos españoles de los europeos - El Confidencial</b> (Google News)<br>
+- <b>España asombra a EEUU y Europa con su modelo para integrar en la economía a los que vienen de fuera: &quot;Es una valiosa lección para la UE&quot; - El Economista</b> (Google News)<br>
+- <b>El Banco de España reclama al Gobierno un plan creíble de consolidación fiscal ante la ausencia de Presupuestos - El Español</b> (Google News)<br>
+- <b>España sella acuerdos con China para impulsar sus exportaciones agroalimentarias - Expansión</b> (Google News)<br>
+- <b>La renta media de los inmigrantes crece el doble que la de los nacidos en España - El Independiente</b> (Google News)<br>
+- <b>España, el país de la OCDE con mayor paro y el único a doble dígito - La Razón</b> (Google News)<br>
+- <b>Los principales analistas de España mejoran su previsión de PIB al 2,9% este año, pero señalan una ralentización en 2026 - 20Minutos</b> (Google News)<br>
+- <b>El Rey reclama “seguir fortaleciendo” las relaciones con China durante una visita de alto contenido económico - EL PAÍS</b> (Google News)<br>
+- <b>España fue el segundo país con más pérdidas económicas en el 2024 por el clima extremo - La Vanguardia</b> (Google News)<br>
+- <b>El precio del huevo en España se dispara: sube un 18 % y triplica la inflación de la eurozona - Diari de Tarragona</b> (Google News)<br>
 <br><b>Resumen automático generado el 13/11/2025.</b>
       ]]></description>
-      <pubDate>Thu, 13 Nov 2025 23:09:37 +0100</pubDate>
+      <pubDate>Thu, 13 Nov 2025 23:48:18 +0100</pubDate>
     </item>
   </channel>
 </rss>

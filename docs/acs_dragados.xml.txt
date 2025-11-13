@@ -9,9 +9,19 @@
     <item>
       <title>Grupo ACS / Dragados - 13/11/2025</title>
       <description><![CDATA[
+- <b>Florentino Pérez (ACS) alcanza un beneficio de 585 millones tras lograr unas ventas de récord - Economía Digital</b> (Google News)<br>
+- <b>ACS mejora sus expectativas para el ejercicio tras ganar 655 millones a septiembre, un 8% más - Cinco Días</b> (Google News)<br>
+- <b>ACS ganará 2.211M€ hasta septiembre ebitda, un 32% más - Finanzas.com</b> (Google News)<br>
+- <b>Florentino Pérez se plantea integrar Dragados en Turner dentro de una reorganización de ACS - Vozpópuli</b> (Google News)<br>
+- <b>ACS ultima una operación de más de 20.000 millones con BlackRock para impulsar sus centros de datos - Artículo 14</b> (Google News)<br>
+- <b>Florentino Pérez pierde en la Audiencia Nacional y se queda sin sobrecostes en una obra de 100 millones del AVE a Galicia - Economía Digital</b> (Google News)<br>
+- <b>La ACS de Florentino Pérez pasa a ser estratégica para Criteria Caixa - El Confidencial</b> (Google News)<br>
+- <b>El Cártel de las Constructoras, las empresas corruptoras en España: de Acciona de los Entrecanales a ACS de Florentino Pérez - Diario Red</b> (Google News)<br>
+- <b>Florentino Pérez, entre los aspirantes a construir el tranvía del Camp de Tarragona - Diari de Tarragona</b> (Google News)<br>
+- <b>La ONU incluye ACS, Ineco y CAF en la lista negra de empresas con negocios en la Cisjordania ocupada - Diari ARA</b> (Google News)<br>
 <br><b>Resumen automático generado el 13/11/2025.</b>
       ]]></description>
-      <pubDate>Thu, 13 Nov 2025 23:09:38 +0100</pubDate>
+      <pubDate>Thu, 13 Nov 2025 23:48:21 +0100</pubDate>
     </item>
   </channel>
 </rss>

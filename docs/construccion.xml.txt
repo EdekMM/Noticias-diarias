@@ -9,9 +9,19 @@
     <item>
       <title>Sector de la construcción - 13/11/2025</title>
       <description><![CDATA[
+- <b>El sector de la construcción en España: El impacto económico de la obra civil (2022) - PwC</b> (Google News)<br>
+- <b>Un 39% de las obras en España sufre retrasos por la criminalidad: los delitos en la construcción frenan proyectos y encarecen la vivienda - Infobae</b> (Google News)<br>
+- <b>España refuerza su posición como uno de los mercados más resilientes de Europa en el sector de la construcción - Acermetal</b> (Google News)<br>
+- <b>Industria de la construcción: aportación al PIB en España 2005-2023 - Statista</b> (Google News)<br>
+- <b>España | La escasez de mano de obra en el sector de la construcción - BBVA Research</b> (Google News)<br>
+- <b>El sector de la construcción en España prevé en 2025 un mayor esfuerzo en la búsqueda de talento y en la digitalización - Revista CIC | Arquitectura y Sostenibilidad</b> (Google News)<br>
+- <b>La actividad de la construcción se dispara un 31,4% interanual en España - EjePrime</b> (Google News)<br>
+- <b>El nuevo caballo de batalla para la vivienda: la construcción asume unos costes laborales récord - Idealista</b> (Google News)<br>
+- <b>El sector de la construcción continúa creciendo por encima del PIB - Diario digital Nueva Tribuna</b> (Google News)<br>
+- <b>Las vacantes sin cubrir en el sector de la construcción se cuadruplican - El Economista</b> (Google News)<br>
 <br><b>Resumen automático generado el 13/11/2025.</b>
       ]]></description>
-      <pubDate>Thu, 13 Nov 2025 23:09:37 +0100</pubDate>
+      <pubDate>Thu, 13 Nov 2025 23:48:19 +0100</pubDate>
     </item>
   </channel>
 </rss>
