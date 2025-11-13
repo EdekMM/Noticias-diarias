@@ -11,7 +11,7 @@
       <description><![CDATA[
 <br><b>Resumen automático generado el 13/11/2025.</b>
       ]]></description>
-      <pubDate>Thu, 13 Nov 2025 22:57:45 +0100</pubDate>
+      <pubDate>Thu, 13 Nov 2025 23:00:14 +0100</pubDate>
     </item>
   </channel>
 </rss>
