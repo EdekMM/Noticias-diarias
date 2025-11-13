@@ -1,4 +1,4 @@
-name: Actualizar Noticas Diarias
+name: Actualizar Noticias Diarias
 
 on:
   schedule:
@@ -13,48 +13,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
 
-      - name: Configurar Git
+      - name: Instalar dependencias
+        run: |
+          pip install feedparser requests
+
+      - name: Ejecutar script
+        run: python3 scripts/generar_feeds.py
+
+      - name: Commit y push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Actualizar repositorio (pull)
-        run: |
-          git pull --rebase --autostash || true
-
-      - name: Crear carpeta scripts si no existe
-        run: mkdir -p scripts
-
-      - name: Crear carpeta docs si no existe
-        run: mkdir -p docs
-
-      - name: Instalar dependencias
-        run: pip install requests feedgen googletrans==4.0.0-rc1
-
-      - name: Ejecutar script generador
-        env:
-          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
-        run: python3 scripts/generar_feeds.py
-
-      - name: Añadir cambios
-        run: |
           git add docs/*.xml.txt
+          git commit -m "Actualización automática" || echo "No hay cambios"
+          git pull --rebase
+          git push
 
-      - name: Comprobar cambios
-        run: git status
-
-      - name: Hacer commit si hay cambios
-        run: |
-          if git diff --cached --quiet; then
-            echo "No hay cambios para commitear."
-          else
-            git commit -m "Actualización automática de feeds"
-          fi
-
-      - name: Push cambios al repo
-        run: git push || true
