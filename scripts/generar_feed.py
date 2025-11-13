@@ -1,93 +1,109 @@
-import os
-from datetime import datetime
+#!/usr/bin/env python3
+# scripts/generar_feeds.py
+# Genera 6 feeds en docs/*.xml.txt usando NewsAPI y traducción (googletrans)
+import os, requests, datetime, time
+from googletrans import Translator
 
-# Directorio de salida
-output_dir = "docs"
-os.makedirs(output_dir, exist_ok=True)
+translator = Translator()
+API_KEY = os.getenv("NEWSAPI_KEY", "")
 
-# Fecha actual
-fecha = datetime.now().strftime("%d/%m/%Y")
-pubdate = datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0100")
-
-# Bloques de noticias
-feeds = {
-    "espana": {
-        "titulo": "Noticias de España",
-        "descripcion": "Resumen de noticias nacionales de España.",
-        "contenido": [
-            "El Gobierno anuncia nuevas medidas económicas.",
-            "El paro baja un 2% en el último trimestre.",
-            "España refuerza su liderazgo en energías renovables."
-        ]
-    },
-    "madrid": {
-        "titulo": "Noticias de Madrid",
-        "descripcion": "Actualidad de la Comunidad y ciudad de Madrid.",
-        "contenido": [
-            "El Ayuntamiento aprueba un nuevo plan de movilidad.",
-            "Aumenta el turismo en la capital un 5% este mes.",
-            "Nuevas obras en la M-30 para mejorar el tráfico."
-        ]
-    },
-    "economia_mundial": {
-        "titulo": "Economía Mundial",
-        "descripcion": "Tendencias y titulares de la economía global.",
-        "contenido": [
-            "La FED mantiene los tipos de interés estables.",
-            "El petróleo sube ligeramente por tensiones geopolíticas.",
-            "China presenta datos de crecimiento mejores de lo esperado."
-        ]
-    },
-    "economia_espana": {
-        "titulo": "Economía en España",
-        "descripcion": "Noticias sobre la economía y mercados españoles.",
-        "contenido": [
-            "El IBEX 35 cierra en positivo impulsado por la banca.",
-            "El déficit público se reduce un 0.3% del PIB.",
-            "El consumo interno muestra signos de recuperación."
-        ]
-    },
-    "construccion": {
-        "titulo": "Sector de la Construcción",
-        "descripcion": "Noticias del sector inmobiliario y obras públicas.",
-        "contenido": [
-            "Las licitaciones de obra pública aumentan un 10%.",
-            "El precio del cemento alcanza su nivel más alto desde 2018.",
-            "Se anuncian nuevos proyectos de infraestructuras en Andalucía."
-        ]
-    },
-    "acs_dragados": {
-        "titulo": "Grupo ACS / Dragados S.A.",
-        "descripcion": "Noticias corporativas del grupo ACS y sus filiales.",
-        "contenido": [
-            "ACS gana un contrato de 500 millones en Estados Unidos.",
-            "Dragados participa en un nuevo túnel ferroviario en Alemania.",
-            "El grupo presenta resultados trimestrales al alza."
-        ]
-    }
+# Definición de consultas (query) y emoji/icono por feed
+FUENTES = {
+    "espana": ("Spain", "🇪🇸"),
+    "madrid": ("Madrid", "🏙️"),
+    "economia_mundial": ("global economy", "🌍"),
+    "economia_espana": ("Spain economy", "💶"),
+    "construccion": ("construction sector Spain", "🏗️"),
+    "acs_dragados": ("ACS OR Dragados", "🏢"),
 }
 
-# Generar un XML por bloque
-for clave, datos in feeds.items():
-    file_path = os.path.join(output_dir, f"{clave}.xml.txt")
-    with open(file_path, "w", encoding="utf-8") as f:
-        f.write(f"""<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-  <channel>
-    <title>{datos['titulo']}</title>
-    <link>https://edekmm.github.io/Noticias-diarias/docs/{clave}.xml.txt</link>
-    <description>{datos['descripcion']}</description>
-    <language>es-es</language>
-    <pubDate>{pubdate}</pubDate>
+def traducir(texto):
+    if not texto:
+        return ""
+    try:
+        return translator.translate(texto, dest="es").text
+    except Exception:
+        return texto
 
-""")
-        for noticia in datos["contenido"]:
-            f.write(f"""    <item>
-      <title>{noticia}</title>
-      <description><![CDATA[{noticia}]]></description>
-      <pubDate>{pubdate}</pubDate>
-    </item>
-""")
-        f.write("  </channel>\n</rss>")
+def obtener_noticias(query, page_size=3):
+    if not API_KEY:
+        return []
+    url = "https://newsapi.org/v2/everything"
+    params = {
+        "q": query,
+        "language": "en",
+        "sortBy": "publishedAt",
+        "pageSize": page_size,
+        "apiKey": API_KEY
+    }
+    try:
+        r = requests.get(url, params=params, timeout=15)
+        data = r.json()
+        articles = data.get("articles", []) if isinstance(data, dict) else []
+    except Exception:
+        articles = []
+    noticias = []
+    for art in articles:
+        titulo_orig = art.get("title") or ""
+        desc_orig = art.get("description") or ""
+        link = art.get("url") or ""
+        img = art.get("urlToImage") or ""
+        # traducir (si falla, devuelve original)
+        titulo = traducir(titulo_orig)
+        desc = traducir(desc_orig)
+        noticias.append((titulo, desc, link, img))
+        # Sleep tiny to be polite with translator/network
+        time.sleep(0.1)
+    return noticias
 
-print("Feeds generados correctamente.")
+def generar():
+    docs_dir = "docs"
+    os.makedirs(docs_dir, exist_ok=True)
+    ahora = datetime.datetime.now()
+    fecha = ahora.strftime("%d/%m/%Y")
+    pubdate = datetime.datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S +0000")
+
+    for slug, (query, icono) in FUENTES.items():
+        noticias = obtener_noticias(query, page_size=3)
+        if not noticias:
+            # Mensaje si no hay resultados
+            noticias = [("Sin titulares disponibles", "No se han encontrado noticias para esta categoría.", "", "")]
+
+        # Construir XML
+        channel_title = f"Noticias diarias - {slug.replace('_',' ').title()}"
+        link = f"https://edekmm.github.io/Noticias-diarias/docs/{slug}.xml.txt"
+        xml_lines = [
+            '<?xml version="1.0" encoding="UTF-8"?>',
+            '<rss version="2.0">',
+            '  <channel>',
+            f'    <title>{channel_title}</title>',
+            f'    <link>{link}</link>',
+            f'    <description>Noticias sobre {query} actualizadas automáticamente.</description>',
+            '    <language>es-es"',
+            f'    <pubDate>{pubdate}</pubDate>'
+        ]
+        # Add items
+        for t, d, l, img in noticias:
+            img_html = f'<img src="{img}" width="120" style="border-radius:6px;"><br>' if img else ""
+            description = f'{icono} {img_html}<b>{t}</b><br><br>{d}<br><a href="{l}">Leer más</a>'
+            item = (
+                "    <item>",
+                f"      <title>{t}</title>",
+                f"      <description><![CDATA[{description}]]></description>",
+                f"      <link>{l}</link>",
+                f"      <pubDate>{pubdate}</pubDate>",
+                "    </item>",
+            )
+            xml_lines.extend(item)
+
+        xml_lines.append("  </channel>")
+        xml_lines.append("</rss>")
+
+        contenido = "\n".join(xml_lines)
+        ruta = os.path.join(docs_dir, f"{slug}.xml.txt")
+        with open(ruta, "w", encoding="utf-8") as fh:
+            fh.write(contenido)
+        print(f"Generado: {ruta}")
+
+if __name__ == "__main__":
+    generar()
