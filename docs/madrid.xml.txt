@@ -3,25 +3,25 @@
   <channel>
     <title>Noticias de Madrid</title>
     <link>https://edekmm.github.io/Noticias-diarias/docs/madrid.xml.txt</link>
-    <description>Noticias de Madrid</description>
+    <description>Noticias de Madrid — recopilación automática.</description>
     <language>es-es</language>
 
     <item>
-      <title>Noticias de Madrid - 13/11/2025</title>
+      <title>Noticias de Madrid - 14/11/2025</title>
       <description><![CDATA[
-- <b>¿Qué equipos de LALIGA no son SAD? - DAZN</b> (Google News)<br>
-- <b>Real Sociedad-Real Madrid | El Madrid aguanta 60 minutos con 10 jugadores y se lleva la victoria en San Sebastián - EL PAÍS</b> (Google News)<br>
-- <b>Courtois no se &#x27;corta&#x27; con Tebas: &quot; No he visto jamás a un presidente de una liga de cualquier deporte hablar así&quot; - Mundo Deportivo</b> (Google News)<br>
-- <b>El Atlético no puede con el Manchester United - EL PAÍS</b> (Google News)<br>
-- <b>Ancelotti ha decidido no seguir la próxima temporada en el Real Madrid - Onda Cero</b> (Google News)<br>
-- <b>Xabi Alonso: “No hay que regodearse demasiado” - EL PAÍS</b> (Google News)<br>
-- <b>Convenio entre Coslada y la Real Federación de Fútbol de Madrid que permite que casi 300 niños y niñas no tengan que desplazarse - Deportes - Ayuntamiento de Coslada</b> (Google News)<br>
-- <b>Cincuenta años no es nada - EL PAÍS</b> (Google News)<br>
-- <b>Vedat Muriqi: “A veces, me parece que juego a otro deporte. No soy rápido ni técnico ni ágil” - EL PAÍS</b> (Google News)<br>
-- <b>El Madrid no se entrega - EL PAÍS</b> (Google News)<br>
-<br><b>Resumen automático generado el 13/11/2025.</b>
+1. <b>Qué hacer en Madrid este fin de semana (14-16 noviembre): los mejores planes de la agenda cultural - Diario del Ayuntamiento de Madrid</b> (Google News) <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxPWW1mYVI1YmM4N2lqODNzazJkTHlNMmRBN2JPX1VSZGRReUVzaUp4Y0J5UWNBQW5wbUIwSzZTbGZnWnBCSHZtbTZNVUhtRVB6eTRlUmJxR1l0WnhWSk16cFBjdW82akZEMDFQZ2dUQTNUY2hnTW84ZkR2Y0FTc21NT2dRODVvNW9yemZfaFFFaU5OaUJ6LW4zVm01YXQ1czBKWmF1YnJBMFBkR1I3U05lOA?oc=5">Leer más</a><br>
+2. <b>La Comunidad de Madrid invertirá 21,5 millones en Majadahonda para proyectos de salud y acceso a la vivienda - Comunidad de Madrid |</b> (Google News) <a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxPZzVoZTlCNTFVQWJ2ZlhJblBvR2hnTS1lN1lyanpCZWxpcjZKUE1SYzdlZl8xeGFXY3duRVRNNTNBMll2cHVXa3FZREUyUlBFLV9WZGdRN25MQzQ4alpwZU93ajBiYzgxeFI5SllNY1RHbFpiNzR6UXZzNmJBck53U3R3Nk03ajFLMDhMaTBDOGo5QV9HRFNoRzlCTUhHY1VYa2VPeUliY0E2ZEt1M0NaRzgyXzZBbkZOOF9kZjdudDlHYktWTmV4WlB1aWs?oc=5">Leer más</a><br>
+3. <b>Fernández, en los Premios Europeos de Servicios Sociales 2025: “Madrid es el ejemplo de que una gran capital europea puede ser profundamente humana” - Diario del Ayuntamiento de Madrid</b> (Google News) <a href="https://news.google.com/rss/articles/CBMimwJBVV95cUxOSk9pSkVLeFNuYm9RNF9jVGhBYUhLVTU1bjRqY3ZXOFNqNG9hbzB4cVJCeTN0MHJaNFhxaVFIOXNoT1d0aFN3TVF5Q2EwZlpuOUs1dzR3WnJkTlBSbVhPMzlhN29kMlo2Yk13YUdBNTJZLWhzQkZUS0FCaVlpTEhBbWlxRGh6RnJzUmo3ZTFkYVZsd3c0Z2NNQUtIVm9MTS14djlJSnk1bEc4QXRmblltT0h6dGJrODhNMk9IZ3I2ajVmQUctSlVuNmprT3lnYzV1d3RuYVdfRVlxRjVrVXUxM01EYk1DbGd1QUJMRHNmRHpuREx5TXpNQjdsclhoX2FKLWFCdGZxSFJwYWVFaHpzck93b19laXpjSWgw?oc=5">Leer más</a><br>
+4. <b>La Comunidad de Madrid, reconocida en las medallas al Mérito de Protección Civil por la labor de cuatro de sus profesionales de emergencias - Comunidad de Madrid |</b> (Google News) <a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxOQW5NNTlfaTFCZWctY0o4cEFjTzBjdENvQUd3MjRJRU9QQ2dNWDRjWmJSOE93S2I3YVlhRmpnRHAwMGE2RldyajF3RGpJNEhlekZzOTVPcGlieE5PRGZzREE0UV9XeXEtTGZucmh6UG02c2xySTdULW1ORjUtVk5kMWtWUTQxUGZGVVJaakVlNWF3OGJkMDdzc1ZzZktWbUdiYndZaTY2UVIycTNTdmxQX0gtanE2NTNiREhRWEFrd1QycWZhMFpQczBhTjByanRXejBUN1lIazlnOVVqaDhyRVBn?oc=5">Leer más</a><br>
+5. <b>Nuevo gran negocio ilegal en Madrid: empadronar a extranjeros en domicilios o locales por hasta 300 euros - EL PAÍS</b> (Google News) <a href="https://news.google.com/rss/articles/CBMi6AFBVV95cUxNTWp3NThSY25jX3JmOVlsRGk3bW1nblo4bnh3ZmVJWFNhY053UkkzblVxOHhEdVk3QjM4WVZRenBsRkZ4ZC1jeE9iNEJCdmsyblJ2UTBsN3g5SDlQdUpndXBmeVpiS2FtaFdNTmE2MG5kUG02QnpxbmhkZGJFU1RmMURVVXhTVDRCMFBtaW5fcjQtSVg1QTVsXzZqdFhOVUpMYWlCSERjNFBFbzM0R21PdEFwcnhqcURmNVdsUUI1VW1XYzd4QUtTbk9CTTZCUlFTcVVaMTllSFVmcmNFbmFzS2hzZm9senFQ0gH8AUFVX3lxTE1UOWtzR1R3djJQd3lnWThETVRZRmpIYTUzcVo4MElIc2l5RlBnTUE1V2trcXVGbk1UU2FIc21hY29sVWc5M1psMUp2X2xQVnVCN1htQXZLTnpPa2hvWFdCVXE5TEl3LUFrbGVJby1GY0RZMXlnVEt2M3M3U2plTGVNenBYa0JSb2lFZ1ZfN3MyQUh5OWJDWVJlUjlaQ2FDU1kwSmNEd2xnaUpBRVA4UjA2YlZMYW1NRDg5bi05elBRbXl3MzYyQzB5MVhFRWx5RFdiNkYtOFFCa20xWHVHTWRJTDRvWEJsX09HY29RbWsxNGZiZ19vV1ZpUmMyZQ?oc=5">Leer más</a><br>
+6. <b>Ayuso, contra el “efecto expulsión” de Vox: “Alguien tendrá que limpiar en sus casas” - EL PAÍS</b> (Google News) <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxPS1hDT296WlFRUUVxYi1ZZXc4SHpGZXFadVRZQmo2bEJLblpSOUpMczJzWlR2SFJ5ZVExWGhNeXJkTjdWaEFUN1FyWmpueENZMmVSaDA5VkdvSDlXdDJDRU41Rl80b0RjT2JRVkdRYndDb1FwQ091SzZLVVhrYXlwRFVUZVhYYWpLQlV4TS1xcF9tWEVC0gGoAUFVX3lxTFBKT0FiSnpSQ25Kdy0zc3I4V1BDdWViaFVvUHZzaVg0ZlE0ZC03ZWNGUkh3UWRHcUFMSlloMzZ3c3QzQkdGNl9NMi1rX0lSMkVsZ3JCV09hUWFuV2RMdi1fMWFhQ1JvSlpmT21rQ3FRWG9pSnd1ZjNiSk94VExTQ2pzN1RvRS1DUlVNMUZFaGhtaHlkRDlWY25OMXB6aVRRNVBuZi0tcTN5WQ?oc=5">Leer más</a><br>
+7. <b>El Madrid recibe una bofetada del Panathinaikos - La Razón</b> (Google News) <a href="https://news.google.com/rss/articles/CBMi5gFBVV95cUxPQlpoS1Rlb3pLemFuTGNFVUNlZ2plaWw0Uk9HUFE2ZkYyYXRwSnBNbnoyeGVhMDBiQTFaRzJZMXF5cGhPM2UwQVhiR1JfdXJCTEN0b1NIX3pYemttZEdJMDJfSVZQOFFVSlBIQ0hMLXhxdzNobHllQlRqajlUN2g4WlZpcFJ5NWhlMzE3OHg5MHdqRWpPUi04T29xX2otc1d6dTZWVm1mT01pVlJvNFBRV210OFlxWjNxZW5uaUdBdi12ZkFhZGVNTVA3MjFPeWtDOVo2SmZULUR1QlJzOEtaZWgwb1VTQQ?oc=5">Leer más</a><br>
+8. <b>Así son los ocho dibujos infantiles que iluminarán la Navidad madrileña - Diario del Ayuntamiento de Madrid</b> (Google News) <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxQY3FjLWdqUnlDX0RuUGRWU0wzWTRMQ002WXNFaXVsY05DZG1GMTFYV3pDWUFWSC1tbWF0blU0d2FuZUFKRndoOUdRVFRsVEdTbEd3T1BjNHFMNkVhV25UYmNmRk05VEFSaU9YUk1aeERMWnIwVHFtUWVMRUlIMGZmVk9GeU1YYW8?oc=5">Leer más</a><br>
+9. <b>Industrial Madrid presenta a Alberto Escribano sus nuevos proyectos industriales y residenciales para Arganda - Ayuntamiento de Arganda</b> (Google News) <a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxPcnktSkJtSS1kb1RmRFk4dUxXVmZlWndjeF9sTDR5RVNwYS1XMXk2LTN0UEc0YVNRenJkWjVRTW9FZTMwaGVUN1NXS3JYdnp6cFJVcUlxRU9oUS1lanJXNXdJWHpMSjVRZjRDZGhVNHNLWF9QX0pDTHBxU0cwU2tHWU9MSnI1R2RoQm5WT1NjVC1HSjJPWGV5bWRRUUFhZVNCeGstWEhmTnhTU3pwZDNVTmZISWk4REpDbk1vLVFSWWJNa2kyVmFzM3VHTndsdHJBNFlPVi1xZUFrWWttNlhlNVhn?oc=5">Leer más</a><br>
+10. <b>Real Madrid - Panathinaikos, estadísticas del partido de Euroliga - ABC</b> (Google News) <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcS1sbkY1X09XQTFPd1Fub1drNUR4a3RDZnFVb3A3WllZdnJOaWRvOF9aM1VCS0pfWWZUZ0tQVlFpMlQ5czBLMzFZbUQwQkxmdjZpa214YjMxYjdtQkZSZE5heUQxblRkNkR4VGx4bEkxS2w3NGtsTV9qT1ZIaXJvQlRORE1PRVlTRTZRZzROQ1hmR2JZVS1ZaV9rLXE5bl96QWdnTXNxd1hwbmZyZjBrTzRjTDRsS1Na0gG-AUFVX3lxTE1KVC04Zl9oUUlWRlV2NXFaNTRwUmRobjlzYmFUX1lpMGoyeGFkWlVBcTJubXV0WUtfaWo4RWJOTGZaaTBzT2pjRnUzN2dVZjF6NTNiSExWTmNYWXpuc3VTWkpUTFJDcDY2a2tOT01TOWV4c0pURE1CVHh5dEVSLTFOVDRULVB3U2ZSc0lzTE5sdGNKUnNYMjZlTkFIRzI1WWxvUFFPUW1ZTmJtcktlOTZzTjNncTBQaGtPdUxkQXc?oc=5">Leer más</a><br>
+<br><b>Resumen automático generado el 14/11/2025.</b>
       ]]></description>
-      <pubDate>Thu, 13 Nov 2025 23:48:14 +0100</pubDate>
+      <pubDate>Fri, 14 Nov 2025 00:04:54 +0100</pubDate>
     </item>
   </channel>
 </rss>
