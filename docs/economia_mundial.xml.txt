@@ -7,7 +7,7 @@
     <language>es-es</language>
 
     <item>
-      <title>Economía mundial - 22/11/2025</title>
+      <title>Economía mundial - 23/11/2025</title>
       <description><![CDATA[
 1. <b>Perspectivas 2026 - CaixaBank Research</b> (Google News) <a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxQbHd4dFZhX0RLV29FNkRmUTBlbFZ1Q3FUWXR4VkpiVEpnTmR4SEFETmZOaHh5b2hHaHNJRlpyXzVzV2VJWExCZnpGTFdlT0NMdjd1S3UzREdqcWxsRTYzZGR4MDB6cEFubTRIbERyMHJ5MktRSmRaOWlFYzhFX1RoS0pROXRSSmtTNGNGY0h3UFo?oc=5">Leer más</a><br>
 2. <b>Making the Green Transition Work for People and the Economy 2025 - El Foro Económico Mundial</b> (Google News) <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxPVFFuTk1uTjFTandzR19lTTBfX2ptWVNqZ1pGTkZOTWRhMlY1bFdRSXV5QlF1dGdWc3g3d2tmb2tBZnNKNnNROVowemxudU85dl9vazFoUlZubzQ4bmhacUpKY3lYMURBdUVvXzRpTnkxYW13QTY3UnVWcVI4TkZZajRuT3FZVFNvckFRTUh0bjgzSjdmLXo2M2pNSXE?oc=5">Leer más</a><br>
@@ -19,9 +19,9 @@
 8. <b>Port de Barcelona impulsa la colaboración global en el Smart Ports: Piers of the Future - www.diariodelpuerto.com</b> (Google News) <a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxOSFdwbm5DQVE4S3JFRzlGMm8yOU9mYmttMTBFaUV6LUg3cmZDTEZDSndpZnhpN1Q4TDEzMkxVNXhyeFpDbHVfR1c5QUdQQ2hjaHB0cGxZT2FiZTN6ZGVhTEMxUU9XSGYydV8xcTFVaGg5SlE1c2ptTFRvYmxKMmRscTRweXQ2WFd1WDZWZjh3dlhIUXpQQmxjODNMVUdEMDRFcXIwYi10a2dGRjJfNFRUa0s1TUhLS2tnOXhlMEtuNjA3S0lxY1dhdW9JdjhaYU84ZUdNcg?oc=5">Leer más</a><br>
 9. <b>OMC | Op-ed: El futuro del comercio de África en una economía mundial fracturada - Organización Mundial del Comercio</b> (Google News) <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxOU0ZsY2E4Y2lEeHEwYndhYU9DbkxBYXh4LVo2VnRWc1RVeWgzT1BQWFpfTlpQdUYyV3owajFqa2FaT0Z4U0stVHJQWXBiMTA0Vk03V0w5UWx5RDlqWktrX05yX0JTUGJpOFVxRVBSenJEZllCTDktQXptWUs0X1ExMVhQaDk1UEpfWHgxY2hITldSUlo3aWVEdWlCZmw0c3UzX2N0eWFDdw?oc=5">Leer más</a><br>
 10. <b>Chief Economists&#x27; Outlook: September 2025 - El Foro Económico Mundial</b> (Google News) <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxONmR4cnhuaDYyRzhRQ3lWRXhOSllaa0hrX3J0dDUzV0wzb1NHQnI0c2NwbU1CX2hHeVFzaFZwaGpKVVFPUkdwUWgyQ1M3ZWxRR3RZSjNCTlg3S2hPLXhjckxmN20yNWlPZnF2UmMyNXdzT0xMb0k5X28xNFladllTX0JR?oc=5">Leer más</a><br>
-<br><b>Resumen automático generado el 22/11/2025.</b>
+<br><b>Resumen automático generado el 23/11/2025.</b>
       ]]></description>
-      <pubDate>Sat, 22 Nov 2025 07:28:39 +0100</pubDate>
+      <pubDate>Sun, 23 Nov 2025 07:30:18 +0100</pubDate>
     </item>
   </channel>
 </rss>
