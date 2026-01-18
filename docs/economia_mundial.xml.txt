@@ -7,7 +7,7 @@
     <language>es-es</language>
 
     <item>
-      <title>Economía mundial - 17/01/2026</title>
+      <title>Economía mundial - 18/01/2026</title>
       <description><![CDATA[
 1. <b>Un análisis de la productividad europea - CaixaBank Research</b> (Google News) <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQRHAzeUxfV1psNzdSRlZXdU1jTTVHb1NwNUJyV016TmVoeTkzMkJncjV2cWo2Z1V0RjRSYzdsVTc0VkpfRVlEUlBZYUtHMlcwbXJ6M1FxWXpZR2RkSkMxdnlwOGI2Z1FRbTlvbGJDVjdRWV9Dc1JQQ2QwdUhScktNNkp5b2VaRGEySjZXSFY1TmpodU5fY3pnWWNXZDU3SjNk?oc=5">Leer más</a><br>
 2. <b>Four Futures for the New Economy: Geoeconomics and Technology in 2030 - El Foro Económico Mundial</b> (Google News) <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPbkd1WVdibGVLRFkwSUNxNk1LQTE3TmNUeUQ1TWtfZE1YVWxKc2l3Q0NxQzE5ckhMaTYydjRjblRydDgyODR3ZHhPeGtPcVBMekhKclEtcHFwOWJsNU1IT09vTkUzQUVIN2c0cENuczRHa0FHbGhibElUQTd3a3hjeGNMTU9sZno5b1loMWQ1OHNkTUZvMi1lREJ2ODhoa1lVbWluUXpRdWI?oc=5">Leer más</a><br>
@@ -16,12 +16,12 @@
 5. <b>Big Mac Index: midiendo la economía global con una hamburguesa - Tapas Magazine</b> (Google News) <a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNckxISzdVT2FYS2tZUVB6UmFYcTlEVnE0ZlJyeHc4ejB0UTBZNmljeXpyc29abkdqODZ3NElNc3I5WmdXQXVCeGhnSllrU3RWZXp1U29tX2x1Rm5aUl9SY1lkcnhtSEdMLTdVWHNTcDlmUWV0Mml5WFp1bVY2TExMYWo3UGktcjNXeEQzOUxTOTd3UkU?oc=5">Leer más</a><br>
 6. <b>¿Qué nos dicen los datos bancarios de China sobre la economía y las consecuencias sectoriales? - CapitalMadrid</b> (Google News) <a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxQeVFucDlZdURPVnR2VnJzSUhjUzRBZmJHMDJzSDhVbUpyQWJheXNYMnRFenhnQm8yV0k0Vm0xU1ZYNlI4QXAwRE9aQVc4bU9DN1libmFzTWtscTFwTENZQUZsZUVZZ21VQzdOZi1zSEV2Ty1nOHVrd2dUUFNnTkM5TmdVVU9BUDhDSDJoajJxQWwyZmF1U1laTHU3b2NibV9makphX19hWGFIYW1mWklDdThZaTU2eUZ6Vi11Yzc0TXFMazh6UGVnYWlDLXBnXzA?oc=5">Leer más</a><br>
 7. <b>La Delegación de Euskadi en Estados Unidos y Canadá participa en diversos eventos celebrados en el marco de la 80ª Asamblea General de la ONU - Gobierno Vasco - Euskadi.eus</b> (Google News) <a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxNUzlIZWhhVTJmRWdTQkw0elJ4ZUdnNjQ0dDZNem1tdHl2QXJaRl9CSHN2X1kzQjA2RnNsRnZlOHNQNUdOYWVRek5qN1oxOVFqVHR4UUF4Q25JNUh2WG9UdXpwOEx2MEd3bFp2aGRTbE1Cci1GY09EVmxhVWRrZGVwZVVkV0xxTHF1TEItYUR3NU1KUXRwS2JCRkpMeDctczRoVXJ6UnBKWENERWRJRWxKakVlSHZpYmt0cTJ3Mlk1MmhCSmY1U0FGYXdFT2d5QWlFZ3A0YWJacjZnTmRtVWNxbkln?oc=5">Leer más</a><br>
-8. <b>Making the Green Transition Work for People and the Economy 2025 - El Foro Económico Mundial</b> (Google News) <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxPVFFuTk1uTjFTandzR19lTTBfX2ptWVNqZ1pGTkZOTWRhMlY1bFdRSXV5QlF1dGdWc3g3d2tmb2tBZnNKNnNROVowemxudU85dl9vazFoUlZubzQ4bmhacUpKY3lYMURBdUVvXzRpTnkxYW13QTY3UnVWcVI4TkZZajRuT3FZVFNvckFRTUh0bjgzSjdmLXo2M2pNSXE?oc=5">Leer más</a><br>
-9. <b>La OPEP dice que la economía mundial podría mejorar en el segundo semestre del año - TradingView: siga todos los mercados</b> (Google News) <a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxNYzc1LTNwcjhLOHFkUTN2WnZwSG1qZFZBWTdBYXJrWkN2cFd5cGNpMEtRQ2dMLWtFeHZYeE90UEp4NlpRc1hBM2M1YVZWd2lHTDNDTzY0LUh0cEJzUTVKQTlBYy1xN0ZsVXdRY3pXVDRGVFNuMEpsTG1HMkJDTHA0VGN4anIwZjYyQ21MS3p0S3l3OHFPXzNWQmdicnQzOHJSRUNWbUU5T3lnZC1YakdTTjVxTUtDbXZ2RTlXdHVRYzJPVDltYi0zV3hKVEg1bG9C?oc=5">Leer más</a><br>
-10. <b>Buenas perspectivas de crecimiento de la economía española en 2026 - CaixaBank Research</b> (Google News) <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNSEstamtoU1A5ZjN6cnJjR3ZrUnpHd2hMcExpSHQ4MVBZYW5hcDNrUEJqbkhGRW5nVzF4LVQ3YWdvUEthZjI0UEtVLV9aRW1Nd0VWOGNta1dNalJPZWUwZFJFT20zeUlGNTBFeUdxV29fZThyTkZMVmdiR0pBbmN4TzlWbDViaW1QaFhCQ2xFTHBwZkJqcnBlaEQ1LVBoekV3S0xTbjBRWVFtdmIzUDNwOA?oc=5">Leer más</a><br>
-<br><b>Resumen automático generado el 17/01/2026.</b>
+8. <b>Space Economy: ¿por qué los directivos deben mirar al cielo? - Asociación para el Progreso de la Dirección | APD</b> (Google News) <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE83dnBMSlQ4ajRRNFJKWHZibG1aTXV2LWdwVFFOWkdncmJvRkV2eFJuSE9FaXR5MUZUMzZrY0JZRDBsQWdfZzFjcUJRSFNCTmh0dWc?oc=5">Leer más</a><br>
+9. <b>Pedro Sánchez participa en el evento &#x27;Latin America, Spain and the United States in the Global Economy&#x27; - La Moncloa</b> (Google News) <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxQOWEzN3dtV2R3NHh0aEUwRlZEN2hfYWwyZ3BjOUlpNXg2bkZpTEd1XzkycUIzUTl3M0UzOTFYZG5jeTluemswcjJLZUdsZVNGT3lITUdrTWNFM1NaX0dlT2JhaWZSWkM1aFdINnhCS2s0cWVKcG5yMndFMnpxOXcwN3hmTWFzajFZRU10RkpyNVdYT3FoUFdUNXdIYk9ZR3BLVHFYN2ZrTmxnMXpFMGFR?oc=5">Leer más</a><br>
+10. <b>Making the Green Transition Work for People and the Economy 2025 - El Foro Económico Mundial</b> (Google News) <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxPVFFuTk1uTjFTandzR19lTTBfX2ptWVNqZ1pGTkZOTWRhMlY1bFdRSXV5QlF1dGdWc3g3d2tmb2tBZnNKNnNROVowemxudU85dl9vazFoUlZubzQ4bmhacUpKY3lYMURBdUVvXzRpTnkxYW13QTY3UnVWcVI4TkZZajRuT3FZVFNvckFRTUh0bjgzSjdmLXo2M2pNSXE?oc=5">Leer más</a><br>
+<br><b>Resumen automático generado el 18/01/2026.</b>
       ]]></description>
-      <pubDate>Sat, 17 Jan 2026 07:13:27 +0100</pubDate>
+      <pubDate>Sun, 18 Jan 2026 07:14:30 +0100</pubDate>
     </item>
   </channel>
 </rss>
