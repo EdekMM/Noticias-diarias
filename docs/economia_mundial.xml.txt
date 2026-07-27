@@ -7,7 +7,7 @@
     <language>es-es</language>
 
     <item>
-      <title>Economía mundial - 26/07/2026</title>
+      <title>Economía mundial - 27/07/2026</title>
       <description><![CDATA[
 1. <b>India mantiene el impulso de crecimiento mientras la economía mundial se enfrenta a la incertidumbre: RBI Bulletin - TradingView</b> (Google News) <a href="https://news.google.com/rss/articles/CBMi3wFBVV95cUxObDZPNGRZWHJYNzEtM0RSQ2VlT29HU1lGQzVnWEcxZnhpTFRMYVoxQUNheWY0NjBscmMxYzFfSHZMSVVMaktHQVA5bXl6YXlXajVkaEpGaG5IcERYVUQ0VkRDQkdOSDd2bjcxNjhDOGVfWU82d0VUYVM4cGI1ZHluT2NIb1BIMWVoQ1FGVzdiNE5DMWgyelplSXVjRk0wUGVMRzdjaEhkbndWb09CUzdxa01lNFViaWlJakxEN3dwVzM2dmwxcVUtU19qTWxWRENNT0dmenNNdWNhWlAyX1lv?oc=5">Leer más</a><br>
 2. <b>Global Front Page News. Consorcio Internacional de Periodistas JMH. 25 de julio. - Bullying Sin Fronteras</b> (Google News) <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxOVDFLUlg3R041b3JaWTJvUjlaUzdqTlR4RGlUcGZrYmxabnlOOTNaeV9kTHZzaDNnZzVZN1BUZmNKZk4yTVVjYTlVQktkNEdsN095ZmEyT2ZlWFVZbnpHWVQtSExPZGtiTVJuZE0wZDhyZVVVUGV2U2JxcHFjc1ZOWkg3Tl9TSDRpbmlCYTV6SU5Fb2tS?oc=5">Leer más</a><br>
@@ -17,11 +17,11 @@
 6. <b>Blue Economy: El mar, ficha clave en el puzle energético - Moeve Global</b> (Google News) <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPbTBzQWRoUDBubTRES2dwTEU4QW5WNFdobXcxblUwUlJfLUZac2VqZnF3ZUgtUWVLT2V4YjBqdkg2Rm9kbVRWRGF0X3VLc2tmRFhZNUQzOG90TnpPSDVMMHRZRUlYek52a1V5LTlwYnhkYU5RRTh0TUFDUV9QWlRMVVNkYU44b3JoYUowN1MxSDNfS3RNMXRn?oc=5">Leer más</a><br>
 7. <b>La economía balear crece un 2,9% en el primer trimestre de 2026 - Mallorca Global Mag</b> (Google News) <a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNemNLWEo4aEhrOERaNkZ5dEg3UDJOTEJGSXQtTzg5MXlDTU1RVG1UV1pIdHNtQ2dDU1lBdFVCQWZsYW44b0NqX21MY1FYcGNCcEI5eU9sYXFna3lzMFdtcGxoMllIX3BHSDU4LU1VaHF5T2pCNUpPTkk2c0RYWEo5czRoaw?oc=5">Leer más</a><br>
 8. <b>Marketing: La creator economy superará los 350 mil millones de dólares y ahora las marcas invierten cada vez más en influencers - Revista Merca2.0</b> (Google News) <a href="https://news.google.com/rss/articles/CBMi5gFBVV95cUxQank1RTgtN1hXMUhsOUpHNUdGZ2V2MWw4RFotZy1Bc25lR0VqSzBmUnE5bXVTbGVMYjBmU1pBNGhLak1ubkVtUVF6Nmpyd3pWRjc2Z1RQNWFBNHlrSjhiTXNpZFlGcDNYR3BpdHVJa1BXeXpQQ092d0hLck82VlRoQmVkb09CSFpEYkZRMlVtY0NDVk0tUTEwLWFFS1dLWWQ3N3otbnYwZV9iZWlDdkJiODdqV0FkLWxNcDZRT3FNc2syNUFVRmFhMmRQdW1pQ3hGT2JrSWs4eWFFTTFHb01ndTlDVTAtZw?oc=5">Leer más</a><br>
-9. <b>Creator Economy: por qué el español impulsa los negocios digitales en LATAM - Marketing4eCommerce México</b> (Google News) <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxNQnpQcDJGeFNycU9XM0E3QUxCNGFVSllJaHBPbUJMR29FYkhGcmczTUFnWXdlYzJKYWlHZWVDd3FuSlR1LTZhZjJZaThUNXBZS2NyeEVNcDl0Vk1XMUg4ZE1lZy01TnJZWXFzdTRST285c09kU1VrdG9QVE90YWZyTE5sTnRUUU5KQzJJZGtJc3BWdHRueUNlT1RoQk80Z2M?oc=5">Leer más</a><br>
-10. <b>Los precios del petróleo superan los $ 90, lo que reaviva las preocupaciones sobre la economía mundial. - javiermiglino.blogspot.com</b> (Google News) <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxQampUTWxhSnpHOFV0MC1XQWdDSXhXcVdEbHdhVDlWM2psU04wSmJTdFVObmhnaTk5ek9jd2hIajVsTzlRNEwwbVF3UkQ2ZlVibXFNUlNWSnlWWTFrYkFrZThYWHpvejBvWU43TW9CUU5rWFZ1eE5IdG53NW9HSy1xRnYzS2RSTU0?oc=5">Leer más</a><br>
-<br><b>Resumen automático generado el 26/07/2026.</b>
+9. <b>La UIMP con GMV y Satlantis abordan en Santander el “V Encuentro sobre SmallSats. El Boom de la Economía Espacial” - - Actualidad Aeroespacial</b> (Google News) <a href="https://news.google.com/rss/articles/CBMi2wFBVV95cUxQb1JtNGU0Wk1fMkJ3ZlFxNFNNb3ZreC04UkZFVl9Xb2V6WG5sRU1YbDU4VHRaR3pMOTlkZWNUX1JpeHVTbkEzdHVEb1dNUnZPTVBfbklFMUNLdm9kcXVWWktsbzllUG8yalo0VW5GYWdINUpxSzh1VGQxSUFVU1RlMm53OFJfclFnYWthbEZVLVJfbjdoeU9Pb1YyTFU3cEtLZlZUM05NelFJS2lmcXVFVVBUb3piWDZGbUYzdy1WcXJ5M3U0U1Z2ZE1RbGxzY0JBS0JBWWNhc3laZkU?oc=5">Leer más</a><br>
+10. <b>35 Jefes de Armadas refuerzan su cooperación en España ante un escenario marítimo cada vez más crucial para la seguridad y la economía. - Noticias de la Armada - Armada - Armada - Ministerio de Defensa</b> (Google News) <a href="https://news.google.com/rss/articles/CBMimAJBVV95cUxNV25KSDdxU1dGb0FvUUoyOTVDTVd5Z3Z4Y21Gcy1GYTYyOVNTM1VaczVkbjl2YnVYdk1tVFhueGdRdUdqenJDekx2MFNtWEtyOERBMWhienR1enVodmViZk8tWnZKUHV6eDhJdkdWSnBHRTVaRVpsNy1PM3ZISkRvWC16Nzl4Rmx3em9Bdlpub0pHR0dtY2MwQWtWWUhQcHZXclVzaHE3bFNiT1VDMGVWNHkyREtVVEkxTzVFZXVuWFVuOHl4TktWTk9iNkpGT0tTeVVWRWJfYTBMN1FWaFl3NE1lNzRocDFSSm5VWlVENHpkMmlaR3ktYmVKWTVfZ0NaVGFKaER1MkZhU1ZaZ1dnTGFUc0NrbnRo?oc=5">Leer más</a><br>
+<br><b>Resumen automático generado el 27/07/2026.</b>
       ]]></description>
-      <pubDate>Sun, 26 Jul 2026 09:08:00 +0100</pubDate>
+      <pubDate>Mon, 27 Jul 2026 10:33:35 +0100</pubDate>
     </item>
   </channel>
 </rss>
