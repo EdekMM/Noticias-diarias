@@ -7,7 +7,7 @@
     <language>es-es</language>
 
     <item>
-      <title>Economía mundial - 11/08/2026</title>
+      <title>Economía mundial - 12/08/2026</title>
       <description><![CDATA[
 1. <b>Chief Economists&#x27; Outlook: May 2026 - El Foro Económico Mundial</b> (Google News) <a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE5FVkFmLUQtaTBFVmd5UGVxTVdqYXRteTNQZHZXamFsU0lkQnI5TTFVUzJFYVJENmxwaENrcVFLb3pFV0dGR1JDRUtKckZBT2E0SEV5cWR2cENZT3U0amJmQlBwYURHV0xWOUdlUTJFa3BOY1p5UDQ0U01n?oc=5">Leer más</a><br>
 2. <b>Moneycontrol Pro Panorama | El informe sobre el estado de la economía del RBI señala la resiliencia en medio de los riesgos globales - TradingView</b> (Google News) <a href="https://news.google.com/rss/articles/CBMi5AFBVV95cUxOOVVYWWZuVzRtdDl3Q2h4UURWbTZmRl9XY2ZRRGNxVC14Nk42MTBDSUlpYWhtbnk0aTh4eXMxRU52ZnNXSGdzdmp4aXlMMGg3X2Y3VC1VOEZ5MmdJdVo3cURXWkJ4RDdlb2RCRDA2OFkxd3hRX3Z6R255dDM0ak4zTWJBT1VqYTE3UmNsWDBYZkpCYWN6bmhvRzJWZERkS2w0UXZod01wdUtMR2pnXzUtMUR6c3hpb0s3dy1DMzBGaXl2RjFwZk9IaTRSdHBOMWVfMEk3bWlMTHNEQUtKUGRVRVExdGY?oc=5">Leer más</a><br>
@@ -17,11 +17,11 @@
 6. <b>Blue Economy: El mar, ficha clave en el puzle energético - Moeve Global</b> (Google News) <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPbTBzQWRoUDBubTRES2dwTEU4QW5WNFdobXcxblUwUlJfLUZac2VqZnF3ZUgtUWVLT2V4YjBqdkg2Rm9kbVRWRGF0X3VLc2tmRFhZNUQzOG90TnpPSDVMMHRZRUlYek52a1V5LTlwYnhkYU5RRTh0TUFDUV9QWlRMVVNkYU44b3JoYUowN1MxSDNfS3RNMXRn?oc=5">Leer más</a><br>
 7. <b>Deuda privada: la próxima crisis que se cierne sobre la economía mundial - Blog de Daniel Lacalle</b> (Google News) <a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxPVGhUelQ0UE5iMnpwZFN0VHo5ZVFzbXpoRWZGb2RSMUJGWjVsbmtDSVhXMGZoek5aTzJ6c2xtSVRVNXpaTmpxeGUwS2xnY2lzZHlaS292V2ZOS1J5UFlUSFBwWndIdVlyQ2wtc1BmSlhyRGxVUE9NelBQZWJjUEJxaExRTEVQQV84R0NnczJHNEM1aEk?oc=5">Leer más</a><br>
 8. <b>WisdomTree lanza el Space Economy UCITS ETF - Estrategias de Inversión</b> (Google News) <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxONHBaNUdRM3hVR0p5X3ROWFRRU1JnekMtUjhmejRGNi1TSVNPN2YyS1ZsR01hU1NEb0tXQlBIODRDWVNvMDgxRFVRZTFPZVp2YzJ1S1gtMWhZcEUta05BbWZ0c3pydmp4Mm9BMFh6RnRFeFVfVllSRDBWamdqSGpEbHc4U00xUXVRWHBlWG9rWXAtVjQ1Wkp4OWlGci1GemfSAZsBQVVfeXFMUG5Ud0ZOYkxrcTB5MERNMURBcEhONWtEdHZ0ZHBVQ2lRa0RqMm9xYlVMcWpqQzBuWEI1MmFxYldKbGFrZTQxOTd6TkRYZEd3UDFWTXEwX2pad1VQT1pyV254V1R3SmRMU1FvQ3kwXzM4YjhuSzY3UWhvZG5aekh1VFVqRm5qNW9Jc2VLbHdoM3c3ZnR5S01GS1psVVE?oc=5">Leer más</a><br>
-9. <b>Space Economy: ¿por qué los directivos deben mirar al cielo? - Asociación para el Progreso de la Dirección | APD</b> (Google News) <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE83dnBMSlQ4ajRRNFJKWHZibG1aTXV2LWdwVFFOWkdncmJvRkV2eFJuSE9FaXR5MUZUMzZrY0JZRDBsQWdfZzFjcUJRSFNCTmh0dWc?oc=5">Leer más</a><br>
-10. <b>Europe and Mexico fortify their alliance in the new geo-economic context - Agenda Pública</b> (Google News) <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPMG5EZk42NzhLTEFMR0tPNmN0djkwN3dscENxU1hvaFB4Y1RlOGFPOTNwclZ4Z0JGMlc2c3JiV0VKTGhuR2dyUFJxcWNDekkxSExrZFhhOXJIOHNJTlFfRy1iZldxTUVPZDBUUFRVd0tZT1RFSVFRWm1hRHhtN2xfSm1vYWYtTnoyQlIzSHpMOE13MTNUa0liSkU4dE9vWjVlbk8wOEQxWQ?oc=5">Leer más</a><br>
-<br><b>Resumen automático generado el 11/08/2026.</b>
+9. <b>Europe and Mexico fortify their alliance in the new geo-economic context - Agenda Pública</b> (Google News) <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPMG5EZk42NzhLTEFMR0tPNmN0djkwN3dscENxU1hvaFB4Y1RlOGFPOTNwclZ4Z0JGMlc2c3JiV0VKTGhuR2dyUFJxcWNDekkxSExrZFhhOXJIOHNJTlFfRy1iZldxTUVPZDBUUFRVd0tZT1RFSVFRWm1hRHhtN2xfSm1vYWYtTnoyQlIzSHpMOE13MTNUa0liSkU4dE9vWjVlbk8wOEQxWQ?oc=5">Leer más</a><br>
+10. <b>Space Economy: ¿por qué los directivos deben mirar al cielo? - Asociación para el Progreso de la Dirección | APD</b> (Google News) <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE83dnBMSlQ4ajRRNFJKWHZibG1aTXV2LWdwVFFOWkdncmJvRkV2eFJuSE9FaXR5MUZUMzZrY0JZRDBsQWdfZzFjcUJRSFNCTmh0dWc?oc=5">Leer más</a><br>
+<br><b>Resumen automático generado el 12/08/2026.</b>
       ]]></description>
-      <pubDate>Tue, 11 Aug 2026 08:04:12 +0100</pubDate>
+      <pubDate>Wed, 12 Aug 2026 08:09:31 +0100</pubDate>
     </item>
   </channel>
 </rss>
